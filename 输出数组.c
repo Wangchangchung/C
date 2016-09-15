@@ -7,7 +7,7 @@ void main(void)
 	int j;
 	int temp;
 
-	printf("ÇëÊäÈë5¸öÕûÊı£º");
+	printf("è¯·è¾“å…¥5ä¸ªæ•´æ•°ï¼š");
 	for( i = 0; i < 5; i++){
 		scanf("%d",arr + i);  // scanf("%d",&arr[i]);
 	}
@@ -21,7 +21,7 @@ void main(void)
 			}
 		}
 	}
-	printf("ÅÅĞòºó£º");
+	printf("æ’åºåï¼š");
 
 	for(i = 0; i < 5; i++){
 		printf("%d ", arr[i]);

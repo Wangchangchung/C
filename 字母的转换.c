@@ -7,11 +7,11 @@ void main(void){
 	int i;
 	int j;
 
-	printf("ÇëÊäÈëÊı×éµÄÊı×Ö£º");
+	printf("è¯·è¾“å…¥æ•°ç»„çš„æ•°å­—ï¼š");
 	for(i = 0; i< 5; i++){
 		scanf("%d", &a[i]);
 	}
-	printf("ÅÅĞòºó£º");
+	printf("æ’åºåï¼š");
 	for(i = 0; i < 5; i++){
 		for(j = i+ 1; j < 5; j++){
 			if(a[i] >= a[j]){
@@ -34,7 +34,7 @@ void main(void){
 
 	char b ;
 
-	printf("ÇëÊäÈëÒ»¸ö×ÖÄ¸:");
+	printf("è¯·è¾“å…¥ä¸€ä¸ªå­—æ¯:");
 	scanf("%c", &b);
 	if( b <= 122 && b > 90){
 		printf("%c", b-32);
@@ -45,5 +45,3 @@ void main(void){
 	printf("\n");
 }
 */
-
-

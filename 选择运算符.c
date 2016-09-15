@@ -5,8 +5,8 @@ void main(void)
 	int a;
 	int b;
 	int c;
-	printf("ÇëÊäÈëÈý¸öÕûÊý£º\n");
+	printf("è¯·è¾“å…¥ä¸‰ä¸ªæ•´æ•°ï¼š\n");
 	scanf("%d %d %d", &a, &b, &c);
 
-	printf("Èý¸öÊýÖÐ×î´óµÄÊýÎª£º%d\n",(a>b ? a:b)> c ?(a>b ? a:b):c);
+	printf("ä¸‰ä¸ªæ•°ä¸­æœ€å¤§çš„æ•°ä¸ºï¼š%d\n",(a>b ? a:b)> c ?(a>b ? a:b):c);
 }
