@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>iCooc - 让优秀成为一种习惯 距离好工作更进一步</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<#include "html/common/top.html">
+<link href="<@m.path/>/css/job_detail.css" rel="stylesheet" type="text/css">		<!--主页css-->
+</head>
+<body>
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+
+	<div id="content" class="container">
+		<article class="col-lg-8 col-md-8 col-sm-8 col-xs-8 content_l">
+			<div class="box_shadow">
+			<#list job as j>
+				<dl class="job_detail">
+					<dt class="title clearfix">
+						<h1 class="job_name triangle_top" title="${j.jobName}">
+							<div class="wanted_company">招聘</div>
+							${j.jobName}
+						</h1>
+						<!-- <a class="btn btn-info btn-lg job_title_button" onClick="location.href='<@m.path/>/tree2.html';" role="button">查看该职业学习体系</a> -->
+					</dt>
+					<dd class="job_request">
+						<span>${j.salary}</span>
+						<span>${j.place}</span>
+						<span>${j.experience} </span>
+						<span>${j.education}</span>
+						<span>
+						  <#if j.workType == 0>  
+						 	全职
+						  <#elseif j.workType == 1>  
+    						实习
+						  <#else>  
+    						兼职
+    					  </#if>
+						</span>
+						<!-- <div class="note">职位诱惑 : 快速成长的团队&良好的上升空间&完善的薪酬</div> -->
+						<div class="time">发布时间：${date}发布</div>
+					</dd>
+					<dd class="job_desc">
+						<h3>职位描述</h3>
+						<pre>${j.longDesc}</pre>
+						<h3>工作地点</h3>
+						<pre>${j.detailPlace}</pre>
+						<!-- <ul>
+							<li>你有没有想过，如果和一大群极富个性、极有激情、具有全球视野的同事，以及创业多年从未失败的设计界明星大咖们一起共事，会是一种什么体验？</li>
+							<li>（管理层均来自国内外高校科研机构、百度、新浪等行业顶尖机构；研究员团队均来自英国、白俄罗斯、香港等各地的博硕士）</li>
+							<li>你有没有想过，互联网公司虽多，能顺应大数据时代的潮流，接触更多大数据系统工作可以给你的资历增添多少分量？</li>
+							<li>做同样的事情也好，选对了方向，你也会收获自己的成功。</li>
+						</ul>
+						<br/>
+						<h4><strong>我们需要你：</strong></h4>
+						<ol>
+							<li>参与产品策划、需求分析；</li>
+							<li>参与系统设计工作；</li>
+							<li>负责系统代码编写。</li>
+						</ol>
+						<h4><strong>我们希望你：</strong></h4>
+						<ol>
+							<li>计算机相关专业毕业，3年以上工作经验</li>
+							<li>精通主流Web应用开发框架、REST等webservice框架</li>
+							<li>精通Mysql数据库</li>
+							<li>熟悉XML、HTML、Javascript的使用和应用开发以及 AJAX技术</li>
+							<li>熟悉Linux环境以及操作，熟悉Git的使用，熟悉Tomcat，Apache，Nginx等开源的服务器的配置和调优</li>
+							<li>逻辑思维能力强，做事有条理，具备较强的分析问题和解决问题的能力</li>
+							<li>思维敏捷，性格开朗，责任感强，工作积极主动，具备学习意识，有良好的团队协作意识；</li>
+							<li>有大数据处理技术经验优先，熟悉分布式系统基础设施中常用的技术优先，如缓存（Memcache、Redis）、消息中间件(Rabbit MQ、Active MQ、Kafka、NSQ)、搜索引擎(Elasticsearch,Lucence、Solr)等</li>
+						</ol> -->
+					</dd>
+					<!-- <dd class="job_publisher">
+						<h3>职位发布者</h3>
+						<div class="dashed_border clearfix">
+							<i class="firstname">郑</i>
+							<div class="name">
+								<a class="fullname">郑祥瑞</a>
+								<span class="title">部门经理</span>
+							</div>
+							<div class="data">
+								<span class="num">100%</span>
+								<span>简历及时处理率</span>
+							</div>
+							<div class="data data_border_right">
+								<span class="num">3天</span>
+								<span>简历处理用时</span>
+							</div>
+						</div>
+					</dd> -->
+					<!-- <dd class="mailing clearfix">
+						<button type="button" class="btn btn-info btn-lg">投个简历</button>
+					</dd> -->
+				</dl>
+				</#list>
+			</div>
+		</article>
+		<aside class="col-lg-4 col-md-4 col-sm-4 col-xs-4 content_r">
+			<div class="box_shadow">
+				<dl class="company_data clearfix">
+					<dt class="company_header">
+						<img class="company_logo" alt="" src="">
+						<span class="company_name">数据公园</span>
+					</dt>
+					<dd class="company_content">
+						<ul class="desc">
+							<li><span>领域</span>电子商务</li>
+							<li><span>规模</span>150-500人</li>
+							<li><span>主页</span><a>http://www.beibei.com</a></li>
+						</ul>
+						<h5>发展阶段</h5>
+						<ul class="desc">
+							<li><span>目前阶段</span>A轮</li>
+							<li><span>投资机构</span>红杉资本(A轮)</li>
+						</ul>
+						<h5>工作地点</h5>
+						<span>北京市朝阳区酒仙桥路4号751D-Park时尚设计广场A16号楼东侧</span>
+					</dd>
+				</dl>
+				<div class="similar_job">
+					<h4 class="page-header">相似职位</h4>
+					<ul>
+						<li class="job_item">
+							<img class="job_img" alt="" src="">
+							<p>Java开发工程师</p>
+							<p>15K-25K</p>
+							<p>创新工厂</p>
+							<span class="job_place">[北京]</span>
+							<div class="more_info my_border">
+								<ul>
+									<li>领域：教育</li>
+									<li>创始人：郑祥瑞</li>
+									<li>规模：3人</li>
+									<li>阶段：起步</li>
+								</ul>
+							</div>
+						</li>
+						<li class="job_item">
+							<img class="job_img" alt="" src="">
+							<p>Java开发工程师</p>
+							<p>15K-25K</p>
+							<p>创新工厂</p>
+							<span class="job_place">[北京]</span>
+							<div class="more_info my_border">
+								<ul>
+									<li>领域：教育</li>
+									<li>创始人：郑祥瑞</li>
+									<li>规模：3人</li>
+									<li>阶段：起步</li>
+								</ul>
+							</div>
+						</li>
+						<li class="job_item">
+							<img class="job_img" alt="" src="">
+							<p>Java开发工程师</p>
+							<p>15K-25K</p>
+							<p>创新工厂</p>
+							<span class="job_place">[北京]</span>
+							<div class="more_info my_border">
+								<ul>
+									<li>领域：教育</li>
+									<li>创始人：郑祥瑞</li>
+									<li>规模：3人</li>
+									<li>阶段：起步</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<a class="more_job clearfix" href="" title="">查看更多相似职位 > </a>
+				</div>
+			</div>
+		</aside>
+	</div>
+	
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+	<#include "html/common/bottom.html">
+	<script>
+	
+	</script>
+	
+</body>
+</html>
+
+	
+
+

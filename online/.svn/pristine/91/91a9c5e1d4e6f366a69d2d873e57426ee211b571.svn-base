@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>目录 - iCooc</title>
+<#include "html/common/top.html">
+<link href="<@m.path/>/css/course.css" rel="stylesheet" type="text/css">		<!--课程资源展示页面css-->
+</head>
+
+<body style="background-color:#eee">
+
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+	
+<div class="container">
+	<!--课程介绍-->
+	<section id="introduction" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:20px; background-color:#fff; box-shadow:0px 1px 2px #BBB;">
+		<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="height:20em;"><img src="<@m.path/>/${courseVideo.imageUrl}" style="width:100%; height:100%;"></div>
+		<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" style="line-height:2; height:20em;">
+			<h3>${courseVideo.name}<span style="margin-left:3em; font-size: 0.6em;"></span></h3>
+			<div>简介：${courseVideo.longDesc}</div>
+			<div>出处：${courseVideo.source}</div>
+			<div>讲师：${courseVideo.teacher}</div>
+			<div>评分：</div>
+			<a class="btn btn-info scroll_other" href="#catalog" role="button" style="position: absolute; bottom:0px; right:0px;">点击查看目录</a>
+		</div>
+	</section>
+	<!--课程介绍结束-->
+	
+	<!--视频课程-->
+	<section id="catalog" class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+		<div style="background: #eee; font-size: 1.4em; line-height: 3; display: block; padding-left:1em;">
+			<span class="glyphicon glyphicon-list" style="margin-right:1em;"></span>
+			<span>课程目录</span>
+		</div>
+		<div class="content" style="background:#fff;line-height:3;">
+			<#list sectionVideos as section>
+				<#assign j=1 >		<#-- 给节计数，每输出一节，该值 +1 -->
+				<#list section as sectionVideo>
+					<#if j=1 >		<#-- 如果是第一节，那么把章的名字也输出出来 -->
+						<div class="chapter">${sectionVideo.section.name}</div>
+						<ul>
+					</#if>
+							<li>	<#-- 每次遍历节都输出节的信息 -->
+								<div class="jie" style="">${sectionVideo.svNum}节
+									<div class="circle" style="">${sectionVideo.svNum}</div>
+								</div>
+								<div class="name" onclick="location.href='<@m.path/>/coursevideo/video_play.html?id=${courseVideo.id}'">
+									${sectionVideo.name}<br />
+									<font style="">视频时长：10分钟</font>
+									<a class="btn btn-info" href="<@m.path/>/coursevideo/video_play.html?id=${courseVideo.id}&sectionVideoId=${sectionVideo.id}">开始学习</a>
+								</div>
+							</li>
+					<#assign j=j+1 >	<#-- 每输出一节，j+1，那么章的名字只输出一遍 -->
+				</#list>
+						</ul>
+			</#list>
+		</div>
+	</section>
+	<!--视频课程结束-->
+	
+	<!-- 附加信息 -->
+	<aside class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding:20px; background-color:#fff; box-shadow:0px 1px 2px #BBB; margin-top:20px;float:right;height:300px;"></aside>
+	<!-- 附加信息结束 -->
+
+	</div>
+	
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">

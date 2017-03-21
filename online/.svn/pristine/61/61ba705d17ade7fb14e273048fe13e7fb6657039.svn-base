@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Java开发工程师 - iCooc</title>
+<meta name="keywords" content="Java开发工程师,学习路线,免费职业学习路线图，职业学习规划，职业学习体系,职业规划">
+<meta name="description" content="为每一个职业提供一条详细，完整的职业学习体系以及大量的优质课程资源!">
+<#include "html/common/top.html">
+<link href="css/new_tree.css" rel="stylesheet" type="text/css">		<!--本页面所需的单独css-->
+
+</head>
+
+<body>
+
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+	
+	<div class="container">		<!-- 该container包含标题栏、树、附加信息及吐槽评论 -->
+		<!--大标题图片-->
+		<section id="slide" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h1 class="page-header clearMargin">Java开发工程师<span class="money">平均薪金：5000~6000</span></h1>
+			<span class="my-icon-question tree_question"> 为什么要学习Java开发工程师？</span>
+			<p class="tree_answer">Java是目前世界上最流行的计算机编程语言，据权威机构统计——在所有软件开发类人才的需求中，对 JAVA工程师的需求达到全部需求量的60%~70%。JAVA工程师的薪水相对较高，通常来说，具有3~5年开发经验的工程师，拥有年薪 10万元是很正常的一个薪酬水平;因此学习Java开发是一种不错的选择。</p>
+			<span class="my-icon-question tree_question"> Java开发工程师能干嘛？</span>
+			<p class="tree_answer">可以从事JSP网站开发、Java编程、Java游戏开发、Java桌面程序设计，以及其他与Java语言编程相关的工作。可进入电信、银行、保险专业软件开发公司等从事软件设计和开发工作。</p>
+			<span class="my-icon-question tree_question"> 如何成为一名Java工程师？</span>
+			<p class="tree_answer">在这里，我们列举了Java开发工程师需要学习的所有核心技术课程，并将其融汇成了一条权威，专业的学习路线；对于想学习本体系课程的学员，尤其是零基础的学员，建议在学习的过程中一定要循序渐进的学习；在学习的过程中，要多思考、多加练习，真正做到学以致用。只要您肯努力，肯坚持；一定会成为一名出色的Java开发工程师。</p>
+
+			<div class="approve">体系认证：<span>西安交通大学</span><span>西安电子科技大学</span><span>西安邮电大学</span></div>
+			<div id="forTreeContent" class="golearn clearfix"><a href="#forTreeContent" class="scroll btn btn-success btn-lg" role="button">查看企业用人标准</a></div>
+		</section>
+		<!--大标题图片结束-->
+	
+		<!--主题内容-->
+		<article id="treeContent" class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+			<h1 class="title"><span class="btn-lg btn-success">Java工程师 - 企业用人标准</span></h1>
+			<div class="main">
+			<div class="line"></div>
+			<ul class="clearfix">
+				<li class="item item_l">
+					<h2 class="stage page-header"><span class="seq">1</span>Java基础阶段<i id="se_basic" class="stage_detail"></i><i class="sanjiao_border_l"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=173c1069-a82c-4010-a77a-a002adc4ef79" target="_blank"  title="Java SE">Java SE</a><a href="<@m.path/>/course/show.html?id=173c1069-a82c-4010-a77a-a002adc4ef79" target="_blank"  title="Java SE" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=8a4fe5d1-9667-4df4-8d47-6ee7dfe3919b" target="_blank"  title="常用设计模式">常用设计模式</a><a href="<@m.path/>/course/show.html?id=8a4fe5d1-9667-4df4-8d47-6ee7dfe3919b" target="_blank"  title="常用设计模式" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=98115c56-f029-4c14-a7de-70e423d415af" target="_blank"  title="Java SE 实战项目">Java SE 实战项目</a><a href="<@m.path/>/course/show.html?id=98115c56-f029-4c14-a7de-70e423d415af" target="_blank"  title="Java SE 实战项目" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+				</li>
+				<li class="item item_r first_r">
+					<h2 class="stage page-header"><span class="seq">2</span>数据库阶段<i id="sql" class="stage_detail"></i><i class="sanjiao_border_r"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=7b4d890d-dc1b-4d45-b159-14c20c34df25" target="_blank"  title="数据库基础">数据库基础</a><a href="<@m.path/>/course/show.html?id=7b4d890d-dc1b-4d45-b159-14c20c34df25" target="_blank"  title="数据库基础" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=2002086a-5fe0-4e52-96ed-44f8fe8358c6" target="_blank"  title="JDBC">JDBC</a><a href="<@m.path/>/course/show.html?id=2002086a-5fe0-4e52-96ed-44f8fe8358c6" target="_blank"  title="JDBC" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+				</li>
+				<li class="item item_l">
+					<h2 class="stage page-header"><span class="seq">3</span>WEB前端基础阶段<i id="web_basic" class="stage_detail"></i><i class="sanjiao_border_l"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=3f7ab92f-467f-4762-a316-faac21050305" target="_blank" title="HTML/CSS/JavaScript">HTML/CSS/JavaScript</a><a href="<@m.path/>/course/show.html?id=3f7ab92f-467f-4762-a316-faac21050305" target="_blank" title="HTML/CSS/JavaScript" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=1aeb6ad2-f413-4291-86d2-d9c646754217" target="_blank" title="JQuery">JQuery</a><a href="<@m.path/>/course/show.html?id=1aeb6ad2-f413-4291-86d2-d9c646754217" target="_blank" title="JQuery" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+				</li>
+				<li class="item item_r">
+					<h2 class="stage page-header"><span class="seq">4</span>Java EE基础阶段<i id="ee_basic" class="stage_detail"></i><i class="sanjiao_border_r"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=b244e4e4-62e5-40bd-b9dc-1f50f57e942f" target="_blank"  title="Java EE基础">Java EE基础</a><a href="<@m.path/>/course/show.html?id=b244e4e4-62e5-40bd-b9dc-1f50f57e942f" target="_blank"  title="Java EE基础" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=73f46f03-e104-4a49-b1e3-7990896dda3f" target="_blank"  title="Java EE基础项目实战">Java EE基础项目实战</a><a href="<@m.path/>/course/show.html?id=73f46f03-e104-4a49-b1e3-7990896dda3f" target="_blank"  title="Java EE基础项目实战" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+				</li>
+				<li class="item item_l">
+					<h2 class="stage page-header"><span class="seq">5</span>Java EE高级框架阶段<i id="framework" class="stage_detail"></i><i class="sanjiao_border_l"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=226da6a3-56a8-44b5-af10-b96bfefca2f1" target="_blank"  title="Struts2">Struts2</a><a href="<@m.path/>/course/show.html?id=226da6a3-56a8-44b5-af10-b96bfefca2f1" target="_blank"  title="Struts2" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=3b90c7bd-8644-4d32-86d5-c887940f7e5f" target="_blank"  title="Hibernate">Hibernate</a><a href="<@m.path/>/course/show.html?id=3b90c7bd-8644-4d32-86d5-c887940f7e5f" target="_blank"  title="Hibernate" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=54890637-5149-4310-ab36-13456753c1de" target="_blank"  title="Spring">Spring</a><a href="<@m.path/>/course/show.html?id=54890637-5149-4310-ab36-13456753c1de" target="_blank"  title="Spring" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=0598dce5-9b2e-4ef9-9930-640f96e241e2" target="_blank"  title="Spring MVC">Spring MVC</a><a href="<@m.path/>/course/show.html?id=0598dce5-9b2e-4ef9-9930-640f96e241e2" target="_blank"  title="Spring MVC" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+				</li>
+			</ul>
+			</div>
+			<h1 class="title"><span class="btn-lg btn-success">应聘BAT</span></h1>
+		</article>
+
+		
+		<!--附加信息（课程体系描述、当前有多少用户在学习等）-->
+		<aside id="treeRemarks" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<h2 class="remark_t">热门招聘信息</h2>
+			<!-- 可复用代码 -->
+			<div class="job_ad" >
+				<span>职位：<a href="http://jobs.zhaopin.com/beijing/JAVA%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88_570520728250039.htm?ssidkey=y&ss=401&ff=03">Java开发工程师</a></span>
+				<span>公司：丽博通达信息科技有限公司</span>
+				<span>薪资：8000~10000元/月</span>
+				<span>城市：北京</span>
+			</div>
+			<hr>
+			<!-- 可复用代码结束 -->
+			<div class="job_ad" >
+				<span>职位：<a href="http://jobs.zhaopin.com/280084810250127.htm?ssidkey=y&ss=201&ff=03">JAVA开发工程师（初级）</a></span>
+				<span>公司：西安新长澍软件有限公司</span>
+				<span>薪资：6001-8000元/月</span>
+				<span>城市：西安</span>
+			</div>
+			<hr>
+			<div class="job_ad" >
+				<span>职位：<a href="http://sh.58.com/tech/19940284017671x.shtml?PGTID=14287174448680.4447412777226418&ClickID=1">Java实习工程师</a></span>
+				<span>公司：上海达内为赢软件科技有限公司</span>
+				<span>薪资： 5000-8000元/月</span>
+				<span>城市：上海市-黄浦区北京东路</span>
+			</div>
+			<hr>
+			<h2 class="remark_t">相关职位</h2>
+			<!-- 可复用代码 -->
+			<div class="rel_work">	<!--正在学习的用户-->
+				<div class="img_box">
+					<img src="image/user/user_01.jpg">
+				</div>
+				<div class="name_box">
+					<a href="" title="" class="clearMargin wname">前端开发工程师</a>	<!--名称-->
+					<span class="s_det">学会做那些酷炫的网页</span>	<!--签名-->
+				</div>
+			</div>
+			<!-- 可复用代码结束 -->
+			<div class="rel_work">	<!--正在学习的用户-->
+				<div class="img_box">
+					<img src="image/user/user_01.jpg">
+				</div>
+				<div class="name_box">
+					<a href="" title="" class="clearMargin wname">PHP工程师</a>	<!--名称-->
+					<span class="s_det">最快学会WEB开发</span>	<!--签名-->
+				</div>
+			</div>
+			<div class="rel_work">	<!--正在学习的用户-->
+				<div class="img_box">
+					<img src="image/user/user_01.jpg">
+				</div>
+				<div class="name_box">
+					<a href="" title="" class="clearMargin wname">.Net工程师</a>	<!--名称-->
+					<span class="s_det">跟着微软有饭吃</span>	<!--签名-->
+				</div>
+			</div>
+		</aside>
+		<!--附加信息结束-->
+		<!--主体内容结束-->
+	
+	<!-- 线下学习-->
+	<section id="off-Line_Learning" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<hgroup>
+			<h3>线下学习</h3>
+			<hr/>
+			<h5>如果您对线上的资源不满意，我们还精心为你推选出让您值得信赖的线下学习资源。</h5>
+		</hgroup>
+		<ul>
+			<li class="item">
+				<a>
+					<img class="img" src="<@m.path/>/image/photo/join_us3.jpg">
+					<div class="item_info">
+						<h4>西安尚学堂Java培训</h4>
+						<hr />
+						<span style="display:block;">培训周期：4个月</span>
+						<span>主讲老师：马士兵</span>
+						<p class="intro">本课程重点培养Java开发人才，学完本课程后，您不仅可以从事JavaEE开发，还可以从事手机、平板电脑、智能家电、智能汽车等设备上的软件开发。</p>
+					</div>
+				</a>
+			</li>
+			<li class="item">
+				<a>
+					<img class="img" src="<@m.path/>/image/photo/join_us3.jpg">
+					<div class="item_info">
+						<h4>网星软件Java培训</h4>
+						<hr />
+						<span style="display:block;">培训周期：5个月</span>
+						<span>主讲老师：马士兵</span>
+						<p class="intro">Java是网星软件培训成立之初最早开设的IT热门专业，作为本培训机构的精品专业，四年多以来，JavaEE这个专业一直受到IT青年热捧。</p>
+					</div>
+				</a>
+			</li>
+			<li class="item">
+				<a>
+					<img class="img" src="<@m.path/>/image/photo/join_us3.jpg">
+					<div class="item_info">
+						<h4>达内Java培训</h4>
+						<hr />
+						<span style="display:block;">培训周期：4.5个月</span>
+						<span>主讲老师：范传奇</span>
+						<p class="intro">本课程重点培养Java开发人才，学完本课程后，您不仅可以从事JavaEE开发，还可以从事手机、平板电脑、智能家电、智能汽车等设备上的软件开发。</p>
+					</div>
+				</a>
+			</li>
+			<li class="item">
+				<a>
+					<img class="img" src="<@m.path/>/image/photo/join_us3.jpg">
+					<div class="item_info">
+						<h4>北大青鸟Java培训</h4>
+						<hr />
+						<span style="display:block;">培训周期：5.5个月</span>
+						<span>主讲老师：刘滨</span>
+						<p class="intro">本课程重点培养Java开发人才，学完本课程后，您不仅可以从事JavaEE开发，还可以从事手机、平板电脑、智能家电、智能汽车等设备上的软件开发。</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</section>
+	
+	<!--评论吐槽-->
+	<div id="comment" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3 class="page-header title">尽情<span>吐槽</span>吧</h3>
+			<ul>
+			  <#list comment as li>
+				<li class="item clearfix">
+					<div class="img_box">
+						<img src="image/user/user_00.jpg" alt="头像" />
+						<span class="name">游客</span>
+					</div>
+					<p class="content">${li.text}</p>
+					<div class="other_info"><span class="zan">赞</span><span class="cai">踩</span><span class="time">${li.date}</span></div>
+				</li>
+			  </#list>
+			</ul>
+			<h3>我来吐槽</h3>
+			<div class="grade">
+				体系评分：
+				<img src="image/icon/star.png">
+				<img src="image/icon/star.png">
+				<img src="image/icon/star.png">
+				<img src="image/icon/star.png">
+				<img src="image/icon/star.png">
+			</div>
+			<div class="input-group">
+			  <input id="comment_input" type="text" class="form-control" placeholder="吐槽些什么呢~？" onkeydown="if(event.keyCode==13){submit_comment()}" />
+			  <span class="input-group-btn">
+				<button class="btn btn-default" type="button" onclick="submit_comment()">立即吐槽！</button>
+			  </span>
+			</div>
+	</div>
+
+	<!--评论吐槽结束-->
+	</div>	<!-- container -->
+	
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script type="text/javascript">
+	$(function(){
+		
+		/*使得附加信息总体高度与树的高度一样*/
+		$('#treeRemarks').height( $('#treeContent').height() );
+		 
+		/* 修正线下教育中，图片与div信息的宽度 */
+		var img_width = $('#off-Line_Learning ul img');
+		var info_width = $('#off-Line_Learning ul div.item_info');
+		fix(img_width, info_width, 'width');
+
+		/*为问题和答案添加click和显示隐藏事件*/
+		$('.tree_question').click(function(){
+			console.info(this);
+			var next = $(this).next('.tree_answer');
+			if ( next.is(':visible') ){
+				next.slideUp();
+			} else {
+				next.slideDown();
+			}
+		});
+		
+		/*为每个阶段添加提示框*/
+		$('#se_basic').popover({	//java基础
+			title : 'Java基础阶段',
+			content : '这一阶段教你学习java的基础语法以及常用的设计模式，主要着重于基础的讲解，为后期Java课程做一个铺垫。在项目实战中通过制作简单的小游戏让你轻松掌握Java基本语法',
+			trigger : 'hover',
+			placement : 'right',
+			container : 'body'
+		});
+		$('#sql').popover({		//数据库
+			title : '数据库阶段',
+			content : '该阶段教你如何对数据库进行访问，从而动态的完成与数据库的交互，让你的程序实现自动化。',
+			trigger : 'hover',
+			placement : 'right',
+			container : 'body'
+		});
+		$('#web_basic').popover({	//web基础
+			title : 'WEB前端基础阶段',
+			content : '这一阶段教你如何对一个网页进行简单地制作与布局，通过学习一些简单的脚本程序，从而使让你的网页动起来。',
+			trigger : 'hover',
+			placement : 'right',
+			container : 'body'
+		});
+		$('#ee_basic').popover({	//java ee
+			title : 'Java EE基础阶段',
+			content : '这一阶段通过教你Java高级应用的入门知识，从而让你明白一个Java项目整体的开发流程。在项目的实战中，会手把手教你如何开发一个Java项目。',
+			trigger : 'hover',
+			placement : 'right',
+			container : 'body'
+		});
+		$('#framework').popover({	//框架
+			title : 'Java EE高级框架阶段',
+			content : '该阶段教你学习当前Java最流行的框架，从而让你更加快捷，有效的完成一个Java项目。是大型企业招聘人才的重要标准之一。',
+			trigger : 'hover',
+			placement : 'right',
+			container : 'body'
+		});
+	});
+
+	/* 当窗口的大小改变时，重新修正线下学习的div.info的宽度 */
+	window.onresize=function(){
+		var img_width = $('#off-Line_Learning ul img');
+		var info_width = $('#off-Line_Learning ul div.item_info');
+		fix(img_width, info_width, 'width');
+	}  
+
+	function submit_comment(){
+		var text = $('#comment_input').val();
+		console.info(text);
+		if( $.trim(text) == '' ){
+			alert('啥都不填，你在逗我！');
+		} else {
+			$.post('<@m.path/>/comment/submit.html',{
+				jobid : '1',
+				text : text
+			},function(response, status, xhr){
+				if( response == 'ok' ){
+					console.info('oka');
+					location.reload();
+				}
+			});
+		}
+		$('#comment').val('');
+	}
+</script>

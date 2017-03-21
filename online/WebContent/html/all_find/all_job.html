@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>全部职位 - iCooc</title>
+<#include "html/common/top.html">
+<link href="css/all_course.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+	
+	<!--标题栏-->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearPadding" style="box-shadow:0 3px 3px #0ff;">
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:200px; background-color:#eee; border-bottom:1px solid #ddd; margin-top:65px;"></div>
+		<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:200px;background-color:#eee; border-bottom:1px solid #ddd; margin-top:65px;">
+			<h1 class="page-header" style=" ">全部职业</h1>
+			<span style="display:block;">这里涵盖了当前所有行业的职业，在您选好了属于自己的理想职业之后，我们会为您免费提供完整的职业学习路线图，只要肯坚持，必定会到达职业的巅峰！</span>
+			<span>如果您目前还没有确定自己的职业方向，那就赶快点击全部专业，通过查找自己的专业，我们会免费为您推荐该专业的可以胜任的热门职业供您参考！ </span>
+		</div>
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:200px; background-color:#eee; margin-top:65px; border-bottom:1px solid #ddd;"></div>
+	</div>
+	<!--标题栏结束-->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:30px;"></div>
+	
+	<div class="container">
+		<aside id="classification" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 clearPadding" style="height:1100px;">
+			<ul class="list-group">
+			  <li class="list-group-item active" name="all">全部职业</li>
+			  <li class="list-group-item" name="1">计算机</li>
+			  <li class="list-group-item" name="2">外国语</li>
+			  <li class="list-group-item" name="3">电子与电气工程</li>
+			  <li class="list-group-item" name="4">经济与管理</li>
+			  <li class="list-group-item" name="5">通信与信息工程</li>
+			  <li class="list-group-item" name="6">人文社科</li>
+			  <!-- <li class="list-group-item">中小学</li>
+			  <li class="list-group-item">亲子教育</li> -->
+			  <li class="list-group-item" style="border-bottom:1px solid #0FF;">其他</li>
+			</ul>
+		</aside>
+		
+		<article id="course_display" class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:1100px;">
+			<div class="course_type_name" style="width:100%; height:50px; font-size:16px; padding-left:10px;">全部职业</div>
+			<div class="no_course" style="display:none; margin-left:20px; font-size:18px;"><font color="#09F">计算机类</font>职业已开发成功，其他类别职业正在努力开发中，敬请期待...</div>
+			
+			<!--第一行-->
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 course_item" onclick="location.href='<@m.path/>/tree1.html'">
+				<div style="">
+					<img src="<@m.path/>/image/job/java/java_01_small.png" style="width:100%; height:55%;">
+					<span style="display:block;padding-left:10px; padding-top:10px; font-size:16px;">Java开发工程师</span>
+					<span style="display:block;padding-left:10px; font-size:13px; color:#096;">企业级应用开发首选</span>
+					<span style="display:block;padding-left:10px; font-size:13px; margin-top:5px; color:#096;">适合学习的专业：软件工程，信息系统管理与设计，电子商务等</span>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 course_item" onclick="location.href='<@m.path/>/tree2.html'">
+				<div style="">
+					<img src="<@m.path/>/image/job/html/html_02_small.png" style="width:100%; height:55%;">
+					<span style="display:block;padding-left:10px; padding-top:10px; font-size:16px;">Web前端开发工程师</span>
+					<span style="display:block;padding-left:10px; font-size:13px; color:#096;">艺术与代码的设计师</span>
+					<span style="display:block;padding-left:10px; font-size:13px; margin-top:5px; color:#096;">适合学习的专业：信息系统管理与设计，电子商务等</span>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 course_item" onclick="location.href='<@m.path/>/tree3.html'">
+				<div style="">
+					<img src="<@m.path/>/image/job/net/net_02_small.png" style="width:100%; height:55%;">
+					<span style="display:block;padding-left:10px; padding-top:10px; font-size:16px;">.Net开发工程师</span>
+					<span style="display:block;padding-left:10px; font-size:13px; color:#096;">思想与代码的碰撞</span>
+					<span style="display:block;padding-left:10px; font-size:13px; margin-top:5px; color:#096;">适合学习的专业：信息系统管理与设计，电子商务等</span>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 course_item" onclick="location.href='<@m.path/>/tree4.html'">
+				<div style="">
+					<img src="<@m.path/>/image/job/php/php_01_small.jpg" style="width:100%; height:55%;">
+					<span style="display:block;padding-left:10px; padding-top:10px; font-size:16px;">PHP开发工程师</span>
+					<span style="display:block;padding-left:10px; font-size:13px; color:#096;">代码艺术的开始</span>
+					<span style="display:block;padding-left:10px; font-size:13px; margin-top:5px; color:#096;">适合学习的专业：软件工程，信息系统管理与设计，电子商务等</span>
+				</div>
+			</div>
+			<!--第一行结束-->
+		</article>
+	
+		<!--分页-->
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:right;">
+			<nav>
+			  <ul class="pagination">
+				<li class="disabled">		<!-- 当前为第一页，则上一页按钮不能点 -->
+				  <a href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				  </a>
+				</li>
+				<li class="active"><a href="#">1</a></li>		<!-- 第一页为已选择 -->
+<!-- 				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li> -->
+				<li class="disabled">
+				  <a href="#" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				  </a>
+				</li>
+			  </ul>
+			</nav>
+		</div>
+		<!--分页结束-->
+	</div>
+	
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script type="text/javascript">
+	$('li.list-group-item').click(function(){
+		if( $(this).hasClass('active') ){
+			console.info('do nothing');
+		} else {
+			console.info('do something');
+			$('ul.list-group li.active').removeClass('active');
+			$(this).addClass('active');
+		}
+		
+		var name = $(this).attr('name');
+		if( name == '1' || name == 'all' ){
+			$('div.course_item').css('display','block');
+			$('div.no_course').css('display','none');
+		} else {
+			$('div.course_item').css('display','none');
+			$('div.no_course').css('display','block');
+		}
+		
+		$('div.course_type_name').html($(this).html());
+	});
+</script>

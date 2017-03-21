@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Web前端工程师  - iCooc</title>
+<meta name="keywords" content="web前端工程师,学习路线,免费职业学习路线图，职业学习规划，职业学习体系,职业规划"">
+<meta name="description" content="为每一个职业提供一条详细，完整的职业学习体系以及大量的优质课程资源!">
+<#include "html/common/top.html">
+<link href="css/new_tree.css" rel="stylesheet" type="text/css">		<!--本页面所需的单独css-->
+
+</head>
+
+<body>
+
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+	
+	<div class="container">		<!-- 该container包含标题栏、树、附加信息及吐槽评论 -->
+		<!--大标题图片-->
+		<section id="slide" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h1 class="page-header clearMargin">前端开发工程师<span class="money">平均薪金：5000~6000</span></h1>
+			<span class="my-icon-question tree_question"> 为什么要学习前端开发？</span>
+			<p class="tree_answer">前端开发是从美工演变而来的，名称上有很明显的时代特征；伴随着互联网的飞速发展，现如今用户对产品体验要求的越来越高，因而成为一名前端开发人员是非常受企业欢迎的；加之目前各大高校也没有开设前端开发相关的课程，因此学习了前端开发也会让你从你身边的同学中脱颖而出！</p>
+			<span class="my-icon-question tree_question"> 前端开发工程师能干嘛？</span>
+			<p class="tree_answer">主要与交互设计师，视觉设计师协作，根据设计图完成页面制作；同时还要维护及优化网站前端性能；使用JavaScript编写封装良好的前端交互组件。</p>
+			<span class="my-icon-question tree_question"> 如何成为一名前端开发工程师？</span>
+			<p class="tree_answer">在这里，我们列举了前端工程师需要学习的所有核心技术课程，并将其融汇成了一条权威，专业的学习路线；对于想学习本体系课程的学员，尤其是零基础的学员，建议在学习的过程中一定要循序渐进的学习；在学习的过程中，要多思考、多加练习，真正做到学以致用。只要您肯努力，肯坚持；一定会成为一名出色的前端开发工程师。</p>
+
+			<div class="approve">体系认证：<span>西安交通大学</span><span>西安电子科技大学</span><span>西安邮电大学</span></div>
+			<div id="forTreeContent" class="golearn clearfix"><a href="#forTreeContent" class="scroll btn btn-success btn-lg" role="button">查看企业用人标准</a></div>
+		</section>
+		<!--大标题图片结束-->
+	
+		<!--主题内容-->
+		<article id="treeContent" class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+			<h1 class="title"><span class="btn-lg btn-success">前端工程师 - 企业用人标准</span></h1>
+			<div class="main">
+			<div class="line"></div>
+			<ul class="clearfix">
+				<li class="item item_l first_l">
+					<h2 class="stage page-header"><span class="seq">1</span>前端基础阶段<i id="html_basic" class="stage_detail"></i><i class="sanjiao_border_l"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=3f7ab92f-467f-4762-a316-faac21050305" target="_blank" title="HTML/CSS/JavaScript">HTML/CSS/JavaScript</a><a href="<@m.path/>/course/show.html?id=3f7ab92f-467f-4762-a316-faac21050305" target="_blank" title="HTML/CSS/JavaScript" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=1aeb6ad2-f413-4291-86d2-d9c646754217" target="_blank" title="jQuery">jQuery</a><a href="<@m.path/>/course/show.html?id=1aeb6ad2-f413-4291-86d2-d9c646754217" target="_blank" title="jQuery" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+				</li>
+				<li class="item item_r first_r">
+					<h2 class="stage page-header"><span class="seq">2</span>界面交互设计阶段<i id="advance" class="stage_detail"></i><i class="sanjiao_border_r"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=e33bff6815bf450bb0a0a5eb657be49c" title="PhotoShop平面设计">PhotoShop平面设计</a><a href="<@m.path/>/course/show.html?id=e33bff6815bf450bb0a0a5eb657be49c" title="PhotoShop平面设计"type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=38a50ebd-bf45-4f0a-a129-676e16d69e9e"  title="flash动画制作">flash动画制作</a><a  href="<@m.path/>/course/show.html?id=38a50ebd-bf45-4f0a-a129-676e16d69e9e"  title="flash动画制作" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+				</li>
+				<li class="item item_l">
+					<h2 class="stage page-header"><span class="seq">3</span>前端进阶阶段<i id="design" class="stage_detail"></i><i class="sanjiao_border_l"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=9692b4f669df423fa6d8c6a830f3debe" title="HTML5/CSS3">HTML5/CSS3</a><a href="<@m.path/>/course/show.html?id=9692b4f669df423fa6d8c6a830f3debe" title="HTML5/CSS3 type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname"  href=""  title="网页基础项目实战">网页基础项目实战</a><a  href="<@m.path/>/course/show.html?id=3b90c7bd-8644-4d32-86d5-c887940f7e5f"  title="网页基础项目实战" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+				</li>
+				<li class="item item_r">
+					<h2 class="stage page-header"><span class="seq">4</span>前端高级阶段<i id="framework" class="stage_detail"></i><i class="sanjiao_border_r"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=f88fb3ae46b04e309e4338977b148b4f"  title="BootStrap">BootStrap</a><a href="<@m.path/>/course/show.html?id=f88fb3ae46b04e309e4338977b148b4f"  title="BootStrap type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname"  href="<@m.path/>/course/show.html?id=73f46f03-e104-4a49-b1e3-7990896dda3f"  title="Less / Sass / Stylus">Less / Sass / Stylus</a><a  href="<@m.path/>/course/show.html?id=73f46f03-e104-4a49-b1e3-7990896dda3f"  title="Less / Sass / Stylus" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname"  href="<@m.path/>/course/show.html?id="  title="AngularJS">AngularJS</a><a  href="<@m.path/>/course/show.html?id="  title="AngularJS" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname"  href="<@m.path/>/course/show.html?id=" title="Node.js">Node.js</a><a  href="<@m.path/>/course/show.html?id=" title="Node.js" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+				</li>
+			</ul>
+			</div>
+			<h1 class="title"><span class="btn-lg btn-success">应聘BAT</span></h1>
+		</article>
+
+		
+		<!--附加信息（课程体系描述、当前有多少用户在学习等）-->
+		<aside id="treeRemarks" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<h2 class="remark_t">热门招聘信息</h2>
+			<!-- 可复用代码 -->
+			<div class="job_ad" >
+					<span>职位：<b style="color:#127db3;" onclick="window.open('http://www.wealink.com/zhiwei/view/26941834/?utm_source=baidu&utm_medium=open4&utm_campaign=opendate')">WEB前端开发工程师</b></span>
+					<span>公司：西安贝塔莱柏软件技术有限公司 </span>
+					<span>薪资：8000~10000元/月</span>
+					<span>地址：唐延路35号旺座现代城G座2201 </span>
+				</div>
+				<hr>
+				<!-- 可复用代码结束 -->
+				<div class="job_ad" >
+					<span>职位：<b style="color:#127db3;" onclick="window.open('http://jobs.zhaopin.com/633099027250027.htm?utm_source=other&utm_medium=cnt&utm_term=&utm_campaign=121114863&utm_provider=zp&sid=121114863&site=sj864')">WEB前端开发工程师(双休+五险一金+高薪)急招</b></span>
+					<span>公司：西安政通信息技术有限公司</span>
+					<span>薪资：6001-8000元/月</span>
+					<span>地址：高新区锦业路领海大厦A座604 </span>
+				</div>
+				<hr>
+				<!-- 可复用代码结束 -->
+				<div class="job_ad" >
+					<span>职位：<b style="color:#127db3;" onclick="window.open('http://xa.ganji.com/zpruanjiangongchengshi/1402886221x.htm?ca_name=baidu_open_zhaopin_001&ca_source=opendata.baidu.com')">Web前端开发工程师</b></span>
+					<span>公司：西安互动未来信息技术有限公司</span>
+					<span>薪资： 5000-8000元/月</span>
+					<span>地址：西安高新区科技一路盛方科技园B座3楼</span>
+				</div>
+			<hr>
+			<h2 class="remark_t">相关职位</h2>
+			<!-- 可复用代码 -->
+			<div class="rel_work">	<!--正在学习的用户-->
+				<div class="img_box">
+					<img src="image/user/user_01.jpg">
+				</div>
+				<div class="name_box">
+					<a href="" title="" class="clearMargin wname">前端开发工程师</a>	<!--名称-->
+					<span class="s_det">学会做那些酷炫的网页</span>	<!--签名-->
+				</div>
+			</div>
+			<!-- 可复用代码结束 -->
+			<div class="rel_work">	<!--正在学习的用户-->
+				<div class="img_box">
+					<img src="image/user/user_01.jpg">
+				</div>
+				<div class="name_box">
+					<a href="" title="" class="clearMargin wname">PHP工程师</a>	<!--名称-->
+					<span class="s_det">最快学会WEB开发</span>	<!--签名-->
+				</div>
+			</div>
+			<div class="rel_work">	<!--正在学习的用户-->
+				<div class="img_box">
+					<img src="image/user/user_01.jpg">
+				</div>
+				<div class="name_box">
+					<a href="" title="" class="clearMargin wname">.Net工程师</a>	<!--名称-->
+					<span class="s_det">跟着微软有饭吃</span>	<!--签名-->
+				</div>
+			</div>
+		</aside>
+		<!--附加信息结束-->
+		<!--主体内容结束-->
+	
+	<!-- 线下学习-->
+	<section id="off-Line_Learning" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<hgroup>
+			<h3>线下学习</h3>
+			<hr/>
+			<h5>如果您对线上的资源不满意，我们还精心为你推选出让您值得信赖的线下学习资源。</h5>
+		</hgroup>
+		<ul>
+			<li class="item">
+				<a>
+					<img class="img" src="<@m.path/>/image/photo/join_us3.jpg">
+					<div class="item_info">
+						<h4>西安尚学堂Java培训</h4>
+						<hr />
+						<span style="display:block;">培训周期：4个月</span>
+						<span>主讲老师：马士兵</span>
+						<p class="intro">本课程重点培养Java开发人才，学完本课程后，您不仅可以从事JavaEE开发，还可以从事手机、平板电脑、智能家电、智能汽车等设备上的软件开发。</p>
+					</div>
+				</a>
+			</li>
+			<li class="item">
+				<a>
+					<img class="img" src="<@m.path/>/image/photo/join_us3.jpg">
+					<div class="item_info">
+						<h4>网星软件Java培训</h4>
+						<hr />
+						<span style="display:block;">培训周期：5个月</span>
+						<span>主讲老师：马士兵</span>
+						<p class="intro">Java是网星软件培训成立之初最早开设的IT热门专业，作为本培训机构的精品专业，四年多以来，JavaEE这个专业一直受到IT青年热捧。</p>
+					</div>
+				</a>
+			</li>
+			<li class="item">
+				<a>
+					<img class="img" src="<@m.path/>/image/photo/join_us3.jpg">
+					<div class="item_info">
+						<h4>达内Java培训</h4>
+						<hr />
+						<span style="display:block;">培训周期：4.5个月</span>
+						<span>主讲老师：范传奇</span>
+						<p class="intro">本课程重点培养Java开发人才，学完本课程后，您不仅可以从事JavaEE开发，还可以从事手机、平板电脑、智能家电、智能汽车等设备上的软件开发。</p>
+					</div>
+				</a>
+			</li>
+			<li class="item">
+				<a>
+					<img class="img" src="<@m.path/>/image/photo/join_us3.jpg">
+					<div class="item_info">
+						<h4>北大青鸟Java培训</h4>
+						<hr />
+						<span style="display:block;">培训周期：5.5个月</span>
+						<span>主讲老师：刘滨</span>
+						<p class="intro">本课程重点培养Java开发人才，学完本课程后，您不仅可以从事JavaEE开发，还可以从事手机、平板电脑、智能家电、智能汽车等设备上的软件开发。</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</section>
+	
+	<!--评论吐槽-->
+	<div id="comment" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3 class="page-header title">尽情<span>吐槽</span>吧</h3>
+			<ul>
+			  <#list comment as li>
+				<li class="item clearfix">
+					<div class="img_box">
+						<img src="image/user/user_00.jpg" alt="头像" />
+						<span class="name">游客</span>
+					</div>
+					<p class="content">${li.text}</p>
+					<div class="other_info"><span class="zan">赞</span><span class="cai">踩</span><span class="time">${li.date}</span></div>
+				</li>
+			  </#list>
+			</ul>
+			<h3>我来吐槽</h3>
+			<div class="grade">
+				体系评分：
+				<img src="image/icon/star.png">
+				<img src="image/icon/star.png">
+				<img src="image/icon/star.png">
+				<img src="image/icon/star.png">
+				<img src="image/icon/star.png">
+			</div>
+			<div class="input-group">
+			  <input id="comment_input" type="text" class="form-control" placeholder="吐槽些什么呢~？" onkeydown="if(event.keyCode==13){submit_comment()}" />
+			  <span class="input-group-btn">
+				<button class="btn btn-default" type="button" onclick="submit_comment()">立即吐槽！</button>
+			  </span>
+			</div>
+	</div>
+
+	<!--评论吐槽结束-->
+	</div>	<!-- container -->
+	
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script type="text/javascript">
+	$(function(){
+		
+		/*使得附加信息总体高度与树的高度一样*/
+		$('#treeRemarks').height( $('#treeContent').height() );
+		 
+		/* 修正线下教育中，图片与div信息的宽度 */
+		var img_width = $('#off-Line_Learning ul img');
+		var info_width = $('#off-Line_Learning ul div.item_info');
+		fix(img_width, info_width, 'width');
+
+		/*为问题和答案添加click和显示隐藏事件*/
+		$('.tree_question').click(function(){
+			console.info(this);
+			var next = $(this).next('.tree_answer');
+			if ( next.is(':visible') ){
+				next.slideUp();
+			} else {
+				next.slideDown();
+			}
+		});
+		
+		/*为每个阶段添加提示框*/
+		$('#html_basic').popover({	//html基础
+		title : 'WEB前端基础阶段',
+		content : '这一阶段教你如何对一个网页进行简单地制作，通过学习一些简单的脚本程序，从而使让你的网页动起来。',
+		trigger : 'hover',
+		placement : 'right',
+		container : 'body'
+	});
+	$('#advance').popover({		//进阶
+		title : 'WEB前端进阶阶段',
+		content : '这一阶段通过学习当前最流行的网页制作技术，教你如何做出一个让别人都赞赏的网页。',
+		trigger : 'hover',
+		placement : 'right',
+		container : 'body'
+	});
+	$('#design').popover({		//页面设计
+		title : '界面交互设计阶段',
+		content : '这一阶段通过ps平面设计与动态flash的学习，教你如何制作一些精美的图片和炫丽的视频，从而让你的网页更加个性化。',
+		trigger : 'hover',
+		placement : 'right',
+		container : 'body'
+	});
+	$('#framework').popover({		//框架
+		title : '前端高级框架阶段',
+		content : '这一阶段通过第三方框架（包含了大量的网站制作模板与素材）的学习，教你如何快速，高效的开发一个高质量的网站。是大型企业招聘人才的重要标准之一。',
+		trigger : 'hover',
+		placement : 'right',
+		container : 'body'
+		});
+	});
+
+	/* 当窗口的大小改变时，重新修正线下学习的div.info的宽度 */
+	window.onresize=function(){
+		var img_width = $('#off-Line_Learning ul img');
+		var info_width = $('#off-Line_Learning ul div.item_info');
+		fix(img_width, info_width, 'width');
+	}  
+
+	function submit_comment(){
+		var text = $('#comment_input').val();
+		console.info(text);
+		if( $.trim(text) == '' ){
+			alert('啥都不填，你在逗我！');
+		} else {
+			$.post('<@m.path/>/comment/submit.html',{
+				jobid : '1',
+				text : text
+			},function(response, status, xhr){
+				if( response == 'ok' ){
+					console.info('oka');
+					location.reload();
+				}
+			});
+		}
+		$('#comment').val('');
+	}
+</script>

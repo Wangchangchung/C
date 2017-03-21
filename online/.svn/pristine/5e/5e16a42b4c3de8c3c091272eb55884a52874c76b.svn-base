@@ -1,0 +1,43 @@
+<!-- 该页面用于加载后续的js文件 -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<@m.path/>/js/main.js"></script>
+
+<!-- 百度统计代码（上传到远程服务器时请将注释取消） -->
+<script>
+/*
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f32fe49012b4f40430b08b1c92a369c7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+*/
+//根据不同浏览器得到可视高度
+//var windowHeight = document.all ? document.getElementsByTagName("html")[0].offsetHeight : window.innerHeight;
+var windowHeight = $(window).height() < 700 ? 700 : $(window).height();
+
+/* 修正两个元素的某个属性property，使其一致，修正原型为example，被修正元素为be_fix
+ * 为啥把它放到main.js就不起作用呢？
+ */
+function fix(example, be_fix, property){
+	console.info('example ' + property + ' : ' + example.css(property));
+	console.info('be_fix ' + property + ' : ' + be_fix.css(property));
+	be_fix.css(property, example.css(property));
+}
+
+function logout(){
+	$.ajax({
+        type: "POST",
+        cache: false,
+        url: "<@m.path/>/user/logoutAction.html",
+        success: function(response) {
+        	if( response == 'ok' ){
+        		location.reload();
+        	}
+        }
+    });
+}
+
+</script>

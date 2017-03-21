@@ -1,0 +1,336 @@
+<@m.header/>
+<link
+	href="<@m.path/>/assets/global/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css"
+	rel="stylesheet" />
+<link
+	href="<@m.path/>/assets/global/plugins/jquery-file-upload/css/jquery.fileupload.css"
+	rel="stylesheet" />
+<link
+	href="<@m.path/>/assets/global/plugins/jquery-file-upload/css/jquery.fileupload-ui.css"
+	rel="stylesheet" />
+<@m.body />
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet light">
+			<div class="portlet-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="note note-danger">
+							<p>
+								警告
+							</p>
+						</div>
+						<div class="col-md-12">
+
+							<form id="fileupload" action="upload.do" method="POST"
+								enctype="multipart/form-data">
+								<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+								<div class="row fileupload-buttonbar">
+									<div class="col-lg-7">
+										<!-- The fileinput-button span is used to style the file input field as button -->
+										<span class="btn green fileinput-button"> <i
+											class="fa fa-plus"></i> <span> 上传文件.. </span> <input
+											type="file" name="files[]" multiple accept="xls">
+										</span>
+										<button type="submit" class="btn blue start">
+											<i class="fa fa-upload"></i> <span> 开始上传 </span>
+										</button>
+										<a href="/Stu01/模板.xls" class="btn red"> <i
+											class="fa fa-ban-circle"></i> <span> 模板下载</span>
+										</a>
+										<!-- The global file processing state -->
+										<span class="fileupload-process"> </span>
+									</div>
+									<!-- The global progress information -->
+									<div class="col-lg-5 fileupload-progress fade">
+										<!-- The global progress bar -->
+										<div class="progress progress-striped active"
+											role="progressbar" aria-valuemin="0" aria-valuemax="100">
+											<div class="progress-bar progress-bar-success"
+												style="width: 0%;"></div>
+										</div>
+										<!-- The extended global progress information -->
+										<div class="progress-extended">&nbsp;</div>
+									</div>
+								</div>
+								<!-- The table listing the files available for upload/download -->
+								<table role="presentation" class="table table-striped clearfix">
+									<tbody class="files" id="show">
+									</tbody>
+								</table>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- BEGIN PAGE CONTENT-->
+	<div class="row" id="all">
+		<div class="col-md-12">
+			<div class="portlet box blue">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="fa fa-gift"></i>文件信息
+					</div>
+					<div class="actions">
+
+						<a href="javascript:;"
+							class="btn btn-circle btn-default btn-sm btn-icon-only fullscreen"
+							data-original-title="" title="全屏"></a>
+					</div>
+
+				</div>
+				<div class="portlet-body">
+					<table class="table table-striped table-bordered table-hover"
+						id="example">
+						<thead>
+							<tr>
+								<th>文件名</th>
+								<th>文件大小</th>
+								<th>文件类型</th>
+								<th>上传人</th>
+								<th>上传时间</th>
+								<th>状态</th>
+								<th>总记录数</th>
+								<th>已导入数</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<@m.footer/>
+	<script
+		src="<@m.path/>/assets/global/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/js/vendor/tmpl.min.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/js/vendor/load-image.min.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/js/vendor/canvas-to-blob.min.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/js/jquery.iframe-transport.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/js/jquery.fileupload.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/js/jquery.fileupload-process.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/js/jquery.fileupload-image.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/js/jquery.fileupload-audio.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/js/jquery.fileupload-video.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/js/jquery.fileupload-validate.js"></script>
+	<script
+		src="<@m.path/>/assets/global/plugins/jquery-file-upload/js/jquery.fileupload-ui.js"></script>
+	<script src="<@m.path/>/assets/admin/pages/scripts/form-fileupload.js"></script>
+	
+	<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+            <p class="name">{%=file.name%}</p>
+            <strong class="error text-danger label label-danger"></strong>
+        </td>
+        <td>
+            <p class="size">Processing...</p>
+            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+            </div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn blue start" disabled>
+                    <i class="fa fa-upload"></i>
+                    <span>开始</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn red cancel">
+                    <i class="fa fa-ban"></i>
+                    <span>取消</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+	<!-- The template to display files available for download -->
+	<script id="template-download" type="text/x-tmpl">
+        {% for (var i=0, file; file=o.files[i]; i++) { %}
+            <tr class="template-download fade">
+                <td>
+                    <span class="preview">
+                        {% if (file.thumbnailUrl) { %}
+                            <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
+                        {% } %}
+                    </span>
+                </td>
+                <td>
+                    <p class="name">
+                        {% if (file.url) { %}
+                            <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+                        {% } else { %}
+                            <span>{%=file.name%}</span>
+                        {% } %}
+                    </p>
+                    {% if (file.error) { %}
+                        <div><span class="label label-danger">错误</span> {%=file.error%}</div>
+                    {% } %}
+                </td>
+                <td>
+                    <span class="size">{%=o.formatFileSize(file.size)%}</span>
+                </td>
+                <td>
+                    {% if (file.deleteUrl) { %}
+                        <button class="btn red delete btn-sm" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+                            <i class="fa fa-trash-o"></i>
+                            <span>删除</span>
+                        </button>
+                        <input type="checkbox" name="delete" value="1" class="toggle">
+                    {% } else { %}
+                        <button class="btn yellow cancel btn-sm">
+                            <i class="fa fa-ban"></i>
+                            <span>取消</span>
+                        </button>
+                    {% } %}
+                </td>
+            </tr>
+        {% } %}
+    </script>
+	<script type="text/javascript">
+		var table = $('#example');
+		var oTable;
+		function initTable1() {
+			oTable = table
+					.DataTable({
+						"language" : {
+							"aria" : {
+								"sortAscending" : ": 升序排序",
+								"sortDescending" : ": 降序排序"
+							},
+							"emptyTable" : "无数据",
+							"info" : "显示 _START_ 到 _END_ 共 _TOTAL_ 条数据",
+							"infoEmpty" : "没有数据",
+							"infoFiltered" : "(共 _MAX_ 条 )",
+							"lengthMenu" : "显示 _MENU_条数据",
+							"search" : "搜索:",
+							"zeroRecords" : "未找到匹配的数据"
+						},
+						"order" : [ [ 0, 'asc' ] ],
+						"lengthMenu" : [ [ 5, 10, 15, 20, -1 ],
+								[ 5, 10, 15, 20, "全部" ] // change per page values here
+						],
+						"pageLength" : 10,
+						"dom" : "<'row' <'col-md-12'>><'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'>r><'table-scrollable't><'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>", // horizobtal scrollable datatable
+						"ajax" : "<@m.path/>/fileupload/load.do",
+						"columns" : [ {
+							"data" : "filename"
+						}, {
+							"data" : "filesize"
+						}, {
+							"data" : "filetype"
+						}, {
+							"data" : "uploader"
+						}, {
+							"data" : "uploaddate"
+						}, {
+							"data" : "flag"
+						}, {
+							"data" : "sum"
+						}, {
+							"data" : "count"
+						}, {
+							"data" : "cz"
+						} ]
+					});
+		}
+		$(function() {
+			initTable1();
+		});
+
+		function del(id) {
+			bootbox.confirm("您确定要删除该文件吗?", function(result) {
+				if (result == true) {
+					$.post("del.do", {
+						"id" : id
+					}, function(data) {
+						if (data == "ok") {
+							toastr.success("操作成功!", "成功");
+
+							oTable.ajax.reload();
+						} else {
+							toastr.error("操作失败!", "错误");
+							bootbox.alert("操作失败！信息：" + data);
+						}
+					}, "text");
+				}
+			});
+		}
+		function push(id) {
+			bootbox.confirm("您确定要导入该文件吗?", function(result) {
+				openBlock();
+				if (result == true) {
+					$.post("push.do", {
+						"id" : id
+					}, function(data) {
+						closeBlock();
+						if (data == "ok") {
+							toastr.success("导入成功!", "成功");
+							oTable.ajax.reload();
+						} else {
+							
+							toastr.error("导入失败!", "错误");
+							bootbox.alert("导入失败！ 文件内容不符合导入要求，请使用模板");
+						}
+					}, "text");
+				}
+			});
+		}
+	</script>
+
+	<script type="text/javascript">
+		$(function() {
+			
+			//初始化，主要是设置上传参数，以及事件处理方法(回调函数) 
+			$('#fileupload').fileupload({
+				autoUpload : false,//是否自动上传  
+				url : "<@m.path/>/coursevideo/upload.do",//上传地址  
+				dataType : 'json',
+				done : function(e, data) {
+					//alert(data.result.data);
+					if (data.result.data == "ok") {
+						toastr.success("上传成功!", "成功");
+						oTable.ajax.reload();
+						data.context.text('');
+					} else {
+						toastr.error(data.result.data, "上传失败");
+						oTable.ajax.reload();
+						data.context.text('');
+					}
+
+					//设置文件上传完毕事件的回调函数  
+					//toastr.success("上传成功!", "成功");
+					//oTable.ajax.reload();
+					//data.context.text('');
+				},
+				progressall : function(e, data) {
+				}
+			});
+		});
+	</script>
+	<@m.end/>

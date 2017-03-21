@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<context:component-scan base-package="cn.edu.xiyou" />
+	
+	<annotation-driven>
+		<argument-resolvers>
+			<beans:bean class="org.springframework.mobile.device.DeviceWebArgumentResolver" />
+		</argument-resolvers>
+	</annotation-driven>
+
+	<interceptors>
+		<beans:bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor" />
+	</interceptors>
+	
+	<beans:bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+  		<beans:property name="templateLoaderPath" value="/"/>
+  		<beans:property name="freemarkerSettings">
+			<beans:props>
+			<!-- 在生产环境下更新模板的间隔要根据实际情况设置，这里为开发方便设置为5秒 -->  
+				<beans:prop key="template_update_delay">5</beans:prop>
+				<beans:prop key="defaultEncoding">UTF-8</beans:prop>
+				<beans:prop key="url_escaping_charset">UTF-8</beans:prop>
+				<beans:prop key="locale">zh_CN</beans:prop>
+				<beans:prop key="boolean_format">true,false</beans:prop>
+				<beans:prop key="datetime_format">yyyy-MM-dd HH:mm:ss</beans:prop>
+				<beans:prop key="date_format">yyyy-MM-dd</beans:prop>
+				<beans:prop key="time_format">HH:mm:ss</beans:prop>
+				<beans:prop key="number_format">0.######</beans:prop>
+				<beans:prop key="whitespace_stripping">true</beans:prop>
+				<beans:prop key="classic_compatible">true</beans:prop> 
+				<beans:prop key="auto_import">/WEB-INF/Macro.html as m</beans:prop>
+			</beans:props>
+		</beans:property>
+	</beans:bean>
+	<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver" >
+	<beans:property name="order" value="10" />
+	</beans:bean>
+	<beans:bean class="org.springframework.mobile.device.view.LiteDeviceDelegatingViewResolver">
+		<beans:constructor-arg>
+			<beans:bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+				<beans:property name="contentType" value="text/html; charset=UTF-8" />
+				<beans:property name="cache" value="true" />
+				<beans:property name="requestContextAttribute" value="rc" />
+			</beans:bean>
+		</beans:constructor-arg>
+		<beans:property name="normalPrefix" value="/" />
+		<beans:property name="mobilePrefix" value="/" />
+		<beans:property name="normalSuffix" value=".html" />
+		<beans:property name="mobileSuffix" value=".html" />
+		<!-- <beans:property name="mobileSuffix" value=".mobile.html" /> -->
+	</beans:bean>
+	<beans:import resource="classpath*:controllers.xml" />
+</beans:beans>

@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>全部课程  - iCooc</title>
+<#include "html/common/top.html">
+<link href="css/all_course.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+	
+	<!--标题栏-->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearPadding" style="box-shadow:0 3px 3px #0ff;">
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:200px; background-color:#eee; border-bottom:1px solid #ddd; margin-top:65px;"></div>
+		<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:200px;background-color:#eee; border-bottom:1px solid #ddd; margin-top:65px;">
+			<h1 class="page-header">全部课程</h1>
+			<span style="display:block;">由多家知名机构和讲师提供的实用技能课程，涵盖多种类别，助你在职场中获得全新的提升。</span>
+		</div>
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:200px; background-color:#eee; margin-top:65px; border-bottom:1px solid #ddd;"></div>
+	</div>
+	<!--标题栏结束-->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:30px;"></div>
+	
+	<div class="container">
+	<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearPadding clearMargin" style="padding-left:5%; padding-right:5%;"> -->
+		<div id="classification" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 clearPadding">
+			<ul class="list-group">
+			  <li class="list-group-item active" name="all">全部课程</li>
+			  <li class="list-group-item" name="1">计算机</li>
+			  <li class="list-group-item" name="2">外国语</li>
+			  <li class="list-group-item" name="3">电子工程</li>
+			  <li class="list-group-item" name="4">经济与管理</li>
+			  <li class="list-group-item" name="5">通信与信息工程</li>
+			  <li class="list-group-item" name="6">人文社科</li>
+			  <!-- <li class="list-group-item">中小学</li>
+			  <li class="list-group-item">亲子教育</li> -->
+			  <li class="list-group-item" style="border-bottom:1px solid #0FF;" name="7">其他</li>
+			</ul>
+		</div>
+		
+		<div id="course_display" class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+			<!-- <div class="course_type_name" style="width:100%; height:50px; font-size:16px; padding-left:10px;">全部课程</div>
+			第一行
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 course_item item_first" onclick="window.open('<@m.path/>/course/show.html?id=98115c56-f029-4c14-a7de-70e423d415af')">
+				<div style="">
+					<img src="<@m.path/>/image/course/Java/JavaSE/01.png">
+					<span style="padding-top:10px; font-size:16px;">Java SE基础</span>
+					<span style="font-size:13px; color:#096;">Java体系万祖之源</span>
+					<span style="font-size:13px; margin-top:5px; color:#096;">适合人群：Java工程师、Android工程师等</span>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 course_item" onclick="window.open('<@m.path/>/course/show.html?id=8a4fe5d1-9667-4df4-8d47-6ee7dfe3919b')">
+				<div style="">
+					<img src="<@m.path/>/image/course/Java/design_model/03.png" style="width:100%; height:55%;">
+					<span style="display:block;padding-left:10px; padding-top:10px; font-size:16px;">Java 常用设计模式</span>
+					<span style="display:block;padding-left:10px; font-size:13px; color:#096;">思想与代码的碰撞</span>
+					<span style="display:block;padding-left:10px; font-size:13px; margin-top:5px; color:#096;">适合人群：Java工程师、Android工程师等</span>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 course_item" onclick="window.open('<@m.path/>/course/show.html?id=3f7ab92f-467f-4762-a316-faac21050305')">
+				<div style="">
+					<img src="<@m.path/>/image/course/Java/html_css/01.png" style="width:100%; height:55%;">
+					<span style="display:block;padding-left:10px; padding-top:10px; font-size:16px;">HTML+CSS</span>
+					<span style="display:block;padding-left:10px; font-size:13px; color:#096;">代码艺术的开始</span>
+					<span style="display:block;padding-left:10px; font-size:13px; margin-top:5px; color:#096;">适合人群：前端工程师、UI设计师等</span>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 course_item item_last" onclick="window.open('<@m.path/>/course/show.html?id=38a50ebd-bf45-4f0a-a129-676e16d69e9e')">
+				<div style="">
+					<img src="<@m.path/>/image/course/Java/javascript/01.png" style="width:100%; height:55%;">
+					<span style="display:block;padding-left:10px; padding-top:10px; font-size:16px;">JavaScript</span>
+					<span style="display:block;padding-left:10px; font-size:13px; color:#096;">让你的网页动起来~</span>
+					<span style="display:block;padding-left:10px; font-size:13px; margin-top:5px; color:#096;">适合人群：前端工程师、UI设计师等</span>
+				</div>
+			</div>
+			第一行结束
+			-->
+			
+		</div>
+	
+		<!--分页-->
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:right;">
+			<nav>
+			  <ul id="pagination" class="pagination">
+			    <li class="previous">
+			      <a href="javacript:void(0);" aria-label="Previous">
+			        <span aria-hidden="true"><<</span>
+			      </a>
+			    </li>
+			    <li class="active"><a href="javacript:void(0);">1</a></li>
+			    <li><a href="javacript:void(0);">2</a></li>
+			    <li><a href="javacript:void(0);">3</a></li>
+			    <li><a href="javacript:void(0);">4</a></li>
+			    <li><a href="javacript:void(0);">5</a></li>
+			    <li class="next">
+			      <a href="javacript:void(0);" aria-label="Next">
+			        <span aria-hidden="true">>></span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
+		</div>
+		<!--分页结束-->
+	</div>
+	
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script type="text/javascript">
+	/* 进入页面初始化参数、并加载全部课程 */
+	var type = 'all';	//记录当前选择类型
+	var page = 1;		//记录当前第几页
+	var html = '全部课程';	//记录当前类型的文本值
+	var totalPage = 0;		//记录总共有多少页
+	
+	//此处两个变量用来保存分页按钮的“上一页”和“下一页”，并在$(function(){})中初始化
+	var $first = null;	//上一页按钮
+	var $last = null;	//下一页按钮
+
+	$(function() {
+		//此处得到的两个都是类数组对象，想要拿到真正的li，得通过[0]拿到
+		$first = $('li.previous');	
+		$last = $('li.next');
+		get_course( type, page, html );
+	});
+	
+	var get_course = function(type, page, html){
+		$("#course_display").html("<div style='text-align:center'><img src='<@m.path/>/image/photo/loading.gif'/></div>");
+		$.post('course/showCourseByType.html',{
+			type : type,
+			page : page - 1,
+			async : false
+		},function(response, status, xhr){
+			if (status == 'success') {
+				var response_json = JSON.parse(response);		//将json字符串转换成js对象
+				var courses = response_json.content;
+				$("#course_display").html("<div class='course_type_name'>" + html + "</div>");
+				for( i=0; i<courses.length; i++ ){
+					$('#course_display').append("<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 course_item' onclick=\"location.href='<@m.path/>/course/show.html?id=" + courses[i].id + "'\"><div style='overflow:hidden;'><img src='<@m.path/>/" + courses[i].imageUrl + "'><span style='padding-top:10px; font-size:16px;'>" + courses[i].name + "</span><span style='font-size:13px; color:#096;'>" + courses[i].shortDesc + "</span><span style='font-size:13px; margin-top:5px; color:#096;'>适合人群：Java工程师、Android工程师等</span></div></div>");
+				}
+				totalPage = Math.ceil( response_json.totalElements/16 );	//根据总course数得到总页数
+				changePagination( totalPage, page );		//改变分页按钮，根据页数来显示有多少个按钮
+			}
+		});
+	}
+	
+	/* 根据点击的类别加载课程 */
+	$('li.list-group-item').click(function(){
+		if( !$(this).hasClass('active') ){		//如果点击的课程类别未激活
+			console.info('do something');
+			$('ul.list-group li.active').removeClass('active');		//则激活该课程类别
+			$(this).addClass('active');
+		}
+		
+		//发送数据给后台，查询对应类别的课程
+		type = $(this).attr('name');
+		html = $(this).html();
+		if( type == 'all' || type == '1' ){
+			get_course(type, 1, html);
+		} else {
+			$("#course_display").html("<div class='course_type_name'>" + html + "</div>");
+			$('#course_display').append("<div class='no_course'><font>计算机类</font>课程已开发成功，其他类别课程正在努力开发中，敬请期待...</div>");
+			changePagination(1,1);		//该类别没有课程时，让其分页按钮只显示一页
+		}
+	});
+	
+	/* 分页功能实现 */
+	$("#pagination").on('click','li',function(){
+		var $this = $(this);
+		var text = $.trim($this.text());	//拿到所点击的分页按钮的文本
+		if( text == '<<' ){		//如果点击的是上一页
+			page = page - 1;
+			get_course(type, page, html);
+		}else if ( text == '>>' ){		//如果点击的是下一页
+			page = page + 1;
+			get_course(type, page, html);
+		}else {
+			page = parseInt(text);		//必须要把字符型转换为数字型
+			get_course(type, text, html);
+		}
+	});
+	
+	//根据总页数、当前页改变分页按钮
+	function changePagination(totalPage, page){
+		while($first.next('li')[0] != $last[0]){	//移除“上一页”和“下一页”之间的所有分页按钮
+			$first.next('li').remove();
+		}
+		
+		if(page == 1){		//如果当前页为1，则“上一页”按钮不可用
+			$('li.previous').addClass('disabled');
+		} else {
+			$('li.previous').removeClass('disabled');
+		}
+		
+		if(page == totalPage){		//如果当前页为最后一页，则“下一页”按钮不可用
+			$('li.next').addClass('disabled');
+		} else {
+			$('li.next').removeClass('disabled');
+		}
+		
+		for( var i = 1; i <= totalPage; i++  ){		//然后再根据传进来的总页数，添加分页按钮
+			if( i == page ){	//并根据传进来的"当前第几页"，给第几页的分页按钮设置为active
+				$last.before("<li class='active'><a href='javacript:void(0);'>" + i + "</a></li>");
+			} else {
+				$last.before("<li><a href='javacript:void(0);'>" + i + "</a></li>");
+			}
+		}
+	}
+</script>

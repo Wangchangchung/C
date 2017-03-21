@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+
+#register_title img {
+	display:block; 
+	float:left;
+}
+#register_title .welcome {
+	float:left; 
+	margin-left:30px; 
+	font-size:24px; 
+	line-height:3; 
+	color:#333;
+}
+#register_title .back_index {
+	float:right; 
+	margin-left:0px; 
+	font-size:15px; 
+	line-height:5;
+}
+#register_content {
+	margin:30px auto;
+;
+}
+#register_content .register_process {
+	width:602px;
+	height:42px;
+	margin:30px auto;
+	background: url("../image/user/register_process.png") no-repeat scroll 0 0 transparent;
+}
+#register_content .head_item div {
+	border:1px solid #0FF;
+	text-align:center;
+	padding-bottom:20px;
+	cursor:pointer;
+	transition: 0.3s border;
+}
+#register_content .head_item div:hover {
+	border:1px solid #06F;
+}
+#register_content .head_item div span {
+	display:block;
+	text-align:center;
+	font-size:30px;
+}
+#register_content .select_item div {
+	border:1px solid #0FF;
+	text-align:center;
+	padding-bottom:20px;
+}
+#register_content .select_item div span {
+	display:block;
+	text-align:center;
+	font-size:20px;
+}
+#register_content .select_item div span.select_again {
+	background-color:#189CFB;
+	border:1px solid #06F;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	width:80%;
+	margin:2% auto;
+	font-size:20px;
+	line-height:2;
+	color:#fff;
+	cursor:pointer;
+	transition:0.3s background;
+}
+#register_content .select_item div span.select_again:hover {
+	background-color:#3ABEFD;
+}
+#register_content .valid_info {
+	position: absolute; 
+	display: inline; 
+	margin-left: 1em; 
+	color: red;
+	padding-top: 7px;
+}
+#register_content .register_submit {
+	background-color:#189CFB;
+	border:1px solid #06F;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	font-size:20px;
+	padding:8px 40px;
+	color:#fff;
+	cursor:pointer;
+	transition:0.3s background;
+}
+#register_content .register_submit:hover {
+	background-color:#3ABEFD;
+
+}

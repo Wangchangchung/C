@@ -1,0 +1,232 @@
+
+<!--课堂大杂烩-->
+<style type="text/css">
+/*课堂大杂烩*/
+#classroom div.title{
+	height:60px;
+	margin-top:60px;
+	font-size:30px;
+	line-height:1.8;
+	text-align:center;
+}
+#classroom div.title2{
+	height:40px;
+	font-size:20px;
+	line-height:1.8;
+	text-align:center;
+}
+#classroom div.scroll_tab_name ul {
+	width:720px;
+	margin:0 auto;
+}
+#classroom div.scroll_tab_name ul li {
+	width:100px;
+	height:60px;
+	display:block;
+	float:left;
+	font-size:16px;
+	padding-top:20px;
+	margin:0 10px;
+	border-bottom:3px solid #cff;
+	transition: 1s border;
+}
+#classroom div.scroll_tab_name ul li:hover {
+	border-bottom:3px solid #cce;
+}
+#classroom div.scroll_tab_name ul li.active {
+	border-bottom:3px solid #F60;
+}
+#classroom div.scroll_tab_info ul li {
+	width:1100px;
+	float:left;
+	display:block;
+	opacity:0;
+	text-align:center;
+}
+#classroom div.scroll_tab_info ul li>div {
+	width:100%;
+	height:100%;
+	padding-left:50px;
+	padding-right:50px;
+}
+#classroom div.scroll_tab_info ul li div.detail {
+	margin-top:20px;
+}
+#classroom div.scroll_tab_info ul li div.detail img {
+	border:solid #0FF 1px;
+	width:100%;
+	height:110px;
+}
+#classroom div.scroll_tab_info ul li div.detail span {
+	display:block;
+	line-height:2.2;
+	font-size:20px;
+}
+#classroom div.scroll_tab_info ul li div.detail{
+	padding:10px;
+	transition: box-shadow;
+	transition-duration:0.5s;
+}
+#classroom div.scroll_tab_info ul li div.detail:hover {
+	box-shadow: 0px 0px 20px #888888;
+}
+/*课堂大杂烩结束*/
+</style>
+<script>
+var moveul = $('#moveul');
+moveul.css('width',screen_width * 6);
+moveul.children('li').css('width',screen_width).css('text-align','center');
+</script>
+	<div id="classroom" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:700px; background-color:#cff; pa">
+
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title">合作机构<font color="#3399FF"></font></div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><hr></div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 title2">这里汇集了最全的 在线教育资源网站</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><hr></div>
+
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:500px">
+			<div class="scroll_tab_name" style="width:100%; height:50px; text-align:center;">
+				<ul class="clearPadding">
+					<a href="#tab_01" onClick="moveTab(this)"><li class="active" style="">综合类</li></a>
+					<a href="#tab_02" onClick="moveTab(this)"><li style="">IT技能类</li></a>
+					<a href="#tab_03" onClick="moveTab(this)"><li style="">考证培训类</li></a>
+					<a href="#tab_04" onClick="moveTab(this)"><li style="">外语学习类</li></a>
+					<a href="#tab_05" onClick="moveTab(this)"><li style="">求职应聘类</li></a>
+					<a href="#tab_06" onClick="moveTab(this)"><li style="">文学艺术类</li></a>
+				</ul>
+			</div>
+			<div class="scroll_tab_info" style="width:100%; height:450px; overflow:hidden; margin:0 auto;">
+				<ul id="moveul" class="clearPadding" style="list-style:outside none none; position:relative;">
+					<li class="active" name="tab_01" style="opacity:1;">
+						<div style="width:80%; margin:0 auto;">
+							<a href="http://study.163.com/" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_1/01.png"><span>网易云课堂</span>网易旗下大型在线学习平台</div></div></a>
+							<a href="http://ke.qq.com/" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_1/02.png"><span>腾讯课堂</span>专业的在线教育平台</div></div></a>
+							<a href="http://www.xuetangx.com/" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_1/03.png"><span>学堂在线</span>最大的中文慕课平台</div></div></a>
+							<a href="http://www.cnmooc.org/home/index.mooc" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_1/04.png"><span>好大学在线</span>真正的网络大学平台</div></div></a>
+							<a href="http://www.learn.kaikeba.com/" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_1/05.png"><span>ewant</span>台湾网络教育平台</div></div></a>
+							<a href="http://www.zhihuishu.com/" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_1/06.png"><span>智慧树</span>最值得信赖的中国网络互动平台</div></div></a>
+							<a href="http://xue.taobao.com/" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_1/07.png"><span>淘宝同学</span>阿里巴巴旗下的教育平台</div></div></a>
+							<a href="https://www.edx.org/" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_1/08.png"><span>edX</span>国外大型免费教育平台</div></div></a>
+						</div>
+					</li>
+					<li name="tab_02" style="">
+						<div style="width:80%; margin:0 auto;">
+							<a href="http://www.shiyanlou.com/" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_2/01.png"><span>实验楼</span>第一家免费的IT在线实验平台</div></div></a>
+							<a href="http://www.imooc.com/course/list" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_2/02.png"><span>慕课网</span>国内最大的IT技能学习平台</div></div></a>
+							<a href="http://www.bjsxt.com/download.html" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_2/03.png"><span>尚学堂培训机构</span>免费提供大量优质Java学习资源</div></div></a>
+							<a href="http://sc.chinaz.com/" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_2/04.png"><span>站长之家</span>免费提供各种网站模板资源</div></div></a>
+							<a href="http://yun.itxdl.cn/course/explore" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_2/05.png"><span>兄弟连教育</span>免费提供当前最流行的IT技术资源</div></div></a>
+							<a href="http://www.csdn.net/" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_2/06.png"><span>CSDN</span>全球最大中文IT互动社区</div></div></a>
+							<a href="http://www.learn.kaikeba.com/" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_2/07.png"><span>开课吧</span>让我们一起开始走进IT的课堂吧</div></div></a>
+							<a href="http://edu.51cto.com/" target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_2/08.png"><span>51CTO学院</span>海量免费视频供你选</div></div></a>
+						</div>
+					</li>
+					<li name="tab_03" style="">
+						<div style="width:80%; margin:0 auto;">
+							<a href="http://www.chinaacc.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_3/01.png"><span>中华会计网校</span>会计人的网上家园</div></div></a>
+							<a href="http://www.233.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_3/02.png"><span>233网校</span>综合类的考证培训平台</div></div></a>
+							<a href="http://www.edu24ol.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_3/03.png"><span>环球网校</span>中国职业培训领导者</div></div></a>
+							<a href="http://www.offcn.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_3/04.png"><span>中公教育</span>公考领袖第一品牌</div></div></a>
+							<a href="http://www.huatu.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_3/05.png"><span>华图教育</span>公务员考试的首选网站</div></div></a>
+							<a href="http://www.dongao.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_3/06.png"><span>东奥会计</span>专业会计培训网站</div></div></a>
+							<a href="http://www.exam8.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_3/07.png"><span>考试吧</span>要考试，上考试吧！</div></div></a>
+							<a href="http://www.examw.com/it/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_3/08.png"><span>中华考试网</span>全能的考试网站</div></div></a>
+						</div>
+					</li>
+					<li name="tab_04" style="">
+						<div style="width:80%; margin:0 auto;">
+							<a href="http://www.koolearn.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_4/01.png"><span>新东方在线</span>专注教育20年</div></div></a>
+							<a href="http://www.hjclass.com/course"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_4/02.png"><span>沪江英语</span>最具有亲和力的英语网站</div></div></a>
+							<a href="http://www.webi.com.cn/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_4/03.png"><span>韦博国际英语</span>高端职场英语培训</div></div></a>
+							<a href="http://www.gedu.org/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_4/04.png"><span>环球雅思</span>国内留学英语培训领军品牌</div></div></a>
+							<a href="http://cet.99sushe.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_4/05.png"><span>99宿舍</span>英语四六级查分平台</div></div></a>
+							<a href="http://exam.tingroom.com/index.php"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_4/06.png"><span>英语考试中心</span>免费提供大量的英语资源</div></div></a>
+							<a href="http://www.cet.edu.cn/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_4/07.png"><span>全国英语四六级考试网</span>四六级考试官方网站</div></div></a>
+							<a href="http://www.hlyy.in/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_4/08.png"><span>哈喽英语自学网</span>免费的英语自学网站</div></div></a>
+						</div>
+					</li>
+					<li name="tab_05" style="">
+						<div style="width:80%; margin:0 auto;">
+							<a href="http://www.zhaopin.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_5/01.png"><span>智联招聘</span>一站式专业人力资源服务</div></div></a>
+							<a href="http://www.51job.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_5/02.png"><span>前程无忧</span>找工作随时随地</div></div></a>
+							<a href="http://xa.58.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_5/03.png"><span>58同城</span>国内第一信息分类网站</div></div></a>
+							<a href="http://xa.ganji.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_5/04.png"><span>赶集网</span>专业的门户信息分类网站</div></div></a>
+							<a href="http://www.chinahr.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_5/05.png"><span>中华英才网</span>人才聚集之地</div></div></a>
+							<a href="http://www.liepin.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_5/06.png"><span>猎聘网</span>猎头推荐 成就高薪应聘</div></div></a>
+							<a href="http://www.yingjiesheng.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_5/07.png"><span>应届生求职网</span>中国应届生求职第一网站</div></div></a>
+							<a href="http://www.lagou.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_5/08.png"><span>拉勾网</span>专注于互联网招聘</div></div></a>
+						</div>
+					</li>
+					<li name="tab_06" style="">
+						<div style="width:80%; margin:0 auto;">
+							<a href="http://www.goodmood.cc/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_6/01.png"><span>好心情原创文学</span>让你时刻读书好心情</div></div></a>
+							<a href="http://www.zongheng.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_6/02.png"><span>纵横中文网</span>提供最热门的免费小说</div></div></a>
+							<a href="http://book.qq.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_6/03.png"><span>腾讯文学</span>文字之美 感动心灵</div></div></a>
+							<a href="http://www.douban.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_6/04.png"><span>豆瓣网</span>一个属于你的生活和文化平台</div></div></a>
+							<a href="http://www.zcool.com.cn/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_6/05.png"><span>站酷网</span>设计师的互动平台</div></div></a>
+							<a href="http://www.rongshuxia.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_6/06.png"><span>榕树下</span>一杯沧海 一叶知秋</div></div></a>
+							<a href="http://shijue.me/home"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_6/07.png"><span>视觉中国</span>中国领先的创意设计社区</div></div></a>
+							<a href="http://huaban.com/"   target="_blank"><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:200px"><div class="detail"><img src="image/tab_01_6/08.png"><span>花瓣网</span>发现 采集你喜欢的一切</div></div></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	
+	
+	<script type="text/javascript">
+		function moveTab(obj){
+			var moveul = $('#moveul');		//拿到移动的那个长长的ul
+			
+			var href = obj.hash;		//拿到点击的标签名的href属性
+			if( href == '#tab_01' ){		//如果是01
+				moveul.stop().animate({'left':'-' + screen.width*0 + 'px'},800,'swing',function(){});		//就将moveul移动到距离左边0个屏幕宽度的地方
+			} else if ( href == '#tab_02' ) {
+				moveul.stop().animate({'left':'-' + screen.width*1 + 'px'},800,'swing',function(){});		//就将moveul移动到距离左边1个屏幕宽度的地方
+			} else if ( href == '#tab_03' ) {
+				moveul.stop().animate({'left':'-' + screen.width*2 + 'px'},800,'swing',function(){});
+			} else if ( href == '#tab_04' ){
+				moveul.stop().animate({'left':'-' + screen.width*3 + 'px'},800,'swing',function(){});
+			} else if ( href == '#tab_05' ){
+				moveul.stop().animate({'left':'-' + screen.width*4 + 'px'},800,'swing',function(){});
+			} else {
+				moveul.stop().animate({'left':'-' + screen.width*5 + 'px'},800,'swing',function(){});
+			}
+			var activename = $('div.scroll_tab_name ul li.active');		//拿到原来激活的标签名
+			activename.removeClass('active');				//去掉原激活标签的active类
+			$(obj).children('li').addClass('active');			//为本次点击的标签名添加active类
+			
+			var activeli = $('#moveul li.active');		//拿到已经激活的标签页
+			var name = href.substr(1,6);				//去掉点击的标签名的href属性的前面的#号
+			console.info(activeli.attr('name'));
+			console.info(name);
+			if( activeli.attr('name') == name ){			//如果点击的标签名对应当前标签页
+				console.info('do nothing');			//那就啥都不干
+			} else {
+				activeli.removeClass('active');			//否则将该标签页的active类移除
+				activeli.animate({'opacity':'0.03'},1000,'swing',function(){});		//同时将其变透明
+				var unactiveli = $('#moveul li[name=' + name + ']');			//然后又拿到点击的标签名对应的标签页
+				unactiveli.addClass('active');			//为该标签页加上active类
+				unactiveli.animate({'opacity':'1'},1000,'swing',function(){});		//同时让其变为不透明
+			}
+		
+		}
+	</script>
+	<!--课堂大杂烩结束-->
+	
+<!-- 页面高度小笔记 -->
+console.info('$(window).height():' + $(window).height());      //浏览器时下窗口可视区域高度
+console.info('$(document).height():' + $(document).height());      //浏览器时下窗口文档的高度
+console.info('$(document.body).height():' + $(document.body).height());     //浏览器时下窗口文档body的高度
+console.info('$(document.body).outerHeight(true)' + $(document.body).outerHeight(true));     //浏览器时下窗口文档body的总高度 包括border padding margin
+console.info('$(window).width()' + $(window).width());      //浏览器时下窗口可视区域宽度
+console.info('$(document).width()' + $(document).width());     //浏览器时下窗口文档对于象宽度
+console.info('$(document.body).width()' + $(document.body).width());     //浏览器时下窗口文档body的高度
+console.info('$(document.body).outerWidth(true)' + $(document.body).outerWidth(true));     //浏览器时下窗口文档body的总宽度 包括border padding margin
+ 
+console.info('$(document).scrollTop()' + $(document).scrollTop());      //获取滚动条到顶部的垂直高度
+console.info('$(document).scrollLeft()' + $(document).scrollLeft());      //获取滚动条到左边的垂直宽度
+<!-- 页面高度小笔记结束 -->

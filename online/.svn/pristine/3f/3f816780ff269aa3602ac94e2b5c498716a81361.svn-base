@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>${course.name}  - EduTech</title>
+<#include "html/common/top.html">
+<link href="<@m.path/>/css/course.css" rel="stylesheet" type="text/css">		<!--课程资源展示页面css-->
+
+</head>
+
+<body style="background: #eee;">
+	<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background: #222; height:2.5em; margin-bottom: 1.5em;"></div> -->
+	<aside style="background:#fff; width:22%; height:100%; position: absolute; left:0px; display:block;bottom:0px;">
+		<!-- 右边按钮 -->
+		<a href="#" class="aside_button glyphicon glyphicon-chevron-left" style="padding-top:1em; top:45%;"> </a>
+		<div style="background: #eee; font-size: 1.4em; line-height: 2; display: block; padding-left:1em;">
+			<span class="glyphicon glyphicon-list" style="margin-right:1em;"></span>
+			课程目录
+		</div>
+		<div class="aside_content" style="background:#fff; overflow-y: auto; overflow-x:hidden; line-height: 3;">
+			<div class="chapter" style="">第一章 Java语言编程基础</div>
+			<ul>
+				<li>
+					<div class="jie" style="">1节</div>
+					<div class="name" style="">Java是什么
+						<div class="circle" style="">1</div>
+						<i class="glyphicon glyphicon-play-circle pull-right"></i>
+					</div>
+				</li>
+				<li>
+					<div class="jie" style="">2节</div>
+					<div class="name" style="">JDK的配置与安装
+						<div class="circle" style="">2</div>
+						<i class="glyphicon glyphicon-play-circle pull-right"></i>
+					</div>
+				</li>
+			</ul>
+			<div class="chapter" style="">第一章 Java语言编程基础</div>
+			<ul>
+				<li>
+					<div class="jie" style="">1节</div>
+					<div class="name" style="">Java是什么
+						<div class="circle" style="">1</div>
+						<i class="glyphicon glyphicon-play-circle pull-right"></i>
+					</div>
+				</li>
+				<li>
+					<div class="jie" style="">2节</div>
+					<div class="name" style="">JDK的配置与安装
+						<div class="circle" style="">2</div>
+						<i class="glyphicon glyphicon-play-circle pull-right"></i>
+					</div>
+				</li>
+				<li>
+					<div class="jie" style="">3节</div>
+					<div class="name" style="">Java是什么
+						<div class="circle" style="">3</div>
+						<i class="glyphicon glyphicon-play-circle pull-right"></i>
+					</div>
+				</li>
+				<li>
+					<div class="jie" style="">4节</div>
+					<div class="name" style="">JDK的配置与安装
+						<div class="circle" style="">4</div>
+						<i class="glyphicon glyphicon-play-circle pull-right"></i>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+	</aside>
+	<div class="player" style="padding-left:24%;">
+		<div class="glyphicon glyphicon-expand intro" style="font-size: 1.4em; line-height: 1; margin-top:2em; margin-bottom:1em;"> Java简介</div>
+		<div id="a1"></div>
+		
+		<script type="text/javascript" src="<@m.path/>/ckplayer/ckplayer.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			var flashvars={
+				//张盼
+				f:'http://101.28.252.152/1abf14ad00000000-1432005153-3661392905/data21/v.chuanke.com/vedio/6/2f/b1/62fb10d35ab42d5cd92e63ab144482b9.flv?auth=1431999750&start=0',
+				p:1
+				};
+			var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+			CKobject.embedSWF('<@m.path/>/ckplayer/ckplayer.swf','a1','ckplayer_a1','99%','100%',flashvars,params);	
+			function closelights(){		//关灯
+				alert(' 本演示不支持开关灯');
+			}
+			function openlights(){		//开灯
+				alert(' 本演示不支持开关灯');
+			}
+			function ckmarqueeadv(){
+				return '我日';
+			}
+		</script>
+	</div>
+
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script>
+	$(function(){
+		//console.info(document.documentElement.clientHeight + 'px');
+		$('#a1').css('height',document.documentElement.clientHeight*0.88);
+	});
+	/* 当窗口的大小改变时，改变目录的高度和浏览器大小 */
+	window.onresize=function(){
+		$('#a1').css('height',document.documentElement.clientHeight*0.88);
+	}
+</script>

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="<@m.path/>/css/homepage.css" />
+<link rel="stylesheet" href="<@m.path/>/css/simditor.css" />
+<#include "html/common/top.html">
+<title>分享圈发布</title>
+</head>
+
+<body>
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+	<div class="one">
+		<div class="personmessage col-lg-2 col-md-2 col-sm-2 col-xs-2">
+			<div class="container">
+				<div class="row">
+					<div class="someone">
+						<div class="personheader leftstyle">
+							<img class="personimg" src="<@m.path/>/image/user/user_01.jpg" />
+							<p class="textstyle">${user.name}</p>
+						</div>
+						<div class="personview">
+							<p>
+								好友(10)<span>内容(10)</span>
+							</p>
+						</div>
+					</div>
+					<!-- <div class="friends">
+						<h3>私人圈</h3>
+						<ul class="list-group">
+							<li class="friendmessage"><a href="#"> <img
+									class="col-lg-1 col-md-1 col-sm-1 col-xs-1 imagesize thumbnail"
+									src="<@m.path/>/image/person2.jpg" />
+									<p class="col-lg-2 col-md-2 col-sm-2 col-xs-2 friendtext">死亡如风</p>
+							</a></li>
+							<li class="friendmessage"><a href="#"> <img
+									class="col-lg-1 col-md-1 col-sm-1 col-xs-1 imagesize thumbnail"
+									src="<@m.path/>/image/person3.jpg" />
+									<p class="col-lg-2 col-md-2 col-sm-2 col-xs-2 friendtext">常伴吾身</p>
+							</a></li>
+							<li class="friendmessage"><a href="#"> <img
+									class="col-lg-1 col-md-1 col-sm-1 col-xs-1 imagesize thumbnail"
+									src="<@m.path/>/image/person4.jpg" />
+									<p class="col-lg-2 col-md-2 col-sm-2 col-xs-2 friendtext">吾虽浪迹天涯</p>
+							</a></li>
+							<li class="friendmessage"><a href="#"> <img
+									class="col-lg-1 col-md-1 col-sm-1 col-xs-1 imagesize thumbnail"
+									src="<@m.path/>/image/person5.jpg" />
+									<p class="col-lg-2 col-md-2 col-sm-2 col-xs-2 friendtext">却未迷失本心</p>
+							</a></li>
+							<li class="friendmessage"><a class="col-md-1"
+								style="color: white;" href="#">上一页</a><a class="col-md-1"
+								style="color: white;" href="#">下一页</a></li>
+
+
+						</ul>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div
+		class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-sm-offset-2 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-8">
+		 <div class="pageheader">
+			<!-- <p style="font-size: 15pt;">我要分享</p> -->
+		</div> 
+			<div class="posileft">
+				<form action="<@m.path/>/share/add.do" class="form-horizontal" role="form">
+					<div class="form-group">
+						<div class="col-sm-12">
+							<textarea id="editor" name="content" autofocus></textarea>
+						</div>
+					</div>
+					 <div class="form-group">
+					 <div class="col-sm-offset-5 col-sm-10">
+					<button type="submit" class="btn btn-primary btn-lg">发表喽</button>
+					</div>
+					</div>
+				</form>
+			</div>
+	</div>
+	<div class="personmessage col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		<div class="heart">
+			<h1>热搜</h1>
+		</div>
+		<div class="others">
+			<h1>沙龙</h1>
+		</div>
+		<div class="advertise">
+			<p>广告</p>
+		</div>
+	</div>
+
+</body>
+</html>
+<#include "html/common/bottom.html">
+<script type="text/javascript" src="<@m.path/>/js/simditor/module.js"></script>
+<script type="text/javascript" src="<@m.path/>/js/simditor/hotkeys.js"></script>
+<script type="text/javascript" src="<@m.path/>/js/simditor/uploader.js"></script>
+<script type="text/javascript" src="<@m.path/>/js/simditor/simditor.js"></script>
+<script type="text/javascript">
+	var editor = new Simditor({
+		textarea : $('#editor'),
+		//optional options 
+		placeholder : '',
+		defaultImage : 'images/image.png',
+		params : {},
+		url: '<@m.path/>/share/share.html',
+		tabIndent : true,
+		toolbar : true,
+		toolbarFloat : true,
+		toolbarFloatOffset : 0,
+		toolbarHidden : false,
+		pasteImage : false,
+		cleanPaste : false,
+		upload : {
+	            url : 'upload.do', //文件上传的接口地址
+	            params: null, //键值对,指定文件上传接口的额外参数,上传的时候随文件一起提交
+	            fileKey: 'image', //服务器端获取文件数据的参数名
+	            connectionCount: 3,
+	            leaveConfirm: '正在上传文件'
+		}
+	});
+
+	$("#mytab a").click(function(e) {
+		e.preventDefault();
+		$(this).tab("show");
+	});
+	$("#textcontentB1,#comment1").click(function() {
+		$("#textcontent1").show();
+		$("#textcontentB1").hide();
+	});
+	$("#textcontentB2,#comment2").click(function() {
+		$("#textcontent2").show();
+		$("#textcontentB2").hide();
+	});
+	$("#textcontentB3,#comment3").click(function() {
+		$("#textcontent3").show();
+		$("#textcontentB3").hide();
+	});
+	$("#textcontentB4,#comment4").click(function() {
+		$("#textcontent4").show();
+		$("#textcontentB4").hide();
+	});
+</script>

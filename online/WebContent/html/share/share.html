@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="<@m.path/>/css/homepage.css" />
+<#include "html/common/top.html">
+<title>分享圈</title>
+</head>
+<style>
+h1, h2, h3 {
+    margin-top: 70px;
+    margin-bottom: 10px;
+
+</style>
+<body>
+<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+    <div class="one">
+        <div class="personmessage col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <div class="container">
+                <div class="row">
+                    <div class="someone">
+                        <div class="personheader leftstyle">
+                            <img class="personimg" src="<@m.path/>/image/user/user_01.jpg" />
+                            <p class="textstyle">${user.name}</p>              	
+                        </div>
+                        <div class="personview">
+                            <p>好友(10)<span>内容(10)</span></p>
+                        </div>
+                    </div>
+                    <!-- <div class="friends">
+                        <h3>私人圈</h3>
+                        <ul class="list-group">
+                            <li class="friendmessage"><a href="#">
+                                <img class="col-lg-1 col-md-1 col-sm-1 col-xs-1 imagesize thumbnail" src="<@m.path/>/image/person2.jpg" />
+                                <p class="col-lg-2 col-md-2 col-sm-2 col-xs-2 friendtext">死亡如风</p>
+                            </a></li>
+                            <li class="friendmessage"><a href="#">
+                                <img class="col-lg-1 col-md-1 col-sm-1 col-xs-1 imagesize thumbnail" src="<@m.path/>/image/person3.jpg" />
+                                <p class="col-lg-2 col-md-2 col-sm-2 col-xs-2 friendtext">常伴吾身</p>
+                            </a></li>
+                            <li class="friendmessage"><a href="#">
+                                <img class="col-lg-1 col-md-1 col-sm-1 col-xs-1 imagesize thumbnail" src="<@m.path/>/image/person4.jpg" />
+                                <p class="col-lg-2 col-md-2 col-sm-2 col-xs-2 friendtext">吾虽浪迹天涯</p>
+                            </a></li>
+                            <li class="friendmessage"><a href="#">
+                                <img class="col-lg-1 col-md-1 col-sm-1 col-xs-1 imagesize thumbnail" src="<@m.path/>/image/person5.jpg" />
+                                <p class="col-lg-2 col-md-2 col-sm-2 col-xs-2 friendtext">却未迷失本心</p>
+                            </a></li>
+                            <li class="friendmessage"><a class="col-md-1" style="color:white;" href="#">上一页</a><a class="col-md-1" style="color:white;" href="#">下一页</a></li>
+                            
+    
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-offset-2 col-md-offset-2  col-sm-offset-2 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-8">
+    	 <h1>分享圈 </h1>
+         <button type="button" class="btn btn-success btn-lg btn-block" onclick="share()">
+      点击我也可以发表呦~ 
+   </button>
+   <#list shares as s>
+        <div class="pages">
+            <div class="posileft">
+            	
+                <div class="perinfo">
+                    <div>
+                        <img class="avatar1 thumbnail whenhover" src="<@m.path/>/image/user/user_01.jpg" />
+                        <#if (s.user)??> 
+                        <#list s.user as u>
+                        <span class="outleft2">
+                        ${u.name}
+                        </span>
+                        </#list>
+                        <#else> 
+                        <span class="outleft2">
+                        		匿名用户
+                        </span>
+						</#if> 
+                        <p class="relisetime">${s.time}<span class="left1">浏览量(1103)</span></p>
+                    </div>     
+                </div>
+                <div class="percontent">
+                    <p>${s.content}</p>
+                    <!-- <img class="contentimg" src="<@m.path/>/image/001.jpg"/> -->
+                </div>
+                <div class="pagebottom">
+                    <ul class="nav navbar-nav">
+                        <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a id="comment1">评论(223)</a></li>
+                        <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#">转发(192)</a></li>
+                        <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#">点赞(520)</a></li>
+                        <!-- <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><a href="#">简历(125)</a></li> -->
+                    </ul>
+                    <div class="textcontentB" id="textcontentB1">
+                        <input type="text" style="width:60%;" placeholder="说点什么吧。。。。"/>
+                    </div>
+                 <!--    <div class="textcontent" id="textcontent1">
+                        <form action="" method="#">
+                            <textarea cols="70" rows="3"></textarea><br /><br />
+                            <input class="btn btn-info btnposi" type="submit" value="发表" />
+                        </form>
+                    </div> -->
+                </div>
+            </div>
+        
+        </div>
+        </#list>
+        
+    </div>
+     <!--分页-->
+      <#list pages as p>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+			<nav>
+			  <ul id="pagination" class="pagination">
+			  <#if p.pre lt 0>
+			  <#else>
+			    <li class="previous">
+			      <a href="share.html?page='${p.pre}" aria-label="Previous">
+			        <span aria-hidden="true"><<</span>
+			      </a>
+			    </li>
+			   </#if>
+			   	<#list p.beginPageIndex..p.endPageIndex as c >
+			    	<#if c == p.currentPage> 
+			    	<li class="active"><a href="javacript:void(0);">${p.currentPage}</a></li>
+			    	<#else>
+			    	   <li><a href="share.html?page=${c}">${c}</a></li>
+			    	</#if>
+			    </#list>
+			  
+			<!--     <li><a href="javacript:void(0);">2</a></li>
+			    <li><a href="javacript:void(0);">3</a></li>
+			    <li><a href="javacript:void(0);">4</a></li>
+			    <li><a href="javacript:void(0);">5</a></li> -->
+			    
+			      	<#if p.next gt p.pageCount>
+			        <#else>
+			    	<li class="next">
+			        <!-- <span aria-hidden="true">>></span> -->
+			         <a href="share.html?page=${p.next}" aria-label="Next">
+			        <span aria-hidden="true">>></span>
+			      </a>
+			    </li>
+			       </#if>
+			  </ul>
+			</nav>
+		</div>
+		</#list>
+		<!--分页结束-->
+  <!--   <div class="personmessage col-lg-2 col-md-2 col-sm-2 col-xs-2">
+    	<div class="heart">
+        	<h1>热搜</h1>
+        </div>
+        <div class="others">
+        	<h1>沙龙</h1>
+        </div>
+        <div class="advertise">
+        	<p>广告</p>
+        </div>
+    </div> -->
+    
+</body>
+</html>
+<#include "html/common/bottom.html">
+<script type="text/javascript">
+    	$("#mytab a").click(function(e){
+			e.preventDefault();
+			$(this).tab("show");
+		});
+		
+		function share(){
+			location.href="<@m.path/>/share/publish.html"
+			
+		}
+		
+		
+		/* 进入页面初始化参数、并加载全部课程 */
+		var page = 1;		//记录当前第几页
+		var html = '全部课程';	//记录当前类型的文本值
+		var totalPage = 0;		//记录总共有多少页
+		
+		//此处两个变量用来保存分页按钮的“上一页”和“下一页”，并在$(function(){})中初始化
+		var $first = null;	//上一页按钮
+		var $last = null;	//下一页按钮
+
+	/* 	$(function() {
+			//此处得到的两个都是类数组对象，想要拿到真正的li，得通过[0]拿到
+			$first = $('li.previous');	
+			$last = $('li.next');
+			get_course(page, html );
+		}); */
+		
+		var get_course = function(page, html){
+			$.post('share.html',{
+				page : page - 1,
+				async : false
+			},function(response, status, xhr){
+				
+			});
+		}
+		
+		/* 分页功能实现 */
+		$("#pagination").on('click','li',function(){
+			var $this = $(this);
+			var text = $.trim($this.text());	//拿到所点击的分页按钮的文本
+			if( text == '<<' ){		//如果点击的是上一页
+				page = page - 1;
+				get_course(page, html);
+			}else if ( text == '>>' ){		//如果点击的是下一页
+				page = page + 1;
+				get_course(page, html);
+			}else {
+				page = parseInt(text);		//必须要把字符型转换为数字型
+				get_course(text, html);
+			}
+		});
+		
+		//根据总页数、当前页改变分页按钮
+		function changePagination(totalPage, page){
+			while($first.next('li')[0] != $last[0]){	//移除“上一页”和“下一页”之间的所有分页按钮
+				$first.next('li').remove();
+			}
+			
+			if(page == 1){		//如果当前页为1，则“上一页”按钮不可用
+				$('li.previous').addClass('disabled');
+			} else {
+				$('li.previous').removeClass('disabled');
+			}
+			
+			if(page == totalPage){		//如果当前页为最后一页，则“下一页”按钮不可用
+				$('li.next').addClass('disabled');
+			} else {
+				$('li.next').removeClass('disabled');
+			}
+			
+			for( var i = 1; i <= totalPage; i++  ){		//然后再根据传进来的总页数，添加分页按钮
+				if( i == page ){	//并根据传进来的"当前第几页"，给第几页的分页按钮设置为active
+					$last.before("<li class='active'><a href='javacript:void(0);'>" + i + "</a></li>");
+				} else {
+					$last.before("<li><a href='javacript:void(0);'>" + i + "</a></li>");
+				}
+			}
+		}		
+    </script>
+    

@@ -1,0 +1,385 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background:#eee;
+}
+.page-header {
+	border-bottom: 1px solid #0CF;
+}
+a{
+	color:#063;
+	transition: color;
+	transition-duration:0.5s;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:none;
+	color:#063;
+}
+
+/*大标题图片*/
+#slide {
+	margin-top:70px;
+	padding:20px; 
+	background-color:#fff; 
+	box-shadow:0px 1px 2px #BBB;
+}
+#slide h1 {
+	color:#09F; 
+	font-size:2em;
+	margin-bottom:10px;
+	padding:30px 30px 30px 40px;
+	background-color:#Eff;
+}
+#slide .money {
+	font-size:0.7em;
+	color:rgb(0, 204, 51);
+	margin-left:2em;
+}
+#slide .tree_question {
+	display:block;
+	font-size:1.15em;
+	margin-left:2em;
+	line-height: 2;
+	cursor:pointer;
+	background-size:1.7em 1.7em; 
+	padding-left:2em;
+}
+#slide .tree_answer {
+	text-indent: 2em;
+	font-size:1em;
+	margin-left:2em;
+	color:#808080;
+	line-height: 1.5;
+	display:block;
+}
+#slide .approve {
+	font-size:1.2em;
+	padding-left:2em;
+}
+#slide .approve span {
+	margin:auto 15px;
+}
+#slide .golearn a {
+	float:right;
+}
+/*大标题图片结束*/
+
+/*主题内容*/
+#treeContent {
+	width:74%; 
+	padding:10px 20px;
+	background-color:#fff; 
+	box-shadow:0px 1px 2px #BBB; 
+	margin-top:30px;
+}
+#treeContent .title {
+	font-size: 1.2em;
+	text-align: center;
+}
+#treeContent .title span {
+	border:1px solid #aaa;
+	transition:background 0.5s;
+}
+#treeContent .main {
+	position: relative;
+}
+#treeContent .item {
+	background-color:#fff; 
+	box-shadow:1px 1px 3px #0FF;
+	border:1px solid #ddd;
+	padding:20px;
+	width:40%;
+	margin:10px 0 60px 0;
+	transition:box-shadow 0.5s;
+}
+#treeContent .item:hover {
+	box-shadow:	1px 1px 15px #0FF;
+}
+#treeContent .item_l {
+	float:left;
+}
+#treeContent .item_l:before {
+	content:"";
+	height:0;
+	width:0;
+	border-top:15px solid transparent;
+	border-right:15px solid transparent;
+	border-bottom:15px solid transparent;
+	border-left:15px solid #ddd;
+	position:absolute;
+	left:40%;
+	margin-top:20px;
+}
+#treeContent .sanjiao_border_l {
+	height:0;
+	width:0;
+	border-top:15px solid transparent;
+	border-right:15px solid transparent;
+	border-bottom:15px solid transparent;
+	border-left:15px solid #fff;
+	position:absolute;
+	left:40%;
+	margin-left:-2px;
+}
+#treeContent .item_r {
+	float:right;
+	margin-bottom:80px;
+}
+#treeContent .item_r:before {
+	content:"";
+	height:0;
+	width:0;
+	border-top:15px solid transparent;
+	border-right:15px solid #ddd;
+	border-bottom:15px solid transparent;
+	border-left:15px solid transparent;
+	position:absolute;
+	right:40%;
+	margin-top:20px;
+}
+#treeContent .sanjiao_border_r {
+	height:0;
+	width:0;
+	border-top:15px solid transparent;
+	border-right:15px solid #fff;
+	border-bottom:15px solid transparent;
+	border-left:15px solid transparent;
+	position:absolute;
+	right:40%;
+	margin-right:-2px;
+}
+#treeContent .first_r {
+	margin-top:100px;
+}
+#treeContent .stage {
+	font-size: 24px;
+	margin-top:20px;
+}
+#treeContent .seq {
+	position: absolute;
+	right:50%;
+	left:50%;
+	margin-left:-17px;
+	display: block;
+	width:40px;
+	height:40px;
+	background:#5cb85c;
+	text-align: center;
+	line-height: 40px;
+	color:#fff;
+	border-radius:50%;
+	transition:background 0.5s;
+}
+#treeContent .seq:hover {
+	background:#398439;
+}
+#treeContent .stage_detail {
+	background: url('../image/icon/question.jpg') no-repeat;
+	background-size: 1em 1em;
+	width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin-left:10px;
+    vertical-align: bottom;
+}
+#treeContent .item div {
+	margin:0.6em 0 0 1em;
+}
+#treeContent .cname {
+	font-size: 17px;
+}
+#treeContent .freelook {
+	float: right;
+}
+#treeContent .line {
+	width:0;
+	height:100%;
+	border-right:5px solid #5cb85c;
+	padding-bottom:100px;
+	position:absolute;
+	z-index:0;
+	right:50%;
+	left:50%;
+	top:0;
+}
+/*附加信息*/
+#treeRemarks {
+	padding:10px; 
+	background-color:#fff; 
+	box-shadow:0px 1px 2px #BBB; 
+	float:right; 
+	margin-top:30px; 
+	overflow:hidden;
+}
+#treeRemarks .remark_t {
+	font-size:1.2em;
+	background-color:#eff; 
+	line-height:2; 
+	font-weight:500;
+	border-bottom:#0FF solid 1px; 
+	padding:10px; 
+	margin:0 0 10px 0;
+}
+#treeRemarks .job_ad {
+	padding:5px;
+	transition: background 0.5s;
+}
+#treeRemarks .job_ad:hover {
+	background-color:#ecf0f1;
+}
+#treeRemarks .job_ad b:hover {
+	cursor:pointer;
+	text-decoration: underline;
+}
+#treeRemarks .job_ad span {
+	display: block;
+	margin-bottom: 5px;
+}
+#treeRemarks .job_ad a {
+	color:#127db3;
+	font-weight: bolder;
+}
+#treeRemarks .job_ad a:hover {
+	text-decoration: underline;
+}
+#treeRemarks .rel_work {
+	height:60px;
+	padding:5px;
+	margin-bottom:5px;
+	transition: background 1s;
+}
+#treeRemarks .rel_work:hover {
+	background-color:#EEE;
+}
+#treeRemarks .img_box {
+	float:left;
+}
+#treeRemarks img {
+	width:50px; height:50px;
+}
+#treeRemarks .name_box {
+	float:left;
+	padding-left:5px;
+	padding-top:5px;
+	width:70%;
+}
+#treeRemarks .wname {
+	display: block;
+}
+#treeRemarks .wname:hover {
+	text-decoration: underline;
+}
+#treeRemarks .s_det{
+	color:#999;
+}
+/*主题内容结束*/
+
+/* 线下学习 */
+#off-Line_Learning {
+	padding:1em; 
+	background-color:#fff; 
+	box-shadow:0px 1px 2px #BBB; 
+	margin:3em 0 3em 0;
+}
+#off-Line_Learning h3 {
+	text-align:center;
+}
+#off-Line_Learning h5 {
+	text-align:center;
+	margin-bottom: 2em;
+}
+#off-Line_Learning .item {
+	width:25%;
+	float:left;
+	padding:0 1em;
+}
+#off-Line_Learning .item a {
+	box-shadow: 0px 3px 5px #ccc;
+	height:30em;
+	display:block;
+}
+#off-Line_Learning .img {
+	width:100%;
+	height:60%;
+}
+#off-Line_Learning .item_info {
+	padding:1em;
+	width:22%;
+	position: absolute;
+	background:#fff;
+	bottom:1em;
+}
+#off-Line_Learning .item_info h4 {
+	padding-top:1em;
+}
+#off-Line_Learning .item_info hr {
+	border-color:#ddd
+}
+#off-Line_Learning .item_info span {
+	display:block;
+	margin-bottom: 1em;
+}
+#off-Line_Learning .item_info .intro {
+	text-indent:2em;
+	height:0em;
+	border-left:2px solid #797C80;
+	padding-left:1em;
+	overflow: hidden;
+	transition: height 0.4s;
+}
+#off-Line_Learning a:hover .intro {
+	height:8em;
+}
+/* 评论吐槽 */
+#comment {
+	padding:20px; 
+	background-color:#fff; 
+	box-shadow:0px 1px 2px #BBB; 
+	margin-bottom:3em;
+}
+#comment .title {
+	border-bottom: none;
+}
+#comment .title span {
+	color:#0099FF;
+}
+#comment .item {
+	border-bottom:1px solid #eee;
+	padding:10px 20px;
+	position: relative;
+}
+#comment .img_box {
+	float:left;
+	text-align: center;
+}
+#comment img {
+	width:60px;
+	height:60px;
+}
+#comment .name {
+	display:block;
+}
+#comment .content {
+	margin-left:80px;
+}
+#comment .other_info {
+	position: absolute;
+	right:10px;
+	bottom:10px;
+}
+#comment .other_info span {
+	margin:0 20px;
+}
+#comment .time {
+	color:#aaa;
+}
+#comment .grade {
+	padding:10px; 
+	height:50px;
+	vertical-align: bottom;
+}
+#comment .grade img {
+	width:20px; 
+	height:20px;
+}

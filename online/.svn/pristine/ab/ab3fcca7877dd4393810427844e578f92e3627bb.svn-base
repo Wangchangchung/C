@@ -1,0 +1,22 @@
+MemcachedClient 
+1.public void setCompressEnable( booleancompressEnable )  
+设定是否压缩放入cache中的数据默认值是ture如果设定该值为true，需要设定CompressThreshold 
+
+2.public void setCompressThreshold( long compressThreshold )  
+设定需要压缩的cache数据的阈值默认值是30k  
+
+3.public void setPrimitiveAsString( booleanprimitiveAsString )  
+设置cache数据的原始类型是String .默认值是false 只有在确定cache的数据类型是string的情况下才设为true，这样可以加快处理速度。 
+
+4.public void setDefaultEncoding( String defaultEncoding )  
+当primitiveAsString为true时使用的编码转化格式默认值是utf-8 如果确认主要写入数据是中文等非ASCII编码字符，建议采用GBK等更短的编码格式 5.cache数据写入操作方法 
+	5.1.set方法 
+	将数据保存到cache服务器，如果保存成功则返回true 如果cache服务器存在同样的key，则替换之 set有5个重载方法，key和value是必须的参数，还有过期时间，hash码，value是否字符串三个可选参数 
+	5.2.add方法 
+	将数据添加到cache服务器,如果保存成功则返回true 如果cache服务器存在同样key，则返回false add有4个重载方法，key和value是必须的参数，还有过期时间，hash码两个可选参数 
+	5.3.replace方法 
+	将数据替换cache服务器中相同的key,如果保存成功则返回true  
+	如果cache服务器不存在同样key，则返回false replace有4个重载方法，key和value是必须的参数，还有过期时间，hash码两个可选参数建议分析key的规律，如果呈现某种规律有序，则自己构造hash码，提高存储效率  
+6.cache数据读取操作方法 
+使用get方法从cache服务器获取一个数据如果写入时是压缩的或序列化的，则get的
+返回会自动解压缩及反序列化 get方法有3个重载方法，key是必须的参数，hash码和value是否字符串是可选参数. 

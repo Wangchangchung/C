@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>${course.name} - iCooc</title>
+<meta name="keywords" content="${course.name},免费课程资源,最好视频教程,优质资源,最合适的课程">
+<meta name="description" content="每一门课程都提供了大量的优质的视频教程供你选择，可以选择适合自己的视频教程!">
+<#include "html/common/top.html">
+<link href="<@m.path/>/css/course.css" rel="stylesheet" type="text/css">		<!--课程资源展示页面css-->
+</head>
+
+<body style="background-color:#eee">
+
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+	
+<div class="container">
+	<!--课程介绍-->
+	<section id="introduction" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div style="padding:20px; background-color:#fff; box-shadow:0px 1px 2px #BBB;">
+			<h2 class="page-header clearMargin title">${course.name}<font size="4px" style="margin-left:50px;">${course.shortDesc }</font></h2>
+			<span style="display:block; margin-bottom:30px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${course.longDesc}</span>
+			<span style="display:block; font-size:17px; line-height:2;">适合学习该课程的职业：
+				<font style="margin-left:20px; color:#00CC33;">${course.people}</font>
+				<!-- <a class="btn btn-info" href="<@m.path/>/plan_edit.html" role="button">制作计划</a> -->
+				<a class="btn btn-info scroll_other" href="#video" role="button">观看视频</a>
+			</span>
+		</div>
+	</section>
+	<!--课程介绍结束-->
+	
+	<!--视频课程-->
+	<section id="video" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<!-- 该高度设定 0=150px; 1=320px; 2=490px; 3=660px; 每个视频宽度170px,依次累加-->
+		<div style="padding:20px; background-color:#fff; box-shadow:0px 1px 2px #BBB;">
+			<h3 class="page-header clearMargin title">课程-视频</h3>
+			<div style="padding:20px;">
+			<#if cv?size lte 0>
+				<span>@_@不好意思~ 视频还在不断更新中，请先看看别的课程吧！</span>
+			</#if>
+			<#list cv as li>
+				<!--可复用代码-->
+				<div style="width:100%; height:160px; border-bottom:1px solid #0FF; margin-bottom:15px;">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 img" style="height:95%; cursor:pointer;" onClick="window.open('<@m.path/>/coursevideo/catalog_display.html?id=${li.id}');">
+						<img src="<@m.path/>/${li.imageUrl}" style=" width:100%; height:100%;">
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 detail" style="position:relative;">
+						<span style="display:block;font-size:20px;">${li.name }</span>
+						<div style="width:100%;"><span style="float:left; width:8%;">简介：</span>
+							<span title="${li.longDesc}" style="float:left; width:92%; height: 4.4em; overflow: hidden;">
+								<#if li.longDesc?length gt 200>
+									${li.longDesc?substring(0,200)}...
+								<#else>
+									${li.longDesc}
+								</#if>
+							</span>
+						</div>
+						<div style="width:100%;">
+							<span style="float:left; width:8%;">出处：</span><span style="float:left; width:20%;">${li.source}</span>
+							<span style="float:left; width:10%;">讲师：</span><span style="float:left; width:20%;">${li.teacher}</span>
+						</div>
+						
+						<a class="btn btn-info" style="position:absolute; right:2em; bottom:-3em;" href="<@m.path/>/coursevideo/video_play.html?id=${li.id}&sectionVideoId=" target="_blank">立即学习</a>
+						<a class="btn btn-info" style="position:absolute; right:10em; bottom:-3em;" href="<@m.path/>/coursevideo/catalog_display.html?id=${li.id}" target="_blank">查看目录</a>
+					</div>
+				</div>
+				<!--可复用代码结束-->
+				</#list>
+			</div>			
+		</div>
+	</section>
+	<!--视频课程结束-->
+	
+	<!--教材与文档-->
+	<section id="book" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		<div style="padding:20px; background-color:#fff; box-shadow:0px 1px 2px #BBB;">
+			<h3 class="page-header clearMargin title">课程-课件教材</h3>
+			<div style="padding:20px; padding-top:0px; font-size:16px;">
+				<a href="http://pan.baidu.com/s/1dDElCkh" target="_blank" style="display:block; border-bottom:1px solid #9ee; padding:10px;">深入理解Java虚拟机</a>
+				<a href="http://pan.baidu.com/s/1dDElCkh" target="_blank" style="display:block; border-bottom:1px solid #9ee; padding:10px;">How to program</a>
+				<span style="display:block; position:absolute; bottom:20px; right:60px;"><a href="http://pan.baidu.com/s/1dDElCkh" target="_blank">更多...</a></span>
+			</div>
+		</div>
+	</section>
+	<section id="document" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		<div style="padding:20px; background-color:#fff; box-shadow:0px 1px 2px #BBB;">
+			<h3 class="page-header clearMargin title">课程-文档API</h3>
+			<div style="padding:20px; padding-top:0px; font-size:16px;">
+				<a href="http://pan.baidu.com/s/1hqDz8hQ" target="_blank" style="display:block; border-bottom:1px solid #9ee; padding:10px;">Java SE API（对各种类、方法、参数的说明）</a>
+				<a href="http://pan.baidu.com/s/1hqDz8hQ" target="_blank" style="display:block; border-bottom:1px solid #9ee; padding:10px;">Java EE API（提供了大量的企业级开发组件）</a>
+				<span style="display:block; position:absolute; bottom:20px; right:60px;"><a href="http://pan.baidu.com/s/1hqDz8hQ">更多...</a></span>
+			</div>
+		</div>
+	</section>
+	<!--教材与文档结束-->
+	
+	<!--开发工具-->
+	<section id="tools" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div>
+			<h3 class="page-header clearMargin title">课程-开发工具</h3>
+			<div class="detail" >
+				<img src="<@m.path/>/image/photo/eclipse.jpg">
+				<div class="info">
+					<span>Eclipse</span>
+					<span>简介：Eclipse 是一个开放源代码的、基于Java的可扩展开发平台。就其本身而言，它只是一个框架和一组服务，用于通过插件组件构建开发环境。</span>
+					<span>版本：3.6.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大小：122.1M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更新：2015-02-26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;环境：WinXP/Win7/Win8<a href="http://pan.baidu.com/s/1kTKfcn9" target="_blank" style="float:right;">点击下载</a></span>
+				</div>
+			</div>
+			<div class="detail">
+				<img src="<@m.path/>/image/photo/sts.jpg">
+				<div class="info">
+					<span>STS</span>
+					<span>简介：STS全称为Spring Tool Suite，它是由Spring公司免费提供的一款开源的基于WEB开发的一款软件；并且提供了与MyEclipse基本相同的功能，再加上是免费开源的，所以受到了广大开发者的喜爱 </span>
+					<span>版本：3.6.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大小：389.5M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更新：2015-02-26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;环境：WinXP/Win7/Win8<a href="http://pan.baidu.com/s/1kTKfcn9" target="_blank" style="float:right;">点击下载</a></span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--开发工具结束-->
+
+	</div>
+	
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">

@@ -1,0 +1,126 @@
+<@m.header/> <@m.body />
+
+<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+<!-- /.modal -->
+<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+<!-- BEGIN PAGE HEADER-->
+
+<!-- END PAGE HEADER-->
+<div class="row">
+	<div class="col-md-12">
+		<!-- BEGIN SAMPLE FORM PORTLET-->
+		<div class="portlet box green ">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-gift"></i> 添加职位
+				</div>
+				<div class="tools">
+					<a href="" class="collapse"> </a> <a href="#portlet-config"
+						data-toggle="modal" class="config"> </a> <a href="" class="reload">
+					</a> <a href="" class="remove"> </a>
+				</div>
+			</div>
+			<div class="portlet-body form">
+				<form class="form-horizontal" role="form">
+					<div class="form-body">
+						<div class="form-group">
+							<label class="col-md-3 control-label">职位名称</label>
+							<div class="col-md-9">
+								<input id=jobName type="text" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-3 control-label">行业</label>
+							<div class="col-md-9">
+								<select id="jobType" class="form-control" size="4">
+									<#list jobTypeList as jt>
+									<option value="${jt.id}">${jt.name}</option> </#list>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-3 control-label">联系方式</label>
+							<div class="col-md-9">
+								<input id="phone" type="text" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-3 control-label">工作类型</label>
+							<div class="radio-list">
+								<label class="radio-inline"> <input type="radio"
+									name="workType" value="0" checked>全职
+								</label> <label class="radio-inline"> <input type="radio"
+									name="workType" value="1"> 实习
+								</label> <label class="radio-inline"> <input type="radio"
+									name="workType" value="2"> 兼职
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-3 control-label">职位描述</label>
+							<div class="col-md-9">
+								<textarea id="longDesc" class="form-control" rows="10"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-3 control-label">薪资水平</label>
+							<div class="col-md-9">
+								<textarea id="salary" class="form-control" rows="3"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-3 control-label">工作地点</label>
+							<div class="col-md-9">
+								<textarea id="place" class="form-control" rows="3"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="form-actions">
+						<div class="row">
+							<div class="col-md-offset-3 col-md-9">
+								<button type="button" class="btn green" onclick="addcourse()">提交</button>
+								<button type="button" class="btn default">取消</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- END SAMPLE FORM PORTLET-->
+	</div>
+</div>
+<@m.footer/>
+<script type="text/javascript">
+	function addcourse() {
+		openBlock();
+		var jobName = $("#jobName").val();
+		var jobType = $("#jobType").val();
+		var phone = $("#phone").val();
+		var workType =$("input[name='workType']:checked").val();
+		var salary = $("#salary").val();
+		var longDesc = $("#longDesc").val();
+		var place = $("#place").val();
+		$.post("<@m.path/>/job/addJob.do", {
+			"jobName" : jobName,
+			"jobType" : jobType,
+			"phone" : phone,
+			"workType" : workType,
+			"salary" : salary,
+			"longDesc" : longDesc,
+			"place" : place
+		}, function(data) {
+			closeBlock();
+			if (data == "ok") {
+				toastr.success("操作成功!", "成功");
+				window.location.reload();
+			} else {
+				toastr.error("操作失败!", "错误");
+				bootbox.alert("操作失败！信息：" + data);
+			}
+		}, "text");
+	}
+</script>
+
+
+<@m.end/>

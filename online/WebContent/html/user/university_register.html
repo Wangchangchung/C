@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用户注册</title>
+<#include "html/common/top.html">
+<link href="<@m.path/>/css/user_register.css" rel="stylesheet" type="text/css">		<!--用户登录页面css-->
+
+</head>
+
+<body style="background-color:#eee">
+
+	<section id="register_title" class="box_shadow">
+		<div class="container">
+			<img src="../image/index/logo_light.png">
+			<div class="welcome">欢迎注册</div>
+			<div class="back_index"><a href="<@m.path/>/index.html">返回首页-></a></div>
+		</div>
+	</section>
+
+	<section id="register_content" class="container">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box_shadow">
+			<h4 class="page-header" style="padding-left:3%;">注册新账号</h4>
+			<div class="register_process"></div>
+			
+			<!--大学生类型-->
+			<div class="university_page" style="width:90%; margin:0 auto;">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 select_item">
+					<div>
+						<img src="<@m.path/>/image/user/university.jpg" style="width:70%;">
+						<span>我是<font color="#189CFB">大学生</font></span>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="padding-top:20px;">
+					<form id="university_form" class="form-horizontal" action="<@m.path/>/user/submit.html" method="post" onsubmit="return register();">
+					<input type="hidden" name="type" value="1" />
+					  <div id="username" class="form-group has-feedback">
+						<label class="col-sm-2 control-label">注册邮箱</label>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						  <input type="text" class="form-control" placeholder="Email" onBlur="username_validate();" name="email" autofocus="autofocus">
+						  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						</div>
+						<div id="username_info" class="valid_info"></div>
+					  </div>
+					  
+					  <div id="emailCode" class="form-group has-feedback">
+						<label class="col-sm-2 control-label">邮箱验证码</label>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						  <input type="text" class="form-control" placeholder="Identifying Code" onBlur="emailCode_validate();" name="emailCode">
+						  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						</div>
+						<button class="btn btn-info" style="float:left; margin-right:15px;" onclick="get_emailCode();">获取验证码</button>
+						<div id="emailCode_info" class="valid_info"></div>
+					  </div>
+					  
+					  <div id="name" class="form-group has-feedback">
+						<label class="col-sm-2 control-label">昵称</label>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						  <input type="text" class="form-control" placeholder="Name" onBlur="name_validate();" name="name">
+						  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						</div>
+						<div id="name_info" class="valid_info"></div>
+					  </div>
+					  
+					  <div id="password" class="form-group has-feedback">
+						<label class="col-sm-2 control-label">密码</label>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						  <input type="password" class="form-control" placeholder="Password" onBlur="password_validate();" name="password" value="">
+						  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						</div>
+						<div id="password_info" class="valid_info"></div>
+					  </div>
+					  
+					  <div id="password_confirm" class="form-group has-feedback">
+						<label class="col-sm-2 control-label">确认密码</label>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						  <input type="password" class="form-control" placeholder="Password Confirm" onBlur="password_confirm_validate();">
+						  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						</div>
+						<div id="password_confirm_info" class="valid_info"></div>
+					  </div>
+					  
+					  <div id="university" class="form-group has-feedback">
+						<label class="col-sm-2 control-label">所在高校</label>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						  <input type="text" class="form-control" placeholder="University" onBlur="university_validate();" name="text1">
+						  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						</div>
+						<div id="university_info" class="valid_info"></div>
+					  </div>
+					  
+					  <div id="major" class="form-group has-feedback">
+						<label class="col-sm-2 control-label">专业</label>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						  <input type="text" class="form-control" placeholder="Major" onBlur="major_validate();" name="text2">
+						  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						</div>
+						<div id="major_info" class="valid_info"></div>
+					  </div>
+					  
+					  <div id="accept" class="form-group">
+						<div class="col-sm-offset-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						  <div class="checkbox" style="padding-left:7%;">
+							  <input type="checkbox" onChange="accept_validate()">我已经阅读并接受<a href="#"> 《EduTech用户协议》</a>
+							  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						  </div>
+						</div>
+						<div id="accept_info" class="valid_info"></div>
+					  </div>
+					  
+					  <div class="form-group" style="">
+						<div class="col-sm-offset-2 col-sm-10">
+							<input id="submit" type="submit" class="btn btn-info btn-lg" value="确定注册"></input>
+						</div>
+					  </div>
+					  
+					</form>
+				</div>
+			</div>
+			<!--大学生类型结束-->
+			
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-top:1px solid #0FF; margin-top:3%; text-align:center; line-height:3;">已有账号？<a href="<@m.path/>/user/login.html">立即登陆</a></div>
+		</div>
+	</section>
+	
+	<!--版权信息-->
+	<section id="copyright" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box_shadow" style="background-color:#fff; color:#666; padding-top:2%;">
+		<p style="font-size:12px">本站资源属于他站资源。本站所有的资源版权归原作者属有，未得到原作者授权下，请勿把本站资源用于商业用途。</p>
+		<p style="font-size:12px">
+			感谢各互联网门户所提供的资源。
+		</p>
+	</section>
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script type="text/javascript">
+	var username;
+	var password;
+	var university;
+	var major;
+	var name;
+	
+	var animation; //用户存储x秒后重新获取验证码的动画
+
+	$(function (){
+		//清空表单中的信息
+		$("div#username input").val("");
+		$("div#emailCode input").val("");
+		$("div#password input").val("");
+		$("div#password_confirm input").val("");
+		$("div#university input").val("");
+		$("div#major input").val("");
+		$("div#password_confirm input").val("");
+		$("div#name input").val("");
+	});
+	
+	//提交注册，当所有验证都通过时，才准许提交
+	function register(){
+		//$("#submit").disable();
+		var register = username_validate() && emailCode_validate() && password_validate() && password_confirm_validate() && university_validate() && major_validate() && accept_validate();
+		return register;
+	}
+	
+	//验证用户名（邮箱）
+	function username_validate(){
+		username = $.trim( $('div#username input').val() );
+		if( username == '' ){
+			$('div#username input').val( username );		//将去掉空白符的值重新设入输入域
+			return change_validate_style('toError','#username','注册邮箱不能为空！');
+		} else if ( !isEmail(username) ){
+			return change_validate_style('toError','#username','注册邮箱不符合规定哦！');
+		} else if ( emailExist(username) ){
+			return change_validate_style('toError','#username','注册邮箱已存在！');
+		}else {
+			return change_validate_style('toSuccess','#username','');
+		}
+		
+	}
+	
+	//邮箱正则表达式
+	function isEmail(str){
+		var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+		return reg.test(str);
+	}
+	
+	//查看邮箱是否已存在
+	function emailExist(username){
+		var flag;
+	    $.ajax({
+	        type: "POST",
+	        cache: false,
+	        data: "email=" + username,
+	        async: false,		//此处设值为同步，我也想弄异步，但是会有好多问题，比如emailExist()方法就无法返回boolean值了，因为在username_validate()中要用到该方法的执行结果。
+	        url: "<@m.path/>/user/checkUserName.html",
+	        success: function(response) {
+	        	if( response == 'error' ){
+					flag = false;
+				}else if( response == 'ok' ){
+					flag = true;
+				}
+	        }
+	    });
+	    return flag; 
+	}
+	
+	//验证码是否已填
+	function emailCode_validate(){
+		emailCode = $.trim( $('div#emailCode input').val() );
+		if( emailCode == '' ){
+			$('div#emailCode input').val('');
+			return change_validate_style('toError','#emailCode','缺少验证码！');
+		} else {
+			return change_validate_style('toSuccess','#emailCode','');
+		}
+	}
+	
+	//获取验证码
+	function get_emailCode(){
+		if( $.trim( $('div#username input').val() ) == '' ){
+			change_validate_style('toError','#emailCode','请先填写注册邮箱！');
+			change_validate_style('toError','#username','注册邮箱不能为空！');
+		} else if( username_validate() ){
+			$.post('<@m.path/>/user/sendCode.html',{
+				email : username
+			},function(response){
+				console.info(response);
+			});
+			$('#emailCode button').attr("disabled",true);
+			var second = 60;
+			animation = setInterval(function(){
+				$('#emailCode button').html(second + '秒后重新获取');
+				second-=1;
+				if( second == 0 ){
+					animation = clearInterval(animation);
+					$('#emailCode button').removeAttr("disabled");
+					$('#emailCode button').html('获取验证码');
+				}
+			}, 1000);
+			
+		}
+	}
+	
+	//验证密码
+	function password_validate(){
+		password = $.trim( $('div#password input').val() );
+		if( password == '' ){
+			$('div#password input').val('');
+			return change_validate_style('toError','#password','密码不能为空！');
+		} else if ( password.length < 6 ){
+			return change_validate_style('toError','#password','密码太短啦，至少6位！');
+		} else if ( password.length > 18 ){
+			return change_validate_style('toError','#password','密码太长啦，至多18位！');
+		}else {
+			return change_validate_style('toSuccess','#password','');
+		}
+	}
+	
+	//验证确认密码
+	function password_confirm_validate(){
+		var confirm_password = $.trim( $('div#password_confirm input').val() );
+		password = $.trim( $('div#password input').val() );
+		if (confirm_password == '') {
+			return change_validate_style('toError','#password_confirm','验证密码不能为空！');
+		}else if( confirm_password != password ){
+			return change_validate_style('toError','#password_confirm','两次密码输入不一致！');
+		} else {
+			return change_validate_style('toSuccess','#password_confirm','');
+		}
+	}
+	
+	//验证所在高校
+	function university_validate(){
+		university = $.trim( $('div#university input').val() );
+		if( university == '' ){
+			$('div#university input').val( university );		//将去掉空白符的值重新设入输入域
+			return change_validate_style('toError','#university','这里一定要输入哦！');
+		} else {
+			return change_validate_style('toSuccess','#university','');
+		}
+	}
+	
+	//验证昵称
+	function name_validate(){
+		name = $.trim( $('div#name input').val() );
+		if( name == '' ){
+			$('div#name input').val( name );		//将去掉空白符的值重新设入输入域
+			return change_validate_style('toError','#name','这里一定要输入哦！');
+		} else {
+			return change_validate_style('toSuccess','#name','');
+		}
+	}
+	
+	//验证专业
+	function major_validate(){
+		major = $.trim( $('div#major input').val() );
+		if( major == '' ){
+			$('div#major input').val( major );		//将去掉空白符的值重新设入输入域
+			return change_validate_style('toError','#major','这里一定要输入哦！');
+		} else {
+			return change_validate_style('toSuccess','#major','');
+		}
+	}
+	
+	//检测是否勾选 《用户注册协议》
+	function accept_validate(){
+		if( $('#accept input').is(":checked") == false ){
+			console.info('toError');
+			return change_validate_style('toError','#accept','请勾选用户注册协议！');
+		} else {
+			console.info('toSuccess');
+			return change_validate_style('toSuccess','#accept','');
+		}
+	}
+	
+	//改变输入框样式、图标、错误信息的封装方法
+	function change_validate_style(type, id, info){
+		if( type == 'toError' ){
+			$(id + '_info').html(info);		//显示错误信息
+			$(id).addClass('has-error');		//让输入框变红
+			$(id + ' span').removeClass('glyphicon-ok');		//移除勾号图标
+			$(id + ' span').addClass('glyphicon-remove');		//添加叉号图标
+			$(id + ' span').css('color','#A94442');			//让图标变为红色
+			return false;
+		} else if ( type == 'toSuccess' ){
+			$(id + '_info').html(info);		//显示错误信息
+			$(id + '').removeClass('has-error');	//让输入框变回蓝色
+			$(id + ' span').removeClass('glyphicon-remove');	//移除叉号
+			$(id + ' span').addClass('glyphicon-ok');			//添加勾号
+			$(id + ' span').css('color','#66AFE9');			//让图标变回蓝色
+			return true;
+		}
+	}
+</script>

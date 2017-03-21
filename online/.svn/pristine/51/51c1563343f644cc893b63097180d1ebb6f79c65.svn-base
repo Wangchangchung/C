@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>编辑用户信息</title>
+<#include "html/common/top.html">
+<link href="<@m.path/>/css/user_info.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body style="background-color:#eee;">
+
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+	
+	<!--标题栏-->
+	<div id="user_info_title" class="container" style="box-shadow:0px 1px 2px #BBB; margin-top:65px; background-color:#fff; height:16em; width:100%;">
+		<div class="container">
+			<img src="<@m.path/>/image/user/user_01.jpg" class="img-thumbnail" style="width:10em; height:10em; margin-top:2.5em; float: left; box-shadow:0px 1px 2px #BBB; ">
+			<div style="float:left; margin-left:2em; margin-top:5em;">
+				<span style="font-size: 2em;">${user.name}</span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="user_info_content" class="container" style="margin-top:2em;">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:#fff; box-shadow:0px 1px 2px #BBB; padding:1em;">
+			<div style="padding:1em;">
+		<form class="form-horizontal" role="form" action="<@m.path/>/user/update.html">
+		<input type="hidden" name="id" value="${user.id}">
+   <div class="form-group">
+      <label for="firstname" class="col-sm-2 control-label">昵称</label>
+      <div class="col-sm-3">
+         <input type="text" class="form-control" name="name" value="${user.name}">
+      </div>
+   </div> 
+   <div class="form-group">
+      <label for="lastname" class="col-sm-2 control-label">所在高校</label>
+      <div class="col-sm-3">
+         <input type="text" class="form-control" value="${user.university}" name="university">
+      </div>
+   </div>
+   <div class="form-group">
+      <label for="lastname" class="col-sm-2 control-label">所在专业</label>
+      <div class="col-sm-3">
+         <input type="text" class="form-control" value="${user.major}" name="major">
+      </div>
+   </div>
+   <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+         <button type="submit" class="btn btn-default">确认</button>
+      </div>
+   </div>
+</form>
+			</div>
+		</div>
+	</div>
+	
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script type="text/javascript">
+	$(function() {
+		console.info(screen.height);
+		$('#user_info_content').height(screen.height*0.6);
+	});
+</script>

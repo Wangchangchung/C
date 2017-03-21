@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+#plan table th, #plan table td {
+	width:14.28%;
+}
+#plan table th div {
+	padding:1em;
+	text-align: center;
+	border:1px solid #eee;
+	background: #eee;
+}
+#plan table td {
+	
+}
+#plan table td:hover {
+	
+}
+#plan table td div.item {
+	padding:0.2em;
+	border:1px solid #eee;
+	width:100%;
+	height:8em;
+}
+#plan table td div.rest {	/* 休息日 */
+	background-color:#fef;
+}
+#plan table td div.past {	/* 上个月的 */
+	opacity:0.4;
+}
+#plan table td div.now {	/* 本月 */
+	transition: background 0.8s;
+}
+#plan table td div.now:hover {
+	background-color:#eee;
+}
+#plan table td div.item span {
+	display:block;
+	text-align:right;
+}
+#plan table td div.item ul {
+	padding-left:1em;
+	margin-top:1em;
+}
+#plan table td div.item ul li {
+	list-style-type:none;
+}
+#plan table td div.item ul li div.circle {
+	width:0.6em;
+	height:0.6em;
+	background-color:#f0f;
+	border:1px solid #eee;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	margin:0.5em 0.5em 0 0; 
+	float:left;
+}
+#plan table td div.item div.button {
+	text-align:center;
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>计划制作</title>
+<#include "html/common/top.html">
+<link href="css/plan.css" rel="stylesheet" type="text/css">		<!--本页面所需的单独css-->
+
+</head>
+
+<body style="background-color:#eee">
+
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+	
+	<div class="container">		<!-- 该container包含标题栏、树、附加信息及吐槽评论 -->
+		<!--计划类型选择-->
+		<div id="model_select" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:70px;background-color:#fff; box-shadow:0px 1px 2px #BBB; padding:1em;">
+			<h3 style="padding-left:2em;">计划模式选择</h3>
+			<hr />
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:2em;">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div style="border:1px solid #eee; height:300px;">
+
+						学霸模式
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div style="border:1px solid #eee; height:300px;">
+						普通模式
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div style="border:1px solid #eee; height:300px;">
+						懒散模式
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:2em;">
+				<form class="form-horizontal">
+				  <div class="form-group">
+				    <label for="inputEmail3" class="col-sm-2 control-label">提醒频率：</label>
+				    <div class="col-sm-10">
+						<label class="radio-inline">
+							<input type="radio" name="remind" id="remind1" value="1" checked> 每天一次
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="remind" id="remind2" value="2"> 两天一次
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="remind" id="remind3" value="3"> 三天一次
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="remind" id="remind4" value="4"> 每周一次
+						</label>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="inputPassword3" class="col-sm-2 control-label">每日学习日期：</label>
+				    <div class="col-sm-10">
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="plan_date0" value="0"> 周天
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="plan_date1" value="1" checked> 周一
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="plan_date2" value="2" checked> 周二
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="plan_date3" value="3" checked> 周三
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="plan_date4" value="4" checked> 周四
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="plan_date5" value="5" checked> 周五
+						</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="plan_date6" value="6"> 周六
+						</label>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				  	<label for="inputPassword3" class="col-sm-2 control-label">每日学习时长：</label>
+				  	<div class="col-sm-10">
+						<label class="radio-inline">
+						  <input type="radio" name="time" id="time1" value="1"> 半小时
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="time" id="time2" value="2" checked> 一小时
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="time" id="time3" value="3"> 一个半小时
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="time" id="time4" value="4"> 俩小时
+						</label>
+				  	</div>
+				  </div>
+				  <div class="form-group">
+				    <div class="col-sm-offset-2 col-sm-10">
+				      <a class="btn btn-default scroll_other" href="#plan" role="button">确认选择-开始制定</a>
+				    </div>
+				  </div>
+				</form>
+			</div>
+		</div>
+		<!--计划类型选择结束-->
+	
+		<!--计划进度及每日任务-->
+		<div id="plan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:1em; background-color:#fff; box-shadow:0px 1px 2px #BBB; margin-top:30px;">
+			<h3 style="padding-left:2em;">计划进度</h3>
+			<hr />
+			<table style="width: 100%;">
+				<!-- 表头 -->
+				<tr>
+					<th><div>周日</div></th>
+					<th><div>周一</div></th>
+					<th><div>周二</div></th>
+					<th><div>周三</div></th>
+					<th><div>周四</div></th>
+					<th><div>周五</div></th>
+					<th><div>周六</div></th>
+				</tr>
+				<!-- 表头结束 -->
+				<!-- 第一行 -->
+				<tr>
+					<td><div class="item rest past"><span>27</span>
+						
+					</div></td>
+					<td><div class="item past"><span>28</span>
+						<ul>
+							<li><div class="circle"></div>Java SE基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item past"><span>29</span>
+						<ul>
+							<li><div class="circle"></div>面向对象思想</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>30</span>
+						<ul>
+							<li><div class="circle"></div>Java继承</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>1</span>
+						<ul>
+							<li><div class="circle"></div>Java多态</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>2</span>
+						<ul>
+							<li><div class="circle"></div>异常处理</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item rest"><span>3</span>
+						
+					</div></td>
+				</tr>
+				<!-- 第一行结束 -->
+				<!-- 第二行 -->
+				<tr>
+					<td><div class="item rest"><span>4</span>
+						
+					</div></td>
+					<td><div class="item now"><span>5</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>6</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>7</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>8</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>9</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item rest"><span>10</span>
+						
+					</div></td>
+				</tr>
+				<!-- 第三行 -->
+				<tr>
+					<td><div class="item rest"><span>11</span>
+						
+					</div></td>
+					<td><div class="item now"><span>12</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>13</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item rest"><span>14</span>
+						<ul>
+							<li><div class="circle"></div>妈妈的生日，休息</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>15</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>16</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item rest"><span>17</span>
+						
+					</div></td>
+				</tr>
+				<!-- 第四行 -->
+				<tr>
+					<td><div class="item rest"><span>18</span>
+						
+					</div></td>
+					<td><div class="item now"><span>19</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>20</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>21</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>22</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>23</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item rest"><span>24</span>
+						
+					</div></td>
+				</tr>
+				<!-- 第五行 -->
+				<tr>
+					<td><div class="item rest"><span>25</span>
+						
+					</div></td>
+					<td><div class="item now"><span>26</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>27</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>28</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>29</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item now"><span>30</span>
+						<ul>
+							<li><div class="circle"></div>基本语法</li>
+						</ul>
+						
+					</div></td>
+					<td><div class="item rest"><span>31</span>
+						
+					</div></td>
+				</tr>
+				<!-- 第六行 -->
+				<tr>
+					
+				</tr>
+			</table>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center; margin-top:3em;">
+				<button type="button" class="btn btn-success btn-lg" onclick="location.href='<@m.path/>/plan_execute.html'">计划确认 > 开始执行！</button>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:right;">
+				计划不满意？<a href="#model_select" class="scroll">返回修改</a>
+			</div>
+		</div>
+		
+		<!-- <div id="plan_property" class="col-lg-2 col-md-2 col-sm-2 col-xs-2"  style="padding:1em; background-color:#fff; box-shadow:0px 1px 2px #BBB; float:right; margin-top:30px; overflow:hidden;">
+			
+		</div> -->
+		
+		<!--主体内容结束-->
+	
+	
+	
+	
+	</div>	<!-- container -->
+	
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script type="text/javascript">
+	$(function(){
+		/*使得附加信息总体高度与树的高度一样*/
+		$('#plan_property').height( $('#plan').height() );
+		
+		$('#plan div.button button').click(function(){
+			var $this = $(this);
+			var $mark = $($this.children()[0]);
+			
+			if( $this.hasClass('btn-info') ){
+				$this.removeClass('btn-info');
+				$this.addClass('btn-success');
+				$mark.removeClass('glyphicon-remove');
+				$mark.addClass('glyphicon-ok');
+				$mark.html('&nbsp;已完成');
+			} else {
+				$this.removeClass('btn-success');
+				$this.addClass('btn-info');
+				$mark.removeClass('glyphicon-ok');
+				$mark.addClass('glyphicon-remove');
+				$mark.html('&nbsp;未完成');
+			}
+		});
+	});
+</script>

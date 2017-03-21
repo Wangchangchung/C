@@ -1,0 +1,31 @@
+<!--该文件用于管理导航栏-->
+<nav id="nav" class="navbar-fixed-top">
+	<div class="container" >
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+		<a href="<@m.path/>/index.html"><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text"><img src="<@m.path/>/image/index/logo_dark.png" alt="logo"></div></a>
+		<a href="<@m.path/>/index.html"><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text">首页</div></a>
+		<a href="<@m.path/>/all_major.html" ><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text">全部专业</div></a>
+		<a href="<@m.path/>/all_job.html" ><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text">全部职业</div></a>
+		<a href="<@m.path/>/all_course.html" ><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text">全部课程</div></a>
+		<a href="<@m.path/>/share/share.html" target="_blank"><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text">分享圈</div></a>
+		<a href="http://www.sojump.com/jq/4714511.aspx" target="_blank"><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text">调查问卷</div></a>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+			<div id="login" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text">
+						<#if user??>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><strong>你好：</strong>${user.name}</a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="<@m.path/>/user/userinfo.html?id=${user.id}">个人信息</a></li> 
+                            <li><a href="<@m.path/>/user/changePassword.html?id=${user.id}">修改密码</a></li>
+                            <li class="divider"></li>
+                            <li><a href='javascript:logout();'>退出</a></li>
+                        </ul>
+                        <#else>
+                        <a class="dropdown-toggle" href="<@m.path/>/user/login.html">登录</a>
+                        </#if>	
+                          
+			</div>
+		
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+	</div>
+</nav>
+

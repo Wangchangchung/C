@@ -1,0 +1,417 @@
+/* 全局设定 */
+hr {
+	border:1px solid #0FF;
+	border-bottom:0;
+	border-right:0;
+	border-left:0;
+	width:100%;
+	display:-moz-inline-box;
+	display:inline-block;
+}
+a {
+	color:#333;
+}
+a:hover {
+	color:#333;
+}
+a.more:hover {
+	color:#aaa;
+}
+.page-header {
+	border-bottom: 1px solid #FCC;
+}
+/* 全局设定结束 */
+
+/* 共同设定 */
+@media (min-width: 768px) {
+	.slide_img {
+	}
+}
+@media (min-width: 992px) {
+	.slide_img {
+		
+	}
+}
+@media (min-width: 1200px) {
+	.slide_img {
+		height: 700px;
+	}
+}
+h1{
+	height:60px;
+	margin-top:50px;
+	font-size:2.2em;
+	line-height:1.8;
+	text-align:center;
+}
+h2{
+	font-size:1.3em;
+	margin-top:7px;
+	text-align:center;
+}
+/* 共同设定结束 */
+
+/*开篇幻灯片*/
+#slide img {
+	width:100%;
+}
+#slide h1 {
+	color:#333;
+	font-size:30px;
+	margin-bottom:1em;
+	text-shadow: none;
+}
+#slide button {
+	padding-left:40px;
+	padding-right:40px;
+	margin:50px 0 100px 0;
+	border:1px solid #aaa;
+	color:#aaa;
+	transition: background border;
+	transition-duration: 0.8s;
+}
+#slide button:hover {
+	background:#fff;
+	border:1px solid #5DC9C9;
+	color:#5DC9C9;
+}
+/*开篇幻灯片结束*/
+
+/*专业*/
+#major {
+	background: #fff;
+}
+#major .container {
+	margin-bottom:40px;
+}
+#major .item {
+	height:230px;
+}
+#major .content {
+	display:block;
+	overflow:hidden;
+	height:100%;
+	padding:1em;
+}
+#major .info {
+	background: #eee;
+	padding:2em;
+}
+#major .name {
+	margin:0 0 1em 0;
+}
+#major .desc {
+	text-indent: 2em;
+}
+#major .read_more_icon {
+	position:absolute;
+	display:block;
+	top:auto;
+	bottom:1em;
+	margin: 2em 0 0 0;
+	transition: color 0.4s;
+}
+#major .read_more_icon:hover {
+	color:#aaa;
+}
+#major .read_more {
+	font-family: '微软雅黑';
+	font-size: 1.2em;
+}
+#major .img {
+	width: 100%;
+	height:100%;
+	transition-duration: 1s;
+}
+#major .img:hover {
+	transform: scale(1.2, 1.2);
+}
+#major .img1 {
+	background: #009966;
+}
+#major .img2 {
+	background: #8fbfd2;
+}
+#major .img3 {
+	background: #428bca;
+}
+#major .img4 {
+	background: #8dc63f;
+}
+#major .img_icon {
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-0.5em 0 0 -0.5em;
+	font-size: 5em;
+	color: #fff;
+	transition: color 0.4s;
+}
+#major .content:hover .img_icon {
+	color: #aaa;
+}
+.triangle_left:before
+{
+  border: 14px solid transparent;
+  border-right-color: #eee;
+  content: '';
+  display: block;
+  height: 0px;
+  left: -28px;
+  position: absolute;
+  top: 17px;
+  width: 0px;
+  z-index: 2;
+}
+.triangle_right:before
+{
+  border: 14px solid transparent;
+  border-left-color: #eee;
+  content: '';
+  display: block;
+  height: 0px;
+  position: absolute;
+  right: -28px;
+  top: 17px;
+  width: 0px;
+  z-index: 2;
+}
+.triangle_top:before
+{
+  border: 14px solid transparent;
+  border-bottom-color: #eee;
+  content: '';
+  display: block;
+  height: 0px;
+  position: absolute;
+  right: 50%;
+  top: -28px;
+  margin-right:-14px;
+  width: 0px;
+  z-index: 2;
+}
+.triangle_bottom:before
+{
+  border: 14px solid transparent;
+  border-top-color: #eee;
+  content: '';
+  display: block;
+  height: 0px;
+  position: absolute;
+  right: 50%;
+  bottom: -28px;
+  margin-right:-14px;
+  width: 0px;
+  z-index: 2;
+}
+/*专业结束*/
+
+/*职位*/
+#job {
+	background: #eee;
+	padding:0 0 2em 0;
+}
+#job .item {
+	height:450px;
+	position: relative;
+}
+#job .to_bottom {
+	top: 4em;
+}
+#job .item_content {
+	display: block;
+	box-shadow: 0px 1px 2px #aaa;
+	text-align: center;
+	background: #fff;
+	height:100%;
+	transition: box-shadow 0.5s;
+}
+#job .item_content:hover {
+	box-shadow: 0px 0px 20px #888888;
+}
+#job .item_name {
+	font-size: 1.5em;
+	line-height: 1.8;
+}
+#job .item_img {
+	width:100%;
+	height:80%;
+}
+#job .more_job {
+	text-align: center;
+	font-size: 1.2em;
+	margin:7em 0 0 0;
+}
+/*职位结束*/
+
+/*招聘信息*/
+#work {
+	background: #fff;
+}
+#work .container {
+	margin-bottom:50px;
+}
+#work .item {
+	width:20%;
+	display:block;
+	float:left;
+	padding:1px;
+	height:170px;
+}
+#work .item_content {
+	display:block;
+	position:relative;
+	height:100%;
+	border:2px solid #fff;
+}
+#work .item_content:hover {
+	border:2px solid #98DFFF;
+}
+#work .work_info {
+	position: absolute;
+	top:70%;
+	right:0;
+	left:0;
+	text-align: center;
+}
+#work .work_icon {
+	position: absolute;
+	top:50%;
+	left:50%;
+	background: url('../image/icon/work_icon.png') no-repeat 0 0;
+	width: 56px;
+	height: 56px;
+	margin: -30px 0 0 -28px;
+}
+/*招聘信息结束*/
+
+/*课程最热门*/
+#course {
+	padding-bottom:60px;
+}
+#course .slide {
+	padding-left:0px;
+	height:440px;
+}
+#course .carousel-inner {
+	height:100%;
+}
+#course .item {
+	height:100%;
+}
+#course .item_img {
+	width:100%;
+	height:100%;
+}
+#course .tab_content_list {
+}
+#course .tab_content_li {
+	float:left;
+	width:33%;
+	height:200px;
+	padding:5px;
+}
+#course .tab_content_item {
+	background: #fff;
+	display: block;
+	text-align: center;
+	width:100%;
+	height:100%;
+	box-shadow:0px 1px 2px #BBB;
+	transition:box-shadow 0.5s;
+}
+#course .tab_content_item:hover {
+	box-shadow:0px 0px 20px #BBB;
+}
+#course .tab_item_img {
+	width:100%;
+	height:60%;
+}
+#myTabs .name {
+	font-size: 1.2em;
+}
+/*课程最热门结束*/
+
+/*关于我们*/
+#about {
+	overflow: auto;
+	background: #fff;
+}
+#about img {
+	width:100%; 
+	height:200px;
+}
+#about h4 {
+	border-bottom:none; 
+	padding-left:10%;
+}
+#about .mid {
+	border-left: 1px solid #eee; 
+	border-right: 1px solid #eee;
+}
+/*关于我们结束*/
+#friend {
+	background: #fff;
+}
+#friend h3 {
+	text-align:left;
+	padding-left: 3em;
+}
+#friend ul {
+	padding: 0 0 3em 3em;
+}
+#friend li {
+	list-style: none;
+	float: left;
+	font-size: 1em;
+	margin: 0 1em;
+}
+#friend a {
+	color: #40526b;
+	transition: 0.1s color;
+	
+}
+#friend a:hover {
+	color: #a2a2b3;
+}
+/*返回顶部*/
+.fixed_button {
+	opacity: 0.6;
+	position:fixed;
+	width:50px;
+	height:50px;
+	cursor:pointer;
+	transition-property: opacity;
+	transition-duration: 0.4s;
+}
+.fixed_button img {
+	width:100%;
+	height:100%;
+}
+.fixed_button:hover {
+	opacity: 1;
+}
+#share>div {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	width:240px;
+	opacity: 0;
+	transition-property: left opacity;
+	transition-duration: 0.4s;
+}
+#share:hover>div {
+	left:-240px;
+	opacity: 1;
+}
+#share .share_item {
+	float:left;
+	width:60px;
+	height:50px; 
+	transition-property: opacity;
+	transition-duration: 0.4s;
+}
+#share .share_item:hover {
+	opacity: 0.6;
+}
+/*返回顶部结束*/

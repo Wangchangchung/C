@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>PHP工程师 - iCooc</title>
+<meta name="keywords" content="php开发工程师,学习路线,免费职业学习路线图，职业学习规划，职业学习体系,职业规划">
+<meta name="description" content="为每一个职业提供一条详细，完整的职业学习体系以及大量的优质课程资源!">
+<#include "html/common/top.html">
+<link href="css/new_tree.css" rel="stylesheet" type="text/css">		<!--本页面所需的单独css-->
+
+</head>
+
+<body>
+
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+	
+	<div class="container">		<!-- 该container包含标题栏、树、附加信息及吐槽评论 -->
+		<!--大标题图片-->
+		<section id="slide" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h1 class="page-header clearMargin">PHP开发工程师<span class="money">平均薪金：5000~6000</span></h1>
+			<span class="my-icon-question tree_question"> 为什么要学习php？</span>
+			<p class="tree_answer" style="display:block;">PHP作为非常优秀的、简便的Web开发语言，正迎合了目前的互联网的发展趋势；和Linux，Apache，MySQL紧密结合，形成LAMP的开源黄金组合，不仅降低使用成本，还提升了开发速度，满足最新的互动式网络开发的应用，这使得php软件工程师成为一个发展迅速的职业。因此，php是一门性价比非常高的语言！</p>
+			<span class="my-icon-question tree_question"> php开发工程师能干嘛？</span>
+			<p class="tree_answer" style="display:block;">PHP可以用于服务端的脚本程序的开发；以及快速的开发一个电子商务网站；对于简单的管理信息系统也可以较快的开发出来！</p>
+			<span class="my-icon-question tree_question"> 如何成为一名php开发工程师？</span>
+			<p class="tree_answer" style="display:block;">在这里，我们列举了php工程师需要学习的所有核心技术课程，并将其融汇成了一条权威，专业的学习路线；对于想学习本体系课程的学员，尤其是零基础的学员，建议在学习的过程中一定要循序渐进的学习；在学习的过程中，要多思考、多加练习，真正做到学以致用。只要您肯努力，肯坚持；一定会成为一名出色的前端开发工程师！</p>
+
+			<div class="approve">体系认证：<span>西安交通大学</span><span>西安电子科技大学</span><span>西安邮电大学</span></div>
+			<div id="forTreeContent" class="golearn clearfix"><a href="#forTreeContent" class="scroll btn btn-success btn-lg" role="button">查看企业用人标准</a></div>
+		</section>
+		<!--大标题图片结束-->
+	
+		<!--主题内容-->
+		<article id="treeContent" class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+			<h1 class="title"><span class="btn-lg btn-success">PHP工程师 - 企业用人标准</span></h1>
+			<div class="main">
+			<div class="line"></div>
+			<ul class="clearfix">
+				<li class="item item_l">
+					<h2 class="stage page-header"><span class="seq">1</span>网页基础阶段<i id="html_basic" class="stage_detail"></i><i class="sanjiao_border_l"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=3f7ab92f-467f-4762-a316-faac21050305" target="_blank" title="HTML/CSS/JavaScript">HTML/CSS/JavaScript</a><a href="<@m.path/>/course/show.html?id=3f7ab92f-467f-4762-a316-faac21050305" target="_blank" title="HTML/CSS/JavaScript" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=1aeb6ad2-f413-4291-86d2-d9c646754217" target="_blank" title="jQuery">jQuery</a><a href="<@m.path/>/course/show.html?id=1aeb6ad2-f413-4291-86d2-d9c646754217" target="_blank" title="jQuery" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=9692b4f669df423fa6d8c6a830f3debe" target="_blank" title="HTML5 + CSS3">HTML5 + CSS3</a><a href="<@m.path/>/course/show.html?id=9692b4f669df423fa6d8c6a830f3debe" target="_blank" title="HTML5 + CSS3" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+				</li>
+				<li class="item item_r first_r">
+					<h2 class="stage page-header"><span class="seq">2</span>PHP基础阶段<i id="php_basic" class="stage_detail"></i><i class="sanjiao_border_r"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=30e158dc488f43e28a8552ce028a8ca8" target="_blank" title="php基础语法">php基础语法</a><a href="<@m.path/>/course/show.html?id=30e158dc488f43e28a8552ce028a8ca8" target="_blank" title="php基础语法" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=cad685c27d6642ffb7c4260dd0fd6b6c" target="_blank" title="php面向对象编程">php面向对象编程</a><a href="<@m.path/>/course/show.html?id=cad685c27d6642ffb7c4260dd0fd6b6c" target="_blank" title="php面向对象编程" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=7b4d890d-dc1b-4d45-b159-14c20c34df25" target="_blank" title="数据库基础">数据库基础</a><a href="<@m.path/>/course/show.html?id=7b4d890d-dc1b-4d45-b159-14c20c34df25" target="_blank" title="数据库基础" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+				</li>
+				<li class="item item_l">
+					<h2 class="stage page-header"><span class="seq">3</span>PHP中级阶段<i id="php_center" class="stage_detail"></i><i class="sanjiao_border_l"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=e79fdf7fe17e4c55801365b64da34ede" target="_blank" title="数据库连接与PDO">数据库连接与PDO</a><a href="<@m.path/>/course/show.html?id=e79fdf7fe17e4c55801365b64da34ede" target="_blank" title="数据库连接与PDO" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=0f4381f0d274475b8f155bab4a73d2ee" target="_blank" title="Web进阶与优化">Web进阶与优化</a><a href="<@m.path/>/course/show.html?id=0f4381f0d274475b8f155bab4a73d2ee" target="_blank" title="Web进阶与优化" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+				</li>
+				<li class="item item_r">
+					<h2 class="stage page-header"><span class="seq">4</span>PHP高级框架阶段<i id="php_advance" class="stage_detail"></i><i class="sanjiao_border_r"></i></h2>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=63e9c90b8c1740e98cda7cdd3d4472b7" target="_blank" title="Smarty框架">Smarty框架</a><a href="<@m.path/>/course/show.html?id=63e9c90b8c1740e98cda7cdd3d4472b7" target="_blank" title="Smarty框架" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=e0414018f0cf43b3b48092425fad1cac" target="_blank" title="BroPhp框架">BroPhp框架</a><a href="<@m.path/>/course/show.html?id=e0414018f0cf43b3b48092425fad1cac" target="_blank" title="BroPhp框架" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+					<div><a class="cname" href="<@m.path/>/course/show.html?id=a299b0c1c8f1472988897fc1d13e7a92" target="_blank" title="php项目实战">php项目实战</a><a href="<@m.path/>/course/show.html?id=a299b0c1c8f1472988897fc1d13e7a92" target="_blank" title="php项目实战" type="button" class="freelook btn btn-success btn-sm">免费观看</a></div>
+			</ul>
+			</div>
+			<h1 class="title"><span class="btn-lg btn-success">应聘BAT</span></h1>
+		</article>
+
+		
+		<!--附加信息（课程体系描述、当前有多少用户在学习等）-->
+		<aside id="treeRemarks" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<h2 class="remark_t">热门招聘信息</h2>
+			<!-- 可复用代码 -->
+			<div class="job_ad" >
+					<span>职位：<b style="color:#127db3;" onclick="window.open('http://www.wealink.com/zhiwei/view/29454267/?utm_source=baidu&utm_medium=open4&utm_campaign=opendate')">PHP工程师</b></span>
+					<span>公司：西安派森网络科技有限公司 </span>
+					<span>薪资：6000-8000元元/月</span>
+					<span>地址：唐延路35号旺座现代城G座2201 </span>
+				</div>
+				<hr>
+				<!-- 可复用代码结束 -->
+				<div class="job_ad" >
+					<span>职位：<b style="color:#127db3;" onclick="window.open('http://www.wealink.com/zhiwei/view/29455949/?utm_source=baidu&utm_medium=open4&utm_campaign=opendate')">php开发工程师</b></span>
+					<span>公司：伊顿教育 在线教育 </span>
+					<span>薪资：6000-10000元/月</span>
+					<span>地址：高新区科技二路中段高新水晶城C座1305室。（高新一中初中部向南500米） </span>
+				</div>
+				<hr>
+				<!-- 可复用代码结束 -->
+				<div class="job_ad" >
+					<span>职位：<b style="color:#127db3;" onclick="window.open('http://job.liepin.com/351_3514028?mscid=s_00_024&utm_campaign=ejob-040&utm_term=270020&utm_content=100100')">PHP开发工程师</b></span>
+					<span>公司：西安澳鹏网络科技有限公司</span>
+					<span>薪资： 12-20万/年</span>
+					<span>地址：西安高新区科技一路盛方科技园B座3楼</span>
+				</div>
+			<hr>
+			<h2 class="remark_t">相关职位</h2>
+			<!-- 可复用代码 -->
+			<div class="rel_work">	<!--正在学习的用户-->
+				<div class="img_box">
+					<img src="image/user/user_01.jpg">
+				</div>
+				<div class="name_box">
+					<a href="" title="" class="clearMargin wname">前端开发工程师</a>	<!--名称-->
+					<span class="s_det">学会做那些酷炫的网页</span>	<!--签名-->
+				</div>
+			</div>
+			<!-- 可复用代码结束 -->
+			<div class="rel_work">	<!--正在学习的用户-->
+				<div class="img_box">
+					<img src="image/user/user_01.jpg">
+				</div>
+				<div class="name_box">
+					<a href="<@m.path/>/new_tree1.html" title="Java工程师" class="clearMargin wname">Java工程师</a>	<!--名称-->
+					<span class="s_det">最快学会WEB开发</span>	<!--签名-->
+				</div>
+			</div>
+		</aside>
+		<!--附加信息结束-->
+		<!--主体内容结束-->
+	
+	<!-- 线下学习-->
+	<section id="off-Line_Learning" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<hgroup>
+			<h3>线下学习</h3>
+			<hr/>
+			<h5>如果您对线上的资源不满意，我们还精心为你推选出让您值得信赖的线下学习资源。</h5>
+		</hgroup>
+		<ul>
+			<li class="item">
+				<a>
+					<img class="img" src="<@m.path/>/image/photo/join_us3.jpg">
+					<div class="item_info">
+						<h4>西安尚学堂Java培训</h4>
+						<hr />
+						<span style="display:block;">培训周期：4个月</span>
+						<span>主讲老师：马士兵</span>
+						<p class="intro">本课程重点培养Java开发人才，学完本课程后，您不仅可以从事JavaEE开发，还可以从事手机、平板电脑、智能家电、智能汽车等设备上的软件开发。</p>
+					</div>
+				</a>
+			</li>
+			<li class="item">
+				<a>
+					<img class="img" src="<@m.path/>/image/photo/join_us3.jpg">
+					<div class="item_info">
+						<h4>网星软件Java培训</h4>
+						<hr />
+						<span style="display:block;">培训周期：5个月</span>
+						<span>主讲老师：马士兵</span>
+						<p class="intro">Java是网星软件培训成立之初最早开设的IT热门专业，作为本培训机构的精品专业，四年多以来，JavaEE这个专业一直受到IT青年热捧。</p>
+					</div>
+				</a>
+			</li>
+			<li class="item">
+				<a>
+					<img class="img" src="<@m.path/>/image/photo/join_us3.jpg">
+					<div class="item_info">
+						<h4>达内Java培训</h4>
+						<hr />
+						<span style="display:block;">培训周期：4.5个月</span>
+						<span>主讲老师：范传奇</span>
+						<p class="intro">本课程重点培养Java开发人才，学完本课程后，您不仅可以从事JavaEE开发，还可以从事手机、平板电脑、智能家电、智能汽车等设备上的软件开发。</p>
+					</div>
+				</a>
+			</li>
+			<li class="item">
+				<a>
+					<img class="img" src="<@m.path/>/image/photo/join_us3.jpg">
+					<div class="item_info">
+						<h4>北大青鸟Java培训</h4>
+						<hr />
+						<span style="display:block;">培训周期：5.5个月</span>
+						<span>主讲老师：刘滨</span>
+						<p class="intro">本课程重点培养Java开发人才，学完本课程后，您不仅可以从事JavaEE开发，还可以从事手机、平板电脑、智能家电、智能汽车等设备上的软件开发。</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</section>
+	
+	<!--评论吐槽-->
+	<div id="comment" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h3 class="page-header title">尽情<span>吐槽</span>吧</h3>
+			<ul>
+			  <#list comment as li>
+				<li class="item clearfix">
+					<div class="img_box">
+						<img src="image/user/user_00.jpg" alt="头像" />
+						<span class="name">游客</span>
+					</div>
+					<p class="content">${li.text}</p>
+					<div class="other_info"><span class="zan">赞</span><span class="cai">踩</span><span class="time">${li.date}</span></div>
+				</li>
+			  </#list>
+			</ul>
+			<h3>我来吐槽</h3>
+			<div class="grade">
+				体系评分：
+				<img src="image/icon/star.png">
+				<img src="image/icon/star.png">
+				<img src="image/icon/star.png">
+				<img src="image/icon/star.png">
+				<img src="image/icon/star.png">
+			</div>
+			<div class="input-group">
+			  <input id="comment_input" type="text" class="form-control" placeholder="吐槽些什么呢~？" onkeydown="if(event.keyCode==13){submit_comment()}" />
+			  <span class="input-group-btn">
+				<button class="btn btn-default" type="button" onclick="submit_comment()">立即吐槽！</button>
+			  </span>
+			</div>
+	</div>
+
+	<!--评论吐槽结束-->
+	</div>	<!-- container -->
+	
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script type="text/javascript">
+	$(function(){
+		
+		/*使得附加信息总体高度与树的高度一样*/
+		$('#treeRemarks').height( $('#treeContent').height() );
+		 
+		/* 修正线下教育中，图片与div信息的宽度 */
+		var img_width = $('#off-Line_Learning ul img');
+		var info_width = $('#off-Line_Learning ul div.item_info');
+		fix(img_width, info_width, 'width');
+
+		/*为问题和答案添加click和显示隐藏事件*/
+		$('.tree_question').click(function(){
+			console.info(this);
+			var next = $(this).next('.tree_answer');
+			if ( next.is(':visible') ){
+				next.slideUp();
+			} else {
+				next.slideDown();
+			}
+		});
+		
+		/*为每个阶段添加提示框*/
+		$('#html_basic').popover({	//html基础
+		title : 'WEB前端基础阶段',
+		content : '这一阶段教你如何对一个网页进行简单地制作，通过学习一些简单的脚本程序，从而使让你的网页动起来。',
+		trigger : 'hover',
+		placement : 'right',
+		container : 'body'
+	});
+		$('#php_basic').popover({		//页面设计
+			title : 'PHP基础阶段',
+			content : '这一阶段通过php基本语法与面向对象编程的学习，以及数据库基础知识，教你如何用php写出一些简单的小程序，从而让你开始逐渐走入计算机的世界！',
+			trigger : 'hover',
+			placement : 'right',
+			container : 'body'
+		});
+	$('#php_center').popover({		//进阶
+		title : 'php中级阶段',
+		content : '这一阶段通过学习PDO与web的优化，从而使得你的网站运行效率得到大大地提高。',
+		trigger : 'hover',
+		placement : 'right',
+		container : 'body'
+	});
+	
+	$('#php_advance').popover({		//框架
+		title : 'php高级框架阶段',
+		content : '这一阶段通过学习php当前流行的框架以及MVC的程序开发模式，教你如何快速，高效的开发一个高质量的网站。是大型企业招聘人才的重要标准之一。',
+		trigger : 'hover',
+		placement : 'right',
+		container : 'body'
+		});
+	});
+
+	/* 当窗口的大小改变时，重新修正线下学习的div.info的宽度 */
+	window.onresize=function(){
+		var img_width = $('#off-Line_Learning ul img');
+		var info_width = $('#off-Line_Learning ul div.item_info');
+		fix(img_width, info_width, 'width');
+	}  
+
+	function submit_comment(){
+		var text = $('#comment_input').val();
+		console.info(text);
+		if( $.trim(text) == '' ){
+			alert('啥都不填，你在逗我！');
+		} else {
+			$.post('<@m.path/>/comment/submit.html',{
+				jobid : '1',
+				text : text
+			},function(response, status, xhr){
+				if( response == 'ok' ){
+					console.info('oka');
+					location.reload();
+				}
+			});
+		}
+		$('#comment').val('');
+	}
+</script>

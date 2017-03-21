@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用户类型选择</title>
+<#include "html/common/top.html">
+<link href="../css/user_register.css" rel="stylesheet" type="text/css">		<!--用户登录页面css-->
+
+</head>
+
+<body style="background-color:#eee">
+
+	<div id="register_title" style="box-shadow:0px 1px 2px #BBB;background-color:#fff;">
+		<div class="container">
+			<img src="../image/index/logo_light.png" style="display:block; float:left;">
+			<div style="float:left; margin-left:30px;"><span style="font-size:24px; line-height:3; color:#333;">欢迎</span></div>
+			<div style="float:right; margin-left:0px;"><a href="<@m.path/>/index.html" style="font-size:15px; line-height:5;">返回首页-></a></div>
+		</div>
+	</div>
+
+	<div id="register_content" class="container" style="margin-bottom:3%;">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style=" box-shadow:0px 1px 2px #BBB;background-color:#fff; padding:2em;">
+			操作成功，正在<a href="<@m.path/>/index.html">跳转</a>（<span id="second">5</span>）...
+		</div>
+	</div>
+	
+	<!--版权信息-->
+	<div id="copyright" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:#FFF;box-shadow:0px 1px 2px #BBB; color:#666; padding-top:2%;">
+		<p style="font-size:12px">本站资源属于他站资源。本站所有的资源版权归原作者属有，未得到原作者授权下，请勿把本站资源用于商业用途。</p>
+		<p style="font-size:12px">
+			感谢各互联网门户所提供的资源。
+		</p>
+	</div>
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script type="text/javascript">
+	$(function (){
+		var second = 6;
+		var animation = setInterval(function(){
+			second-=1;
+			$('#second').html(second);
+			if( second == 0 ){
+				location.href='<@m.path/>/index.html';
+			}
+		}, 1000);
+	});
+</script>

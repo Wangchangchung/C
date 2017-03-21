@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>用户信息</title>
+<#include "html/common/top.html">
+<link href="<@m.path/>/css/user_info.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body style="background-color:#eee;">
+
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+	
+	<!--标题栏-->
+	<div id="user_info_title" class="container" style="box-shadow:0px 1px 2px #BBB; margin-top:65px; background-color:#fff; height:16em; width:100%;">
+		<div class="container">
+			<img src="<@m.path/>/${user.head}" class="img-thumbnail" style="width:10em; height:10em; margin-top:2.5em; float: left; box-shadow:0px 1px 2px #BBB; ">
+			<div style="float:left; margin-left:2em; margin-top:5em;">
+				<span style="font-size: 2em;">${user.name}</span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="user_info_content" class="container" style="margin-top:2em;">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:#fff; box-shadow:0px 1px 2px #BBB; padding:1em;">
+			<a class="glyphicon glyphicon-pencil" style="float:right;" href="/online/user/userUpdate.html?${user.id}">编辑个人信息</a>
+			<div style="padding:1em;">
+				<div class="item">
+					<span class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >昵称：</span>
+					<span class="col-lg-10 col-md-10 col-sm-10 col-xs-10" >${user.name}</span>
+				</div>
+				<div class="item">
+					<span class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >所在高校：</span>
+					<span class="col-lg-10 col-md-10 col-sm-10 col-xs-10" >${user.university}</span>
+				</div>
+				<div class="item">
+					<span class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >所学专业：</span>
+					<span class="col-lg-10 col-md-10 col-sm-10 col-xs-10" >${user.major}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script type="text/javascript">
+	$(function() {
+		console.info(screen.height);
+		$('#user_info_content').height(screen.height*0.6);
+	});
+</script>

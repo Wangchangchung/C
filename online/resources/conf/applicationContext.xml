@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                    http://www.springframework.org/schema/tx
+                    http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+                    http://www.springframework.org/schema/aop
+                    http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+                    http://www.springframework.org/schema/context
+                    http://www.springframework.org/schema/context/spring-context-3.2.xsd
+                    http://www.springframework.org/schema/data/jpa
+    				http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd
+    				http://www.springframework.org/schema/mvc 
+					http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+
+	<!--
+	值得注意的是 <context:component-scan/> 配置项不但启用了对类包进行扫描以实施注释驱动 Bean 定义的功能，
+	同时还启用了注释驱动自动注入的功能（即还隐式地在内部注册了 AutowiredAnnotationBeanPostProcessor 
+	和 CommonAnnotationBeanPostProcessor），因此当使用 <context:component-scan/> 后，就可以将 <context:annotation-config/> 移除了。
+	-->
+	<context:annotation-config />
+	<context:component-scan base-package="cn.edu.xiyou" />
+	<aop:aspectj-autoproxy />
+	<!-- 事务（注解 ）-->
+	<tx:annotation-driven  transaction-manager="transactionManager" />
+	<jpa:repositories base-package="cn.edu.xiyou" 
+	entity-manager-factory-ref="entityManagerFactory" 
+	transaction-manager-ref="transactionManager" />
+		
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath*:conf/jdbc-mysql.properties</value>
+		</property>
+	</bean>
+	<!-- 定义数据库连接池 -->
+	<bean id="dataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="maxActive" value="${maxActive}" />
+		<property name="maxIdle" value="${maxIdle}" />
+		<property name="maxWait" value="${maxWait}" />
+		<property name="validationQuery" value="select 0 from dual"></property>
+		<property name="testWhileIdle" value="true"></property>
+		<property name="timeBetweenEvictionRunsMillis" value="3600000"></property>
+		<property name="minEvictableIdleTimeMillis" value="18000000"></property>
+		<property name="testOnBorrow" value="true"></property>
+	</bean>
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"></bean>
+		</property>
+		<property name="packagesToScan" value="cn.edu.xiyou" />
+		<property name="persistenceXmlLocation" value="classpath*:conf/persistence.xml" />
+		<property name="persistenceUnitName" value="${unitName}" />
+	</bean>
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<bean id="realm" class="cn.edu.xiyou.sys.base.XRealm">
+		<property name="authorize" ref="authorize" />
+	</bean>
+	
+	<bean id="securityManager" class="cn.edu.xiyou.sys.base.DefaultWebSecurityManager">
+		<property name="realm" ref="realm" />
+	</bean>
+	
+	<bean id="shiroFilter" class="cn.edu.xiyou.sys.base.XShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager" />
+		<property name="authorize" ref="authorize" />
+		<property name="loginUrl" value="/login.html" />
+		<property name="successUrl" value="/index.html" />
+		<property name="unauthorizedUrl" value="/unauthorized.htm" />
+	</bean>
+	<!-- spring文件上传配置 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding">
+			<value>UTF-8</value>
+		</property>
+		<property name="maxUploadSize">
+			<value>32505856</value><!-- 上传文件大小限制为31M，31*1024*1024 -->
+		</property>
+		<property name="maxInMemorySize">
+			<value>4096</value>
+		</property>
+	</bean>
+</beans>

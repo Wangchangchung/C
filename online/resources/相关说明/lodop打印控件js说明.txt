@@ -1,0 +1,54 @@
+/**打印js部分**/
+	var LODOP; //声明为全局变量   
+	function RealPrint() {
+		djbh = $("#djbh").val();
+		var urladd = window.location.protocol + "//" + window.location.host
+				+ "<@m.path />/dbdlr/printtets.do?djbh=" + djbh;
+		if (djbh == null || djbh == "") {
+			show("请先进行保存！");
+			return;
+		} else {
+
+			LODOP = getLodop(document.getElementById('LODOP_OB'), document
+					.getElementById('LODOP_EM'), '<@m.path/>/js/lodopPrint/');
+			//设置初始化参数   必须
+			LODOP.PRINT_INIT("调拨单");
+			//设置打印页面
+			LODOP.SET_PRINT_PAGESIZE(2, "210mm", "297mm", "CreateCustomPage");
+			//隐藏提示信息
+			LODOP.SET_SHOW_MODE("MESSAGE_GETING_URL", "");//MESSAGE_GETING_URL的值：字符型，默认值是“正打开页面下载数据(限时5分钟)...”,当设置该值为空时则隐藏提示。
+			LODOP.SET_SHOW_MODE("MESSAGE_PARSING_URL", "");//MESSAGE_PARSING_URL的值：字符型，默认值是“下载结束,正在准备打印数据...”，当设置该值为空时则隐藏提示。
+			LODOP.SET_SHOW_MODE("MESSAGE_PARSING_HTM", "");//MESSAGE_PARSING_HTM的值：字符型，默认值是空（不提示信息），当超文本内容较多，有明显等待时间时，建议设置该值。
+
+			//使用表格模式打印 便于控制分页
+			LODOP.ADD_PRINT_TBURL("15mm", "15mm", "100%", "100%", urladd);
+			//打印预览模式  也可更换命令直接打印
+			LODOP.PRINT();
+		}
+	};
+	function Preview1(){
+		djbh = $("#djbh").val();
+		var urladd = window.location.protocol + "//" + window.location.host
+				+ "<@m.path />/dbdcx/printtets.do?djbh="+djbh;
+		if (djbh == null || djbh == "") {
+			alert("请先进行保存！");
+			return;
+		} else {
+			
+			LODOP = getLodop(document.getElementById('LODOP_OB'), document
+					.getElementById('LODOP_EM'), '<@m.path/>/js/lodopPrint/');
+			//设置初始化参数   必须
+			LODOP.PRINT_INIT("调拨单");
+			//设置打印页面
+			LODOP.SET_PRINT_PAGESIZE(2, "210mm", "297mm", "CreateCustomPage");
+			//隐藏提示信息
+			LODOP.SET_SHOW_MODE ("MESSAGE_GETING_URL","");//MESSAGE_GETING_URL的值：字符型，默认值是“正打开页面下载数据(限时5分钟)...”,当设置该值为空时则隐藏提示。
+			LODOP.SET_SHOW_MODE ("MESSAGE_PARSING_URL","");//MESSAGE_PARSING_URL的值：字符型，默认值是“下载结束,正在准备打印数据...”，当设置该值为空时则隐藏提示。
+			LODOP.SET_SHOW_MODE ("MESSAGE_PARSING_HTM","");//MESSAGE_PARSING_HTM的值：字符型，默认值是空（不提示信息），当超文本内容较多，有明显等待时间时，建议设置该值。
+			
+			//使用表格模式打印 便于控制分页
+			LODOP.ADD_PRINT_TBURL("15mm", "15mm", "100%", "100%", urladd);
+			//打印预览模式  也可更换命令直接打印
+			LODOP.PREVIEW();
+		}
+	};  

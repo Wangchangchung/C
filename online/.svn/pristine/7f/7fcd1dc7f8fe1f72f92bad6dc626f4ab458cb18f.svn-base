@@ -1,0 +1,177 @@
+body{
+	height:100%;
+		
+}
+.newicon{
+	width:200%;
+}
+.leftstyle{
+	padding-left:4%;	
+}
+.someone{
+	border-bottom:1px solid white;	
+}
+h3{
+	margin-left:5%;
+	padding-bottom:2%;	
+}
+ 
+.one{
+	width:100%;
+	position:fixed;
+}
+.personmessage{
+	position:fixed;
+	background-color:#5F6D7E;
+	height:485pt;	
+	color:white;
+	top:50px;
+}
+.personimg{
+	border:4px solid white;
+	width:100px;
+	margin-top:5%;	
+	border-radius:50px;
+}
+.textstyle{
+	font-size:25pt;
+	margin-top:15pt;
+	padding-left:1%;
+		
+}
+.personview{
+	padding-left:2%;	
+}
+span{
+	margin-left:5%;	
+}
+.friendmessage{
+	list-style:none;
+	padding-bottom:60px;
+	margin-left:2%;	
+}
+li .imagesize{
+	width:40px;	
+}
+.thumbnail{
+	border:5px;
+}
+.friendtext{
+	color:white;
+	margin-top:1%;	
+	margin-left:1%;
+}
+.contentheader{
+	margin-top:2%;	
+}
+.heart{
+	padding-top:7%;	
+	height:25%;
+	border-bottom:1px solid white;
+}
+.others{
+	height:25%;
+	border-bottom:1px solid white;	
+}
+
+.reaserch{
+	position:absolute;
+	margin-top:1%;
+	margin-left:10%;	
+}
+.reaserch1{
+	position:absolute;
+	margin-top:0.5%;
+	margin-left:25%;
+}
+
+
+
+
+#bgimg{
+		position:fixed;
+		width:100%;
+		height:100%;
+		z-index:-1;	
+	}
+	#bgimg>img{
+		width:100%;
+		height:100%;
+			
+	}
+	body{
+		
+		font-family:"微软雅黑";
+	}
+	.newicon{
+		height:50px;
+	}
+	.personal{
+		margin-top:100px;
+	}
+	.avatar{
+		height:100px;
+		float:left;	
+	}
+	.avatar1{
+		height:50px;
+		float:left;	
+	}
+	.outleft{
+		margin-left:2%;
+		
+		color:#003;
+		font-size:20pt;
+		
+	}
+	.whenhover:hover{
+		border:1px solid #009;
+		-webkit-box-shadow:3px 3px 10px;
+		-moz-box-shadow:3px 3px 10px;
+	}
+	.outleft2{
+		margin-left:2%;
+		
+		color:#8cc6ff;
+		font-size:15pt;
+		
+	}
+	.pageheader{
+		border:1px solid #666;
+		background:#527CA2;
+		margin-bottom:-1pt;
+		border-radius:2px;
+		margin-top:10%;
+		
+	}
+	.pages{
+		border:1px solid #666;	
+		margin-bottom:10px;
+		padding-bottom:10px;
+		border-radius:2px;
+		background-color:white;
+	}
+	.relisetime{
+		margin-left:8%;
+		margin-top:1%;
+		font-size:10pt;
+	}
+	.left1{
+		margin-left:5%;
+	}
+	.percontent{
+		margin-top:4%;	
+	}
+	.contentimg{
+		width:60%;	
+	}
+	.posileft{
+		margin-left:10px;
+		margin-top:10px;		
+	}
+	.textcontent{
+		display:none;	
+	}
+	#comment1:hover,#comment2:hover,#comment3:hover{
+		cursor:pointer;	
+	}

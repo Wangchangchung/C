@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>iCooc - 让优秀成为一种习惯 距离好工作更进一步</title>
+<meta name="keywords" content="免费IT课程,教学视频,职业学习路线图,职业规划,学习体系,学习顺序">
+<meta name="description"
+	content="iCooc是一个专为大学生提供的从专业到职业为导向的在线免费学习平台，让大学生对自己的所学专业不在迷茫，同时网站为每一个职业免费提供清晰，完整的学习路线图以及大量的优质视频资源，帮助你更快找到好工作!">
+<#include "html/common/top.html">
+<link href="<@m.path/>/css/content.css" rel="stylesheet" type="text/css">
+<!--主页css-->
+</head>
+<body>
+
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+
+	<!-- 开篇幻灯片 -->
+	<section id="slide">
+		<div id="carousel-example-generic" class="carousel slide"
+			data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				<a class="scroll" href="#major">
+					<div class="item active">
+						<img class="slide_img" src="image/index/slide_02.jpg">
+						<div class="carousel-caption">
+							<h1>在这里 ,根据您的专业</h1>
+							<h1>寻找专属于您的职业学习体系</h1>
+							<button class="btn-lg" href="#" role="button">了解更多 ></button>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- 开篇幻灯片结束 -->
+
+	<!--专业-->
+	<section id="major" class="clearfix">
+		<h1>
+			<span class="title_color">专业</span> 前景规划
+		</h1>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<hr>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<h2>这里可以告诉您的专业以后能干什么</h2>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<hr>
+		</div>
+
+		<div class="container">
+			<ul class="list clearfix">
+				<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item clearPadding">
+					<a class="content img1" href="<@m.path/>/major3.html"
+					title="信息管理系统"> <img class="img" alt=""
+						src="image/major/01.jpg">
+				</a>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item clearPadding">
+					<div class="content info triangle_bottom">
+						<h3 class="name">电子商务</h3>
+						<p class="desc">电子商务专业(B2B)是融计算机科学、市场营销学、管理学、经济学、法学和现代物流于一体的新型交叉学科。</p>
+						<a class="read_more_icon glyphicon glyphicon-chevron-right"
+							href="<@m.path/>/major1.html" title="电子商务"> <span
+							class="read_more">进入详情...</span></a>
+					</div>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item clearPadding">
+					<a class="content img2" href="#" title=""> <img class="img"
+						alt="" src="image/major/02.jpg">
+				</a>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item clearPadding">
+					<div class="content info triangle_bottom">
+						<h3 class="name">软件工程</h3>
+						<p class="desc">软件工程专业以计算机科学与技术学科为基础，强调软件开发的工程性，使学生在熟练掌握计算机科学与技术方面知识和技能。</p>
+						<a class="read_more_icon glyphicon glyphicon-chevron-right"
+							href="<@m.path/>/major2.html" title="软件工程"> <span
+							class="read_more">进入详情...</span></a>
+					</div>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item clearPadding">
+					<div class="content info triangle_top">
+						<h3 class="name">信息管理系统</h3>
+						<p class="desc">信息管理系统专业培养具备现代管理学理论基础、计算机科学技术知识及应用能力，掌握系统思想和信息系统分析与设计方法的高级专业人才。</p>
+						<a class="read_more_icon glyphicon glyphicon-chevron-right"
+							href="<@m.path/>/major3.html" title="信息管理系统"> <span
+							class="read_more">进入详情...</span></a>
+					</div>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item clearPadding">
+					<a class="content img3" href="<@m.path/>/major1.html" title="电子商务">
+						<img class="img" alt="" src="image/major/03.jpg">
+				</a>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item clearPadding">
+					<div class="content info triangle_top">
+						<h3 class="name">电子信息科学与技术</h3>
+						<p class="desc">该专业培养具备电子信息科学与技术的基本理论和知识，受到严格的科学实验训练和科学研究训练，能在电子信息科学相关领域工作的高级技术人才。</p>
+						<a class="read_more_icon glyphicon glyphicon-chevron-right"
+							href="#" title=""> <span class="read_more">进入详情...</span></a>
+					</div>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item clearPadding">
+					<a class="content img4" href="<@m.path/>/major2.html" title="软件工程">
+						<img class="img" alt="" src="image/major/04.jpg">
+				</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- 专业模态提示窗口 -->
+		<div class="modal fade" id="major_modal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body" style="text-align: center;">
+						<img src="<@m.path/>/image/working.jpg"
+							style="width: 50%; height: 50%">
+						<h3 class="modal-title"
+							style="text-align: center; line-height: 2;">
+							<a href="<@m.path/>/major.html" style="color: #3399FF">电子商务</a>
+							专业已经开发成功
+						</h3>
+						<h3 class="modal-title" id="myModalLabel"
+							style="text-align: center; line-height: 2;">其他专业正在努力开发中，敬请期待...</h3>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-lg"
+							data-dismiss="modal">我 知 道 了</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--专业结束-->
+
+	<!--职位-->
+	<section id="job" class="clearfix">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h1>
+				<font color="#339900">职业</font> 体系规划
+			</h1>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<hr>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<h2>这里为您量身打造的职业学习线路</h2>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<hr>
+			</div>
+		</div>
+
+		<div class="container">
+			<ul>
+				<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item"><a
+					class="item_content" href="<@m.path/>/tree1.html" title="Java开发工程师">
+						<img class="item_img" alt="Java开发工程师"
+						src="<@m.path/>/image/job/java/java_01.jpg">
+						<h4 class="item_name">Java开发工程师</h4>
+						<p class="item_desc">WEB企业级管理首选</p>
+				</a></li>
+				<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item to_bottom">
+					<a class="item_content" href="<@m.path/>/tree2.html"
+					title="Web前端工程师"> <img class="item_img" alt="Web前端工程师"
+						src="<@m.path/>/image/job/html/html_02.png">
+						<h4 class="item_name">Web前端工程师</h4>
+						<p class="item_desc">艺术与技术的完美融合</p>
+				</a>
+				</li>
+				<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item"><a
+					class="item_content" href="<@m.path/>/tree3.html" title=".Net开发工程师">
+						<img class="item_img" alt=".Net开发工程师"
+						src="<@m.path/>/image/job/net/net_01.jpg">
+						<h4 class="item_name">.Net开发工程师</h4>
+						<p class="item_desc">跟着微软有饭吃</p>
+				</a></li>
+				<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 item to_bottom">
+					<a class="item_content" href="<@m.path/>/tree4.html"
+					title="PHP开发工程师"> <img class="item_img" alt="PHP开发工程师"
+						src="<@m.path/>/image/job/php/php_01.png">
+						<h4 class="item_name">PHP开发工程师</h4>
+						<p class="item_desc">最快速度学会Web开发</p>
+				</a>
+				</li>
+			</ul>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 more_job">
+				<a class="more" href="" title="">更多职业学习体系请点击这里...</a>
+			</div>
+		</div>
+
+
+		<!-- 职位模态提示窗口 -->
+		<div class="modal fade" id="job_modal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body" style="text-align: center;">
+						<img src="<@m.path/>/image/working2.jpg"
+							style="width: 50%; height: 50%">
+						<h3 class="modal-title"
+							style="text-align: center; line-height: 2;">
+							<a href="<@m.path/>/tree1.html" style="color: #3399FF">Java工程师</a>
+							职位已开发成功
+						</h3>
+						<h3 class="modal-title"
+							style="text-align: center; line-height: 2;">
+							其他职位正在努力开发中，敬请期待...</font>
+						</h3>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-lg"
+							data-dismiss="modal">我 知 道 了</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 模态窗口结束 -->
+	</section>
+	<!--职位结束-->
+
+
+	<!-- 广告结束-->
+	<!-- 
+	<section id="work" class="clearfix">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h1>
+				就业有<font color="#339900">未</font>来
+			</h1>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<hr>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<h2>这里为您挑选到合适的职位</h2>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<hr>
+			</div>
+		</div>
+
+		<div class="container">
+			<ul class="clearfix">
+				<li class="item"><a class="item_content bg-success"
+					href="job/list.html" title="产品经理职位"> <span class="work_info">产品经理</span>
+						<i class="work_icon"></i>
+				</a></li>
+				<li class="item"><a class="item_content bg-info"
+					href="job/list.html" title=""> <span class="work_info">Java开发工程师</span>
+						<i class="work_icon"></i>
+				</a></li>
+				<li class="item"><a class="item_content bg-warning"
+					href="job/list.html" title=""> <span class="work_info">前端开发工程师</span>
+						<i class="work_icon"></i>
+				</a></li>
+				<li class="item"><a class="item_content bg-danger"
+					href="job/list.html" title=""> <span class="work_info">项目经理</span>
+						<i class="work_icon"></i>
+				</a></li>
+				<li class="item"><a class="item_content bg-warning"
+					href="job/list.html" title=""> <span class="work_info">运营专员</span>
+						<i class="work_icon"></i>
+				</a></li>
+				<li class="item"><a class="item_content bg-info"
+					href="job/list.html" title=""> <span class="work_info">UI设计师</span>
+						<i class="work_icon"></i>
+				</a></li>
+				<li class="item"><a class="item_content bg-warning"
+					href="job/list.html" title=""> <span class="work_info">PHP开发工程师</span>
+						<i class="work_icon"></i>
+				</a></li>
+				<li class="item"><a class="item_content bg-success"
+					href="job/list.html" title=""> <span class="work_info">.Net开发工程师</span>
+						<i class="work_icon"></i>
+				</a></li>
+				<li class="item"><a class="item_content bg-warning"
+					href="job/list.html" title=""> <span class="work_info">IOS开发工程师</span>
+						<i class="work_icon"></i>
+				</a></li>
+				<li class="item"><a class="item_content bg-danger"
+					href="job/list.html" title=""> <span class="work_info">开发工程师</span>
+						<i class="work_icon"></i>
+				</a></li>
+			</ul>
+		</div>
+	</section>
+ -->
+	<!--课程最热门-->
+	<section id="course">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h1>
+				课程 <font color="#3399FF">最热门</font>
+			</h1>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<hr>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<h2>这里还有各类当前热门的 课程精选</h2>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<hr>
+			</div>
+		</div>
+
+		<div class="container">
+			<div id="myCarousel" class="carousel slide col-lg-5">
+				<div class="carousel-inner" role="listbox">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+					</ol>
+					<div class="item active">
+						<a href="<@m.path/>/course/wzycourse.html" title="HTML / CSS 网页设计">
+							<img class="item_img" src="image/major/05.jpg" alt="...">
+							<div class="carousel-caption">网易微专业课堂开课了~</div>
+						</a>
+					</div>
+					<div class="item ">
+						<a
+							href="<@m.path/>/course/show.html?id=173c1069-a82c-4010-a77a-a002adc4ef79"
+							title="Java SE"> <img class="item_img"
+							src="image/major/01.jpg" alt="...">
+							<div class="carousel-caption">Java SE 基础入门</div>
+						</a>
+					</div>
+					<div class="item">
+						<a
+							href="<@m.path/>/course/show.html?id=3f7ab92f-467f-4762-a316-faac21050305"
+							title="HTML / CSS 网页设计"> <img class="item_img"
+							src="image/major/02.jpg" alt="...">
+							<div class="carousel-caption">HTML / CSS 网页设计</div>
+						</a>
+					</div>
+					<div class="item">
+						<a
+							href="<@m.path/>/course/show.html?id=8a4fe5d1-9667-4df4-8d47-6ee7dfe3919b"
+							title="常用设计模式"> <img class="item_img"
+							src="image/major/03.jpg" alt="...">
+							<div class="carousel-caption">设计模式详解</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="myTabs" class="col-lg-7">
+
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#home"
+						aria-controls="home" role="tab" data-toggle="tab">Java工程师体系</a></li>
+					<li role="presentation"><a href="#profile"
+						aria-controls="profile" role="tab" data-toggle="tab">前端开发体系</a></li>
+					<li role="presentation"><a href="#messages"
+						aria-controls="messages" role="tab" data-toggle="tab">.Net工程师体系</a></li>
+					<li role="presentation"><a href="#settings"
+						aria-controls="settings" role="tab" data-toggle="tab">PHP工程师体系</a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active" id="home">
+						<ul class="tab_content_list">
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=173c1069-a82c-4010-a77a-a002adc4ef79"
+								title="Java SE" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/Java/java_se/02.jpg">
+									<h5 class="name">Java SE</h5>
+									<p class="desc">Java体系万祖之源</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=2002086a-5fe0-4e52-96ed-44f8fe8358c6"
+								title="JDBC" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/Java/jdbc/02.jpg">
+									<h5 class="name">JDBC</h5>
+									<p class="desc">Java数据库访问之道</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=b244e4e4-62e5-40bd-b9dc-1f50f57e942f"
+								title="JavaEE基础" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/Java/java_ee/01.jpg">
+									<h5 class="name">JavaEE基础</h5>
+									<p class="desc">通往JavaWeb开发的大门</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=226da6a3-56a8-44b5-af10-b96bfefca2f1"
+								title="Struts2" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/Java/struts2/01.jpg">
+									<h5 class="name">Struts2</h5>
+									<p class="desc">MVC架构精华</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=3b90c7bd-8644-4d32-86d5-c887940f7e5f"
+								title="Hibernate" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/Java/hibernate/01.jpg">
+									<h5 class="name">Hibernate</h5>
+									<p class="desc">利用框架访问数据库</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=54890637-5149-4310-ab36-13456753c1de"
+								title="Spring" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/Java/spring/03.jpg">
+									<h5 class="name">Spring</h5>
+									<p class="desc">当今最流行的框架之一</p>
+							</a></li>
+						</ul>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="profile">
+						<ul class="tab_content_list">
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=3f7ab92f-467f-4762-a316-faac21050305"
+								title="HTML/CSS/JavaScipt" class="tab_content_item my_border">
+									<img class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/Html/html_css_js/01.jpg">
+									<h5 class="name">HTML/CSS/JavaScipt</h5>
+									<p class="desc">前端基础的那些事</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=e33bff6815bf450bb0a0a5eb657be49c"
+								title="PhotoShop平面设计" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/Html/ps/01.jpg">
+									<h5 class="name">PhotoShop平面设计</h5>
+									<p class="desc">众所周知的图片处理软件</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=1aeb6ad2-f413-4291-86d2-d9c646754217"
+								title="jQuery" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/Html/jquery/01.jpg">
+									<h5 class="name">jQuery</h5>
+									<p class="desc">JavaScript行业标准框架</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=9692b4f669df423fa6d8c6a830f3debe"
+								title="HTML5/CSS3" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/Html/html_css_js/02.jpg">
+									<h5 class="name">HTML5/CSS3</h5>
+									<p class="desc">最流行的前端技术之一</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=f88fb3ae46b04e309e4338977b148b4f"
+								title="BootStrap" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/Html/bootstrap/01.jpg">
+									<h5 class="name">BootStrap</h5>
+									<p class="desc">一个能够迅速做出精美网页的框架</p>
+							</a></li>
+							<li class="tab_content_li"><a href="" title=""
+								class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/Java/java_se/01.jpg">
+									<h5 class="name">Java SE 教程</h5>
+									<p class="desc">Java体系万祖之源</p>
+							</a></li>
+						</ul>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="messages">
+						<ul class="tab_content_list">
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=1480a63671684e85a4c23c9f8f6ccb0d"
+								title="C#基础语法" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/C/c_basic/01.jpg">
+									<h5 class="name">C#基础语法</h5>
+									<p class="desc">.NET平台上的核心开发语言</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=5bc568151180489bae15851f376bf4d0"
+								title="C#面向对象编程" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/C/oo/01.jpg">
+									<h5 class="name">C#面向对象编程</h5>
+									<p class="desc">运行于.NET Framework之上的语言</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=bace08d0a5b548949794cfb12b72e058"
+								title="WPF基础" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/C/wpf/01.jpg">
+									<h5 class="name">WPF基础</h5>
+									<p class="desc">.NET开发中程序员与美工的明确分工</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=7b4d890d-dc1b-4d45-b159-14c20c34df25"
+								title="数据库基础" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/sql/01.jpg">
+									<h5 class="name">数据库基础(.NET方向)</h5>
+									<p class="desc">带你走进计算机存储的世界</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=108958b8dd024514a3bf2c81ed35052c"
+								title="ADO.NET" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/C/ado.net/01.jpg">
+									<h5 class="name">ADO.NET</h5>
+									<p class="desc">用于Microsoft技术中访问数据</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=bc804b8df1544d8baecb9a68b271f0dc"
+								title="ADO.NET项目实战" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/C/ado.net/02.jpg">
+									<h5 class="name">ADO.NET项目实战</h5>
+									<p class="desc">连接数据库的项目实战</p>
+							</a></li>
+						</ul>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="settings">
+						<ul class="tab_content_list">
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=30e158dc488f43e28a8552ce028a8ca8"
+								title="php基础语法" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/PHP/php_basic/01.jpg">
+									<h5 class="name">php基础语法</h5>
+									<p class="desc">一门简单，易学的开发语言</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=cad685c27d6642ffb7c4260dd0fd6b6c"
+								title="php面向对象编程" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/PHP/php_oo/01.jpg">
+									<h5 class="name">php面向对象编程</h5>
+									<p class="desc">让程序开发变得更加简单</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=e79fdf7fe17e4c55801365b64da34ede"
+								title="数据库连接与PDO" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/PHP/pdo/01.jpg">
+									<h5 class="name">数据库连接与PDO</h5>
+									<p class="desc">所有数据库的连接只需一个接口</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=0f4381f0d274475b8f155bab4a73d2ee"
+								title="Web进阶与优化" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/PHP/web_improve/01.jpg">
+									<h5 class="name">Web进阶与优化</h5>
+									<p class="desc">让你的网站访问更加流畅</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=63e9c90b8c1740e98cda7cdd3d4472b7"
+								title="Smarty框架" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/PHP/smarty/01.jpg">
+									<h5 class="name">Smarty框架</h5>
+									<p class="desc">一个使PHP程序员同前端人员分离的框架</p>
+							</a></li>
+							<li class="tab_content_li"><a
+								href="<@m.path/>/course/show.html?id=e0414018f0cf43b3b48092425fad1cac"
+								title="BroPhp框架" class="tab_content_item my_border"> <img
+									class="tab_item_img" alt=""
+									src="<@m.path/>/image/course/PHP/brophp/01.jpg">
+									<h5 class="name">BroPhp框架</h5>
+									<p class="desc">一个简单并且实用的php框架</p>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 课程模态提示窗口 -->
+		<div class="modal fade" id="course_modal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body" style="text-align: center;">
+						<img src="<@m.path/>/image/working.jpg"
+							style="width: 50%; height: 50%">
+						<h3 class="modal-title"
+							style="text-align: center; line-height: 2;">
+							<a style="color: #3399FF">计算机类</a> 课程已经开发成功
+						</h3>
+						<h3 class="modal-title" id="myModalLabel"
+							style="text-align: center; line-height: 2;">其他类别课程正在努力开发中，敬请期待...</h3>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-lg"
+							data-dismiss="modal">我 知 道 了</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 模态窗口结束 -->
+	</section>
+	<!--课程最热门结束-->
+
+	<!-- 关于我们 -->
+	<section id="about">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h1>关于我们</h1>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<hr>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<img src="<@m.path/>/image/index/about_us_01.png" alt="丰富的课程库">
+				<h4 class="page-header">丰富的课程库</h4>
+				<span>致力于提供高质量的学习资源，课程涵盖了当前热门的技术领域，由易到难，从基础到实战。让你感到学有所用！</span>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mid">
+				<img src="<@m.path/>/image/index/about_us_02.png" alt="从专业到职业的引导">
+				<h4 class="page-header">从专业到职业的引导</h4>
+				<span>根据您所学的专业可以帮您列举出其可以胜任的职业，帮助您早日找到属于自己的理想职业，从而不再迷茫！</span>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<img src="<@m.path/>/image/index/about_us_03.png" alt="权威的职业学习路线图">
+				<h4 class="page-header">权威的职业学习路线图</h4>
+				<span>如果您已明确自己心中的理想职位但不知从何开始，那就从零基础起步，由易到难，系统学习，知识点对应实战案例，让您早日进入理想职业!</span>
+			</div>
+		</div>
+
+	</section>
+	<!-- 关于我们结束 -->
+
+	<!-- 合作机构 -->
+	<section id="friend" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<h3 class="page-header">合作机构</h3>
+		<ul class="clearfix">
+			<li><a href="http://study.163.com/" title="网易云课堂" ref="noflow">网易云课堂</a></li>
+			<li><a href="http://ke.qq.com/" title="腾讯课堂" ref="noflow">腾讯课堂</a></li>
+			<li><a href="http://www.xuetangx.com/" title="学堂在线" ref="noflow">学堂在线</a></li>
+			<li><a href="http://xue.taobao.com/" title="淘宝教育" ref="noflow">淘宝教育</a></li>
+			<li><a href="http://www.cnmooc.org/home/index.mooc"
+				title="好大学在线" ref="noflow">好大学在线</a></li>
+			<li><a href="https://www.shiyanlou.com/" title="实验楼"
+				ref="noflow">实验楼</a></li>
+			<li><a href="http://www.imooc.com/" title="慕课网" ref="noflow">慕课网</a></li>
+			<li><a href="http://www.kaikeba.com/" title="开课吧" ref="noflow">开课吧</a></li>
+			<li><a href="http://edu.51cto.com/" title="51CTO学院" ref="noflow">51CTO学院</a></li>
+			<li><a href="http://www.chinaacc.com/" title="中华会计网校"
+				ref="noflow">中华会计网校</a></li>
+			<li><a href="http://www.chinaz.com/" title="站长之家" ref="noflow">站长之家</a></li>
+			<li><a href="http://www.lagou.com/" title="拉勾网" ref="noflow">拉勾网</a></li>
+		</ul>
+	</section>
+	<!-- 合作机构结束 -->
+
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+
+	<!-- 右下角按钮 -->
+	<div id="share" class="fixed_button" style="right: 2%; bottom: 5.5em;">
+		<img style="position: absolute; z-index: 10;"
+			src="<@m.path/>/image/photo/share.jpg">
+		<div class="share_" style="z-index: 5;">
+			<div class="share_item"
+				style="background: url('<@m.path/>/image/photo/share_items.png') no-repeat -304px -30px;"></div>
+			<div class="share_item"
+				style="background: url('<@m.path/>/image/photo/share_items.png') no-repeat -213px -144px;"></div>
+			<div class="share_item bds_tqq" data-cmd="tqq"
+				style="background: url('<@m.path/>/image/photo/share_items.png') no-repeat -30px -31px;"></div>
+			<div class="share_item"
+				style="background: url('<@m.path/>/image/photo/share_items.png') no-repeat -30px -144px;"></div>
+		</div>
+	</div>
+	<a class="scroll" href="#slide"><div id="back_to_top"
+			class="fixed_button" style="right: 2%; bottom: 1em;">
+			<img src="<@m.path/>/image/photo/pointer_01.png">
+		</div></a>
+	<!-- 右下角按钮 -->
+
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script type="text/javascript">
+	(function() {
+		$('#myTabs .nav-tabs a').click(function(e) {
+			e.preventDefault();
+			$(this).tab('show');
+		});
+	})();
+	$('.dropdown-menu').mouseleave(function(){
+		   this.slideUp();
+		});
+</script>

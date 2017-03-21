@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE"/>
+<title>major</title>
+
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!--<script type="text/javascript" src="http://www.bitstorm.org/jquery/shadow-animation/jquery.animate-shadow-min.js"></script>-->		<!--jQuery 阴影动画所需js-->
+<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+
+<link href="css/content.css" rel="stylesheet" type="text/css">
+<link href="css/major_for_many.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},800);
+		});
+	});
+</script>
+</head>
+<!--<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5"></div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"></div>
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8"></div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"></div>
+<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"></div>
+<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"></div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>-->
+<body>
+
+	<!--导航栏-->
+	<nav id="nav" class="navbar-fixed-top">
+		<div class="container" >
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+			<a href="<@m.path/>/index.html"><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text" style="padding-top:10px;"><img src="<@m.path/>/image/index/logo.png" style="width:100%;"></div></a>
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5"></div>
+			<a href="<@m.path/>/index.html"><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text">首页</div></a>
+			<a href="<@m.path/>/all_major.html" ><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text">全部专业</div></a>
+			<a href="<@m.path/>/all_job.html" ><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text">全部职业</div></a>
+			<a href="<@m.path/>/all_course.html" ><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text">全部课程</div></a>
+			<a href="http://www.sojump.com/jq/4714511.aspx" target="_blank"><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text">调查问卷</div></a>
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+		</div>
+    </nav>
+	<!--导航栏结束-->
+	
+	<div id="question" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height:400px; background-color:#eee;text-align:center; ">
+		<div class="jumbotron" style="margin-top:120px;">
+		  <h1>电子商务能干什么？</h1>
+		</div>
+		<div class="button"><a class="scroll" href="#bubble"><span>点我看答案</span></a></div>
+	</div>
+	
+	<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:600px;"></div>
+	<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="height:600px;">
+		
+	</div>
+	<div id="bubble" class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="height:600px;">
+		<div class="bubble" style="height:10em; width:10em; left:70%; top:10%; animation-duration:3s; background:#FF9;"><font size="3">前端开发工程师</font></div>
+		<div class="bubble" style="height:15em; width:15em; left:10%; top:10%; animation-duration:3.5s; background:#9C9;"><font size="5">Java研发工程师</font></div>
+		<div class="bubble" style="height:13em; width:13em; left:70%; top:60%; animation-duration:5s; background:#69F;"><font size="5">测试工程师</font></div>
+		<div class="bubble" style="height:20em; width:20em; left:35%; top:30%; animation-duration:4s;"><font size="6">C++研发工程师</font></div>
+	</div>
+	<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:600px;"></div>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>iCooc - 让优秀成为一种习惯 距离好工作更进一步</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<#include "html/common/top.html">
+<link href="<@m.path/>/css/job_list.css" rel="stylesheet" type="text/css">		<!--主页css-->
+</head>
+<body>
+	
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+
+	<div class="container content">
+		<div id="type" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<ul class="list-group">
+			<li class="list-group-item clearfix" name="0">
+				<div class="item_main clearfix">
+					<h2 class="title1">
+					<a href="<@m.path/>/job/list.html" title="">全部</a>
+					</h2>
+				</div>
+			  </li>
+			<#list jobTypeList as jt>
+			  <li class="list-group-item clearfix" name="0">
+				<div class="item_main clearfix">
+					<h2 class="title1">${jt.name}</h2>
+					<div class="bottom_line"></div>
+				<div class="item_sub">
+					<dl>
+						<dd>
+						<#list jt.jobTags as j>
+							<a href="<@m.path/>/job/list.html?name=${j.name}" title="">${j.name}</a>
+						</#list>
+						</dd>
+					</dl>
+				</div>
+				</div>
+			  </li>
+			  </#list>
+			</ul>
+		</div>
+		<div id="job_info" class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+			<form id="searchForm" name="searchForm" action="<@m.path/>/job/list.html" accept-charset="utf-8" method="post">
+		        <div class="input-group input-group-lg">
+			      <input type="text" name="name" class="form-control" value="${name}" placeholder="请输入要搜索的职位">
+			      <span class="input-group-btn">
+			        <button class="btn btn-default" type="submit">搜 索</button>
+			      </span>
+			    </div>
+		    </form>
+		    <div class="hot_search clearfix">
+		    	<span>热门搜索：</span>
+		    	<a href="<@m.path/>/job/list.html?name=php" title="">PHP</a>
+				<a href="<@m.path/>/job/list.html?name=C%2B%2B" title="">C++</a>
+				<a href="<@m.path/>/job/list.html?name=运营" title="">新媒体运营</a>
+				<a href="<@m.path/>/job/list.html?name=ios" title="">iOS.</a>
+				<a href="<@m.path/>/job/list.html?name=Net" title="">Net</a>
+				<a href="<@m.path/>/job/list.html?name=产品助理" title="">产品助理</a>
+				<a href="<@m.path/>/job/list.html?name=Java" title="">Java</a>
+				<a href="<@m.path/>/job/list.html?name=前端开发" title="">前端开发</a>
+				<a href="<@m.path/>/job/list.html?name=产品经理" title="">产品经理</a>
+				<a href="<@m.path/>/job/list.html?name=Android" title="">Android</a>
+			</div>
+		    <ul class="result_type clearfix">
+		    	<!-- <li class="current">热门职位</li> -->
+		    	<li class="current">最新职位</li>
+		    </ul>
+		    <ul class="result_list">
+		    	<#list jobs as j>
+		    	<li>
+		    		<div class="info_top">
+		    			<div class="info_top_l">
+		    				<h2 class="position_name"><a href="detail.html?id=${j.id}">${j.jobName}[${j.place}]</a></h2>
+		    				<span class="money">${j.salary}</span>
+		    				<!-- <span>经验1-3年</span>
+		    				<span>本科</span> -->
+		    			</div>
+		    			 <div class="info_top_r">
+		    				<span class="company_name">${j.company}</span>
+		    				<!-- <span>企业服务</span> -->
+		    				<!-- <span>成长型(B轮)</span> -->
+		    			</div> 
+		    		</div>
+		    		 <!-- <div class="info_bottom">
+		    			<span>“高成长、有激情、有挑战~”</span>
+		    			<div class="other_r">
+		    				<span>节日礼物</span>
+		    				<span>年底双薪</span>
+		    				<span>绩效奖金</span>
+		    			</div>
+		    		</div> --> 
+		    	</li>
+		    	</#list>
+		    	<!-- <li>
+		    		<div class="info_top">
+		    			<div class="info_top_l">
+		    				<h2 class="position_name"><a href="detail.html">前端开发 [北京]</a></h2>
+		    				<span class="money">10k-20k</span>
+		    				<span>经验1-3年</span>
+		    				<span>本科</span>
+		    			</div>
+		    			<div class="info_top_r">
+		    				<span class="company_name">凯捷</span>
+		    				<span>企业服务</span>
+		    				<span>上市公司</span>
+		    			</div>
+		    		</div>
+		    		<div class="info_bottom">
+		    			<span>“始于人，成于事。”</span>
+		    			<div class="other_r">
+		    				<span>节日礼物</span>
+		    				<span>年底双薪</span>
+		    				<span>绩效奖金</span>
+		    			</div>
+		    		</div>
+		    	</li>
+		    	<li>
+		    		<div class="info_top">
+		    			<div class="info_top_l">
+		    				<h2 class="position_name"><a href="detail.html">前端开发 [北京]</a></h2>
+		    				<span class="money">10k-20k</span>
+		    				<span>经验1-3年</span>
+		    				<span>本科</span>
+		    			</div>
+		    			<div class="info_top_r">
+		    				<span class="company_name">数据公园</span>
+		    				<span>企业服务</span>
+		    				<span>成长型(A轮)</span>
+		    			</div>
+		    		</div>
+		    		<div class="info_bottom">
+		    			<span>“拥抱大数据时代！”</span>
+		    			<div class="other_r">
+		    				<span>节日礼物</span>
+		    				<span>年底双薪</span>
+		    				<span>绩效奖金</span>
+		    			</div>
+		    		</div>
+		    	</li>
+		    	<li>
+		    		<div class="info_top">
+		    			<div class="info_top_l">
+		    				<h2 class="position_name"><a href="detail.html">前端开发 [北京]</a></h2>
+		    				<span class="money">10k-20k</span>
+		    				<span>经验1-3年</span>
+		    				<span>本科</span>
+		    			</div>
+		    			<div class="info_top_r">
+		    				<span class="company_name">网易</span>
+		    				<span>企业服务</span>
+		    				<span>上市公司</span>
+		    			</div>
+		    		</div>
+		    		<div class="info_bottom">
+		    			<span>“网络易中人”</span>
+		    			<div class="other_r">
+		    				<span>节日礼物</span>
+		    				<span>年底双薪</span>
+		    				<span>绩效奖金</span>
+		    			</div>
+		    		</div>
+		    	</li>
+		    	<li>
+		    		<div class="info_top">
+		    			<div class="info_top_l">
+		    				<h2 class="position_name"><a href="detail.html">前端开发 [北京]</a></h2>
+		    				<span class="money">10k-20k</span>
+		    				<span>经验1-3年</span>
+		    				<span>本科</span>
+		    			</div>
+		    			<div class="info_top_r">
+		    				<span class="company_name">锐捷网络</span>
+		    				<span>企业服务</span>
+		    				<span>成长型(B轮)</span>
+		    			</div>
+		    		</div>
+		    		<div class="info_bottom">
+		    			<span>“加入我们，成就你的不平凡！”</span>
+		    			<div class="other_r">
+		    				<span>节日礼物</span>
+		    				<span>年底双薪</span>
+		    				<span>绩效奖金</span>
+		    			</div>
+		    		</div>
+		    	</li>
+		    	<li>
+		    		<div class="info_top">
+		    			<div class="info_top_l">
+		    				<h2 class="position_name"><a href="detail.html">前端开发 [北京]</a></h2>
+		    				<span class="money">10k-20k</span>
+		    				<span>经验1-3年</span>
+		    				<span>本科</span>
+		    			</div>
+		    			<div class="info_top_r">
+		    				<span class="company_name">百度</span>
+		    				<span>企业服务</span>
+		    				<span>上市公司</span>
+		    			</div>
+		    		</div>
+		    		<div class="info_bottom">
+		    			<span>“招最好的人，给最大的空间，看最后的结果，让优秀人才脱颖而出。”</span>
+		    			<div class="other_r">
+		    				<span>节日礼物</span>
+		    				<span>年底双薪</span>
+		    				<span>绩效奖金</span>
+		    			</div>
+		    		</div>
+		    	</li>
+		    	<li>
+		    		<div class="info_top">
+		    			<div class="info_top_l">
+		    				<h2 class="position_name"><a href="detail.html">前端开发 [北京]</a></h2>
+		    				<span class="money">10k-20k</span>
+		    				<span>经验1-3年</span>
+		    				<span>本科</span>
+		    			</div>
+		    			<div class="info_top_r">
+		    				<span class="company_name">大街网</span>
+		    				<span>企业服务</span>
+		    				<span>成长型(B轮)</span>
+		    			</div>
+		    		</div>
+		    		<div class="info_bottom">
+		    			<span>“高成长、有激情、有挑战~”</span>
+		    			<div class="other_r">
+		    				<span>节日礼物</span>
+		    				<span>年底双薪</span>
+		    				<span>绩效奖金</span>
+		    			</div>
+		    		</div>
+		    	</li>
+		    	<li>
+		    		<div class="info_top">
+		    			<div class="info_top_l">
+		    				<h2 class="position_name"><a href="detail.html">前端开发 [北京]</a></h2>
+		    				<span class="money">10k-20k</span>
+		    				<span>经验1-3年</span>
+		    				<span>本科</span>
+		    			</div>
+		    			<div class="info_top_r">
+		    				<span class="company_name">易购</span>
+		    				<span>企业服务</span>
+		    				<span>成长型(B轮)</span>
+		    			</div>
+		    		</div>
+		    		<div class="info_bottom">
+		    			<span>“高成长、有激情、有挑战~”</span>
+		    			<div class="other_r">
+		    				<span>节日礼物</span>
+		    				<span>年底双薪</span>
+		    				<span>绩效奖金</span>
+		    			</div>
+		    		</div>
+		    	</li> -->
+		    </ul>
+		    <div class="more_job"><button class="btn btn-default" type="button">查看更多...</button></div>
+		    <div class="friend clearfix">
+		    	友情链接
+		    	<ul>
+		    		<li><a href="" title="">找工作</a></li>
+		    		<li><a href="" title="">中大网校</a></li>
+		    		<li><a href="" title="">手机软件</a></li>
+		    		<li><a href="" title="">人人都是产品经理</a></li>
+		    		<li><a href="" title="">教师招聘</a></li>
+		    		<li><a href="" title="">找工作</a></li>
+		    		<li><a href="" title="">中大网校</a></li>
+		    		<li><a href="" title="">手机软件</a></li>
+		    		<li><a href="" title="">人人都是产品经理</a></li>
+		    		<li><a href="" title="">教师招聘</a></li>
+		    		<li><a href="" title="">找工作</a></li>
+		    		<li><a href="" title="">中大网校</a></li>
+		    		<li><a href="" title="">手机软件</a></li>
+		    		<li><a href="" title="">人人都是产品经理</a></li>
+		    		<li class="no_border"><a href="" title="">教师招聘</a></li>
+		    	</ul>
+		    </div>
+		</div>
+	</div>
+	
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+	<#include "html/common/bottom.html">
+	<script>
+	
+	</script>
+	
+</body>
+</html>
+
+	
+
+

@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>iCooc</title>
+<#include "html/common/top.html">
+<link href="<@m.path/>/css/course.css" rel="stylesheet" type="text/css">		<!--课程资源展示页面css-->
+
+</head>
+
+<body style="background:#333; overflow: hidden;">
+	<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background: #222; height:2.5em; margin-bottom: 1.5em;"></div> -->
+	<aside style="background:#fff; width:22%; height:100%; position: absolute; left:0%; display:block;bottom:0px;">
+		<!-- 右边按钮 -->
+		<a href="javascript:void(0);" class="aside_button glyphicon glyphicon-chevron-left" style="padding-top:1em; top:45%;cursor:pointer;" onclick="to_display()"> </a>
+		<div style="background: #eee; font-size: 1.4em; line-height: 3; display: block; padding-left:1em;">
+			<span class="glyphicon glyphicon-list" style="margin-right:1em;"></span>
+			<span>课程目录</span>
+		</div>
+		<div class="aside_content" style="background:#fff; overflow-y: auto; overflow-x:hidden; line-height: 3;">
+			<#assign i=1 >		<#-- 给所有的节计数，每输出一节，该值 +1 -->
+			<#list sectionVideos as section>
+				<#assign j=1 >		<#-- 给该section的节计数，每输出一节，该值 +1 -->
+				<#list section as sv>
+				
+					<#if j=1 >		<#-- 如果是第一节，那么把章的名字也输出出来 -->
+						<div class="chapter" title="${sv.section.name}">
+							<#if sv.section.name?length gt 23>
+								${sv.section.name?substring(0,23)}...
+							<#else>
+								${sv.section.name}
+							</#if>
+						</div>
+						<ul>
+					</#if>
+					
+					<#-- 当sectionVideo没有传入，且遍历到所有li项的第一个时，默认激活第一项 -->
+					<#if !sectionVideo?? && i=1 >
+						<li class="active" onclick="javascript:change_video('${sv.id}','${sv.sectionVideoUrl}','${sv.name}',this);">
+					<#-- 当sectionVideo传入，且遍历到的li跟该sectionVideo一样时，则激活该项 -->
+					<#elseif sectionVideo?? && sectionVideo.id == sv.id >
+						<li class="active" onclick="javascript:change_video('${sv.id}','${sv.sectionVideoUrl}','${sv.name}',this);">
+					<#-- 否则就是输出没有激活的项目 -->
+					<#else>
+						<li onclick="javascript:change_video('${sv.id}','${sv.sectionVideoUrl}','${sv.name}',this);">
+					</#if>
+					
+					<#-- 每次遍历节都输出节的信息 -->
+							<div class="jie" style="">${sv.svNum}节</div>
+							<div class="name" style="">
+								<font title="${sv.name}" style="white-space:nowrap;text-overflow:ellipsis;overflow: hidden;">
+									<#if sv.name?length gt 11>
+										${sv.name?substring(0,11)}...
+									<#else>
+										${sv.name}
+									</#if>
+								</font>
+								<div class="circle" style="">${sv.svNum}</div>
+								<i class="glyphicon glyphicon-play-circle pull-right"></i>
+							</div>
+						</li>
+					<#assign j=j+1 >	<#-- 每输出一节，j+1，那么章的名字只输出一遍 -->
+					<#assign i=i+1>		<#-- 每输出一节，i+1，那么当没传sectionVideo时，只有第一个li项为active -->
+				</#list>
+				</ul>
+				
+			</#list>
+		</div>
+	</aside>
+	
+	<div class="player" style="padding-left:24%; padding-right: 1%;">
+		<div class="glyphicon glyphicon-expand intro" style="font-size: 1.4em; line-height: 1; margin-top:2em; margin-bottom:1em; color:#eee; "> 
+			<#if sectionVideo??>
+				${sectionVideo.name}
+			<#else>
+				${sectionVideos[0][0].name}
+			</#if>
+			<#-- 如果freemarker里面有sectionVideo，就表明是点击目录过来的，那就输出点击的那一节的名字；否则，就是点击直接观看过来的，那就默认显示第一节的名字 -->
+		</div>
+		<div id="a1"></div>
+		
+		<!-- ckplayer -->
+		<script type="text/javascript" src="<@m.path/>/ckplayer/ckplayer.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			var flashvars={
+				//用于执行版本 请勿修改
+				//如果freemarker里面有sectionVideo，就表明是点击目录过来的，那就直接播放点击的那节；否则，就是点击直接观看过来的，那就默认播放第一节
+				f:'<#if sectionVideo??>${sectionVideo.sectionVideoUrl}<#else>${sectionVideos[0][0].sectionVideoUrl}</#if>',
+				p:1,
+				c:'0',//是否读取文本配置,0不是，1是
+				loaded:'loadedHandler'		//播放器加载完毕就调用该方法
+				};
+			var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+			CKobject.embedSWF('<@m.path/>/ckplayer/ckplayer.swf','a1','ckplayer_a1','99%','100%',flashvars,params);	
+			
+		</script>
+	</div>
+
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script>
+	var active;		//用于存储现在被选择的目录列表项
+	var videoId;		//存储当前播放视频的id
+	
+	$(function(){
+		$('#a1').css('height',document.documentElement.clientHeight*0.87);
+		$('.aside_content').css('height',document.documentElement.clientHeight*0.91);
+	});
+	
+	/* 当窗口的大小改变时，改变目录的高度和浏览器大小 */
+	window.onresize=function(){
+		$('#a1').css('height',document.documentElement.clientHeight*0.87);
+		$('.aside_content').css('height',document.documentElement.clientHeight*0.91);
+	}
+	
+	//调整aside，让其点击按钮时缩放
+	function to_display(){
+		var aside_button = $('.aside_button');		//调整aside缩放的按钮	
+		var aside = $('aside');
+		var player = $('.player');		//播放器界面
+		if( aside.position().left >= 0 ){
+			aside.animate({left:'-22%'});
+			player.animate({paddingLeft:'2%'});
+			aside_button.removeClass('glyphicon-chevron-left');
+			aside_button.addClass('glyphicon-chevron-right');
+		} else {
+			aside.animate({left:'0%'});
+			player.animate({paddingLeft:'24%'});
+			aside_button.removeClass('glyphicon-chevron-right');
+			aside_button.addClass('glyphicon-chevron-left');
+		}
+	}
+	
+ 	function change_video(id,url,name,o){
+ 		videoId = id;
+		$('.player .intro').html(' ' + name);		//将浏览器上面的标题换成点击的视频的名称
+		active = $('.aside_content li.active');
+		active.removeClass('active');		//取消原来的已选择目录列表项的效果
+		active = $(o);
+		active.addClass('active');			//给新点击的目录列表项添加效果
+		var flashvars={
+			f:url,		//改变播放器的视频流地址
+			p:1,
+			c:'0',//是否读取文本配置,0不是，1是
+			loaded:'loadedHandler'		//播放器加载完毕就调用该方法
+			};
+		CKobject.embedSWF('<@m.path/>/ckplayer/ckplayer.swf','a1','ckplayer_a1','99%','100%',flashvars,params);
+	}
+ 	
+ 	function closelights(){		//关灯
+		alert(' 本演示不支持开关灯');
+	}
+	function openlights(){		//开灯
+		alert(' 本演示不支持开关灯');
+	}
+	//视频不可播
+	function errorHandler(){
+		console.info('该视频不能播');
+		console.info(videoId);
+		if( videoId != undefined ){
+			$.post('<@m.path/>/sectionvideo/changestate.html',{
+				sectionvideoId : videoId,
+				state : false
+			},function(reponse){
+				console.info(response);
+			});
+		}
+	}
+	//视频可播
+	function playHandler(){
+		console.info('该视频能播');
+		console.info(videoId);
+		if( videoId != undefined ){
+			$.post('<@m.path/>/sectionvideo/changestate.html',{
+				sectionvideoId : videoId,
+				state : true
+			},function(response){
+				console.info(response);
+			});
+		}
+	}
+	//根据视频是否能加载修改数据库视频状态值
+	function loadedHandler(){
+		CKobject.getObjectById('ckplayer_a1').addListener('error','errorHandler');
+		CKobject.getObjectById('ckplayer_a1').addListener('play','playHandler');
+	}
+</script>

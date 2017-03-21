@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+#login_title {
+	
+}
+
+#login_content {
+	background:url(../image/user/login_background.jpg) no-repeat;
+}
+#login_content .login_info {
+	color: #8A6D3B;
+	background-color: #FCF8E3;
+	border: 1px solid #FAEBCC;
+	margin:10px 0;
+	padding:5px;
+	font-size: 0.9em;
+}
+#login_content .login_info .glyphicon {
+	color: #33FF00 ;
+}
+#login_content .container > div {
+	width:30%;
+	height:85%;
+	background-color:#FFF;
+	float:right;
+	margin-top:4%;
+	padding:20px;
+	box-shadow:0px 1px 2px #333;
+}
+#login_content div.other_login a {
+	margin-left:10px;
+}
+#login_content button {
+	background-color:#FFF;
+	border:1px solid #ccc;
+	color:#333;
+	transition: background border;
+	transition-duration: 0.4s;
+}
+#login_content button:hover {
+	background:#00CCFF;
+	border:1px solid #fff;
+	color:#fff;
+}

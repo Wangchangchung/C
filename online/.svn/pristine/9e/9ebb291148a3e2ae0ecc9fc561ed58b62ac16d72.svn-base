@@ -1,0 +1,8 @@
+jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.url=jdbc\:mysql\://222.24.63.102/online-dev?useUnicode\=true&amp;characterEncoding\=UTF-8 
+jdbc.username=root
+jdbc.password=lzp110
+unitName=mysql
+maxActive=30
+maxIdle=20
+maxWait=5000

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用户登陆</title>
+<#include "html/common/top.html">
+<link href="<@m.path/>/css/user_login.css" rel="stylesheet" type="text/css">		<!--用户登录页面css-->
+
+
+
+</head>
+
+<body>
+
+	<div id="login_title" class="container">
+		<img src="<@m.path/>/image/index/logo_light.png" style="display:block; float:left;">
+		<div style="float:left; margin-left:30px;"><span style="font-size:24px; line-height:3; color:#333;">欢迎登录</span></div>
+		<div style="float:right; margin-top:10px;"><a href="<@m.path/>/index.html" style="font-size:14px; line-height:3;">返回首页 -></a></div>
+	</div>
+
+	<div id="login_content" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="">
+		<div class="container" style="height:100%;">
+			<div style="">
+				<span style="font-size:20px;">会员登录</span>
+				<div class="login_info"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> <span class="info">公共场所不建议自动登录，以防账号丢失！</span></div>
+				<div id="username" class="input-group" style="margin-bottom:15px;">
+				  <span class="input-group-addon">用户名</span>
+				  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" autofocus="autofocus">
+				</div>
+				<div id="password" class="input-group" style="margin-bottom:15px;">
+				  <span class="input-group-addon">密&nbsp;&nbsp;&nbsp;码</span>
+				  <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+				</div>
+				<div class="checkbox" style="margin:0px 10px;">
+				  <label>
+					<input type="checkbox" value="">
+					下次自动登陆
+				  </label>
+				  <a href="#" style=" float:right;">忘记密码？</a>
+				</div>
+				<button type="button" class="btn-lg btn-block" style=" margin:15px 0px;" onclick="login_action();">登&nbsp;&nbsp;录</button>
+				<button type="button" class="btn-lg btn-block" onclick="location.href='<@m.path/>/user/type_select.html'">注&nbsp;&nbsp;册</button>
+				<div class="other_login" style="margin-top:4%;line-height:2;">使用其他账号登录：<a href="#">QQ</a><a href="#">新浪微博</a><a href="#">网易邮箱</a></div>
+			</div>
+		</div>
+	</div>
+	
+	<!--版权信息-->
+	<div id="copyright" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:#FFF; color:#666; padding-top:2%; margin-top: 0px;">
+		<p style="font-size:12px">本站资源属于他站资源。本站所有的资源版权归原作者属有，未得到原作者授权下，请勿把本站资源用于商业用途。</p>
+		<p style="font-size:12px">
+			感谢各互联网门户所提供的资源。
+		</p>
+	</div>
+	<!--版权信息结束-->
+	
+</body>
+</html>
+
+<#include "html/common/bottom.html">
+
+<script type="text/javascript">
+	$(function (){
+		var screen_width = screen.width;
+		var screen_height = screen.height;
+		//console.info('这是屏幕宽度：' + screen_width);
+		$('#login_content').css('height',screen.height*0.63);
+	});
+	
+	//用户登陆的方法
+	function login_action(){
+		var username = $.trim($('#username input').val());
+		var password = $.trim($('#password input').val());
+		if( username == '' ){
+			$('.login_info .glyphicon').removeClass('glyphicon-star').addClass('glyphicon-remove').css('color','#CC9966');
+    		$('.login_info .info').html('请输入用户名！');
+    		return;
+		} else if ( password == '' ){
+			$('.login_info .glyphicon').removeClass('glyphicon-star').addClass('glyphicon-remove').css('color','#CC9966');
+    		$('.login_info .info').html('请输入密码！');
+    		return;
+		} else {
+			$.ajax({
+		        type: "POST",
+		        cache: false,
+		        data: {
+		        	username : username,
+		        	password : password
+		        },
+		        async: false,
+		        url: "<@m.path/>/user/loginAction.html",
+		        success: function(response) {
+		        	if(response == 'admin'){
+		        		location.href = '<@m.path/>/user/admin.html';
+		        	}
+		        	if( response == 'ok' ){
+		        		location.href = '<@m.path/>/index.html';
+		        	} else if(response == 'error') {
+		        		$('.login_info .glyphicon').removeClass('glyphicon-star').addClass('glyphicon-remove').css('color','#CC9966');
+		        		$('.login_info .info').html('账户名与密码不匹配，请重新输入！');
+		        	}
+		        }
+		    });
+		}
+		
+	}
+</script>

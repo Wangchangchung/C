@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */
+/* 该css用于专业详细页面的css */
+
+@keyframes button_animation		/*巨幕按钮动画*/
+{
+0%   {background:#eee;}
+100% {background:#0CF;}
+}
+@keyframes small_button_animatiion		/*职业介绍按钮动画*/
+{
+100% {background:#0CF;}
+}
+
+a{
+	color:#6FF;
+	text-decoration:none;
+}
+a:link {	/*点击后不出现下划线*/
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:none;
+}
+
+/*巨幕*/
+#question {
+	height:510px; 
+	background-color:#eee;
+	text-align:center;
+}
+#question .jumbotron {
+	margin-top:150px;
+}
+#question .button {
+	text-align:center;
+}
+#question a {		/*巨幕问题*/
+	width:150px;
+	height:50px;
+	display:block;
+	color:#003;
+	border:1px solid #0CF;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin:0 auto;
+	font-size:20px;
+	line-height:2.5;
+	border-radious:5px;
+	transition: 1s background;
+}
+#question a:hover {		/*滑动到按钮时给按钮加上动画*/
+	animation:button_animation 0.8s linear infinite alternate;
+	-moz-animation:button_animation 0.8s linear infinite alternate;
+}
+/*巨幕结束*/
+
+/*问题答案*/
+#answer .tobe {
+	text-align:center; 
+	height:150px; 
+	font-size:30px; 
+	line-height:6;
+}
+#answer .job_img {		/* 职业图片 */
+	width:30%;
+	height:100%;
+	margin:0 auto;
+	float:left;
+	border:1px solid #0FF; 
+	cursor:pointer;
+}
+#answer .job_img:hover .job_detail {
+	opacity:0.8;
+}
+#answer .job_img .job_detail {		/* 职业简介的div */
+	width:29%;
+	height:40%;
+	position:absolute;
+	bottom:0px;
+	padding-top:5px;
+	padding-left:10px;
+	padding-right:10px;
+	color:#6FF;
+	background-color:#033;
+	opacity:0.6;
+	transition:0.8s opacity;
+}
+#answer .intro {
+	display:block;
+	text-indent: 2em;
+}
+#answer intro2 {
+	display:block; 
+	color:#FF9;
+}
+#answer .button {		/* “查看课程体系”按钮样式 */
+	float:right;
+	border:1px solid #0FF;
+	width:100px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	line-height:2.5;
+	text-align:center;
+	font-size:15px;
+	transition:1s background;
+}
+#answer .button:hover {		/* 给“查看课程体系”按钮加上动画 */
+	animation:small_button_animatiion 0.6s linear infinite alternate;
+	-moz-animation:small_button_animatiion 0.6s linear infinite alternate;
+}
+#answer .gap {
+	width:5%; 
+	height:100%; 
+	margin:0 auto; 
+	float:left;
+}
+/*问题答案结束*/
+

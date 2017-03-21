@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title>Hello</title>
+</head>
+<body>
+<font color="red" size="6"><div align="center">Freemarker语法小测试</div></font>
+<script>    
+  function show(){
+    alert("Hello,${name}!");     
+ }
+</script>
+
+<hr>
+---获取action中的属性值--</br>
+Hello,${name}</br>
+<hr>
+----模板中使用JavaScript,并且动态给JavaScript赋值--</br>
+     <font color="red" onclick=show()>请点击我</font>
+<hr>
+---html表单中直接利用freemarker赋值--</br>
+<form>
+  <input type="text" name="test" value="${name}"/>
+</form>
+<hr>
+----打印出各种类型的变量--</br>
+(int)i=${i}</br>
+<#assign b=true/>
+(boolean)b=${b?string("true", "false")}</br>
+(float)f=${f}</br>
+${r"c:\\\\\${fott}"}</br>
+<hr>
+--字符串截取--</br>
+${list}</br>
+${list[0]}</br>
+${list[0][1]}</br>
+${list[0][0..4]}</br>
+<hr>
+--获取List大小--</br>
+${list?size}</br>
+<hr>
+--给变量x动态赋值--</br>
+<#assign x>
+<#list ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期天"] as n>
+${n}
+</#list>
+</#assign>
+<font color="red">
+<hr>
+--输出字符串--</br>
+ ${x}
+</font>
+<table align="center" bgcolor="red">
+    <tr>
+<#list list as li>
+      <td>
+        ${li?if_exists}
+      </td>
+</#list> 
+    </tr>
+  </table>
+</br>
+<hr>
+--获取Map中的值--</br>
+${m.m}</br>
+${m.m1}</br>
+${m}</br>
+<hr>
+-----获取session中的值--</br>
+${Session["user"]}</br>
+<hr>
+--遍历Map-</br>
+<#list m?keys as k>
+<#assign mm = m.get(k)/>
+${k}
+${mm}</br>
+</#list>
+<hr>
+--遍历List--</br>
+<#list list as li>
+${li}</br>
+</#list></br>
+<hr>
+--List大小--</br>
+${list.size()}</br>
+<hr>
+--遍历list里面对象的属性--</br>
+-----list-----</br>
+<#list userlist as ul>
+${ul.username}
+${ul.password};</br>
+</#list>
+<hr>
+--遍历map里面对象的属性--</br>
+-----map-----</br>
+<#list usermap?keys as k><#--获取map里面的所有key值并赋给变量k-->
+ ${usermap.get(k).username}<#--usermap.get(k)是获取key值等于k的对象-->
+ ${usermap.get(k).password};</br>
+</#list>
+<hr>
+-----获对象的属性及调用对象中的方法-----</br>
+调用方法：${usertest.getUsername()}</br>
+获得属性值：${usertest.password}</br>
+<hr>
+
+</body>
+</html>
+

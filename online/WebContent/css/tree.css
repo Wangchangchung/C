@@ -1,0 +1,333 @@
+@charset "utf-8";
+/* CSS Document */
+
+.page-header {
+	border-bottom: 1px solid #0CF;
+}
+a{
+	color:#063;
+	transition: color;
+	transition-duration:0.5s;
+	text-decoration:none;
+}
+a:link {	/*点击后不出现下划线*/
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:none;
+	color:#063;
+}
+
+/*大标题图片*/
+#slide {
+	margin-top:70px;
+	padding:20px; 
+	background-color:#fff; 
+	box-shadow:0px 1px 2px #BBB;
+}
+#slide h2 {
+	color:#09F; 
+	padding-left:40px;
+	background-color:#Eff; 
+	padding:30px; 
+	margin-bottom:10px;
+}
+#slide div {
+	height:100%;
+}
+#slide span.tree_question {
+	display:block;
+	font-size:1.15em;
+	margin-left:2em;
+	line-height: 2;
+	cursor:pointer;
+	background-size:1.7em 1.7em; 
+	padding-left:2em;
+}
+#slide p.tree_answer {
+	text-indent: 2em;
+	font-size:1em;
+	margin-left:2em;
+	color:#808080;
+	line-height: 1.5;
+	display:none;
+}
+#slide div.golearn span {
+	display:block;
+	float:right;
+	text-align:center;
+	width:200px;
+	height:40px;
+	border:1px solid #4CAE4C;
+	background-color:#5CB85C;
+	color:#fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin:0px auto;
+	font-size:20px;
+	padding-top:5px;
+	transition: background 1s;
+}
+#slide div.golearn span:hover {
+	background-color:#360;
+}
+#slide img{
+	width:100%;
+	height:100%;
+}
+/*大标题图片结束*/
+
+/*主题内容*/
+@keyframes leftshadow		/*左边框框的动画*/
+{
+	50%  {box-shadow: 3px 3px 5px #0FF;}
+	100% {box-shadow: 1px 1px 3px #0FF;}
+}
+@-moz-keyframes leftshadow
+{
+	50%  {box-shadow: 3px 3px 5px #0FF;}
+	100% {box-shadow: 1px 1px 3px #0FF;}
+}
+@keyframes rightshadow		/*右边框框的动画*/
+{
+	50%  {box-shadow: -3px 3px 15px #0FF;}
+	100% {box-shadow: -1px 1px 3px #0FF;}
+}
+@-moz-keyframes rightshadow
+{
+	50%  {box-shadow: -3px 3px 15px #0FF;}
+	100% {box-shadow: -1px 1px 3px #0FF;}
+}
+#treeContent {
+	width:74%; 
+	padding-top:10px; 
+	padding-bottom:10px; 
+	background-color:#fff; 
+	box-shadow:0px 1px 2px #BBB; 
+	margin-top:30px;
+}
+#treeContent > div {	/*选择#treeContent下的直接子元素div，不包括孙子元素*/
+	height:100%;
+	text-align:center;
+}
+#treeContent span.firstWord {	/*树顶的文字 J2EE工程师之路*/
+	display:block;
+	width:15em;
+	height:40px;
+	background-color:#5CB85C;
+	color:#fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin:0px auto;
+	font-size:1.4em;
+	vertical-align:middle;
+	padding-top:5px;
+	transition: background 0.8s;
+}
+#treeContent span.firstWord:hover {		/*树顶样式*/
+	background-color:#360;
+}
+#treeContent div.circle {		/*中间每一个圆点的样式*/
+	width:40px;
+	height:40px;
+	background-color:#5CB85C;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	margin:0 auto;
+	color:#FFF;
+	font-size:20px;
+	text-align:center;
+	line-height:2;
+	transition: background 0.8s;
+}
+#treeContent div.circle:hover {		/*中间每一个圆点的样式（滑过）*/
+	background-color:#360;
+}
+#treeContent h3 b {		/* 阶段介绍文字 */
+	font-size: 0.7em;
+	color:#999;
+	margin-left:1em;
+	cursor:pointer;
+}
+#treeContent .page-header {		/*左右框框的标题文字*/
+	margin:0px;
+	margin-top:10px;
+}
+#treeContent span {		/* 课程名字 */
+	display:block;
+	font-size:17px;
+	margin:10px;
+}
+@media (max-width:1200px) {
+	#treeContent .page-header {
+		font-size:20px;
+	}
+	#treeContent div.left_stage span {
+		font-size:14px;
+	}
+}
+#treeContent div.left_stage {		/*树的左边的每一个小框*/
+	width:100%;
+	margin-bottom:100px;
+	padding:20px;
+	box-shadow: 1px 1px 3px #0FF;
+	transition: box-shadow;
+	transition-duration:0.4s;
+}
+#treeContent div.left_stage:last-of-type {		/*最后一个.left*/
+	margin-bottom:10px;
+}
+#treeContent div.left_stage:hover {
+	box-shadow: 1px 5px 6px #0FF;
+}
+#treeContent div.left_stage a:hover{
+	color:#0CF;
+}
+#treeContent div.right_stage {	/*树的右边的每一个小框*/
+	width:100%;
+	margin-bottom:140px;
+	padding:20px;
+	box-shadow: 1px 1px 3px #0FF;
+	transition: box-shadow;
+	transition-duration:0.4s;
+}
+#treeContent div.right_stage:last-of-type {	/*最后一个.right*/
+	margin-bottom:10px;
+}
+#treeContent div.right_stage:hover {
+	box-shadow: 1px 5px 6px #0FF;
+}
+#treeContent div.right_stage a:hover{
+	color:#0CF;
+}
+#treeContent div.left_stage span b {
+	font-weight:normal;
+	font-size:14px;
+	color:#0CC;
+	margin-left:10px;
+}
+/*附加信息*/
+#treeRemarks h4 {
+	background-color:#Eff; 
+	line-height:2; 
+	font-weight:500;  
+	border-bottom:#0FF solid 1px; 
+	padding:10px; 
+	margin:0 0 10px 0;
+}
+#treeRemarks div.job_ad {
+	padding:5px;
+	transition: background 0.5s;
+}
+#treeRemarks div.job_ad:hover {
+	background-color:#ecf0f1;
+}
+#treeRemarks div.job_ad b:hover {
+	cursor:pointer;
+	text-decoration: underline;
+}
+#treeRemarks div.job_ad span {
+	display: block;
+	margin-bottom: 5px;
+}
+#treeRemarks div.learner {		/*树的附加信息（课程体系描述、当前有多少用户在学习等）*/
+	height:60px;
+	padding:5px;
+	margin-bottom:5px;
+	transition: background 1s;
+}
+#treeRemarks div.learner:hover {
+	background-color:#EEE;
+}
+#treeRemarks div.img {
+	float:left;
+}
+#treeRemarks div.img img {
+	width:50px; height:50px;
+}
+#treeRemarks div.name {
+	float:left;
+	padding-left:5px;
+	padding-top:5px;
+	width:70%;
+}
+/*主题内容结束*/
+
+/* 线下学习 */
+#off-Line_Learning {
+	padding:1em; 
+	background-color:#fff; 
+	box-shadow:0px 1px 2px #BBB; 
+	margin-bottom:3em;
+}
+#off-Line_Learning h3 {
+	text-align:center;
+}
+#off-Line_Learning h5 {
+	text-align:center;
+	margin-bottom: 2em;
+}
+#off-Line_Learning ul {
+	list-style:outside none none;
+	padding:0px;
+}
+#off-Line_Learning ul li {
+	width:25%;
+	float:left;
+	padding:0 1em;
+}
+#off-Line_Learning ul li a {
+	box-shadow: 0px 3px 5px #ccc;
+	height:30em;
+	display:block;
+}
+#off-Line_Learning ul li a img {
+	width:100%;
+	height:60%;
+}
+#off-Line_Learning ul li a div.item_info {
+	padding:1em;
+	width:22%;
+	position: absolute;
+	background:#fff;
+	bottom:1em;
+}
+#off-Line_Learning ul li a div.item_info h4 {
+	padding-top:1em;
+}
+#off-Line_Learning ul li a div.item_info hr {
+	border-color:#ddd
+}
+#off-Line_Learning ul li a div.item_info span {
+	display:block;
+	margin-bottom: 1em;
+}
+#off-Line_Learning ul li a div.item_info p.intro {
+	text-indent:2em;
+	height:0em;
+	border-left:2px solid #797C80;
+	padding-left:1em;
+	overflow: hidden;
+	transition: height 0.4s;
+}
+#off-Line_Learning ul li a:hover div.item_info p.intro {
+	height:8em;
+}
+/* 评论吐槽 */
+#treeComment div.every_comment {
+	border-bottom:1px solid #0FF; width:100%; height:100px; padding:10px;
+}
+#treeComment div.every_comment img {
+	width:60px;
+	height:60px;
+}
+#treeComment div.every_comment span {
+	display:block;
+	line-height:1.8;
+}
+#treeComment a:hover {
+	color:#bbb;
+}

@@ -1,0 +1,68 @@
+<@m.header/> <@m.body />
+
+<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+
+<!-- /.modal -->
+<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+<!-- BEGIN PAGE HEADER-->
+
+<!-- END PAGE HEADER-->
+<div class="row">
+	<div class="col-md-12">
+		<!-- BEGIN SAMPLE FORM PORTLET-->
+		<div class="portlet box green ">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-gift"></i> 添加行业
+				</div>
+				<div class="tools">
+					<a href="" class="collapse"> </a> <a href="#portlet-config"
+						data-toggle="modal" class="config"> </a> <a href="" class="reload">
+					</a> <a href="" class="remove"> </a>
+				</div>
+			</div>
+			<div class="portlet-body form">
+				<form class="form-horizontal" role="form">
+					<div class="form-body">
+						<div class="form-group">
+							<label class="col-md-3 control-label">行业名称</label>
+							<div class="col-md-9">
+								<input id=name type="text" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="form-actions">
+						<div class="row">
+							<div class="col-md-offset-3 col-md-9">
+								<button type="button" class="btn green" onclick="addcourse()">提交</button>
+								<button type="button" class="btn default">取消</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- END SAMPLE FORM PORTLET-->
+	</div>
+</div>
+<@m.footer/>
+<script type="text/javascript">
+	function addcourse() {
+		var jobName = $("#name").val();
+		$.post("<@m.path/>/job/addJobType.do", {
+			"name" : jobName
+		}, function(data) {
+			closeBlock();
+			if (data == "ok") {
+				toastr.success("操作成功!", "成功");
+				window.location.reload();
+			} else {
+				toastr.error("操作失败!", "错误");
+				bootbox.alert("操作失败！信息：" + data);
+			}
+		}, "text");
+	}
+</script>
+
+
+<@m.end/>

@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+
+#user_info_content div.item span {
+	margin:20px 0 20px 0;
+	font-size: 1.2em;
+}

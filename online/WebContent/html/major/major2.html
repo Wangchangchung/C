@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>软件工程 - iCooc</title>
+<meta name="keywords" content="软件工程,免费专业到职业的导向,专业方向,胜任职位,职位选择">
+<meta name="description" content="根据专业的选择，为你推荐该专业能够胜任的所有职业!">
+<#include "html/common/top.html">
+<link href="<@m.path/>/css/major.css" rel="stylesheet" type="text/css">	<!-- 该页面的css -->
+
+</head>
+<body>
+
+	<!--导航栏-->
+	<#include "html/common/nav.html">
+	<!--导航栏结束-->
+	
+	<div id="question" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="jumbotron">
+		  <h1>软件工程能干什么？</h1>
+		</div>
+		<div class="button"><a class="scroll" href="#answer"><div>点我看答案</div></a></div>
+	</div>
+
+	<div id="answer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tobe">学软件工程可以成为...</div>
+
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:450px;"></div>
+		<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:450px;">
+			<div class="job_img" style="background:url(<@m.path/>/image/job/java/java_01.jpg);	background-size:100% 100%; cursor:pointer" onClick="location.href='tree1.html';">
+				<div class="job_detail">
+					<h3>Java开发工程师</h3>
+					<span class="intro">企业级WEB应用的实现者，将企业的业务需求与IT技术相结合，从而帮助企业走向信息化的管理水平。一个真正的热门职业。</span>
+					<span class="intro2">应届生平均薪金：5000~6000</span>
+					<a style="color:#6FF"><div class="button">查看学习体系</div></a>
+				</div>
+			</div>
+			<div class="gap"></div>
+			<div class="job_img" data-toggle="modal" data-target="#job_modal" style="background:url(<@m.path/>/image/job/c++/c++_01.png); background-size:100% 100%;">
+				<div class="job_detail">
+					<h3>C/C++开发工程师</h3>
+					<span class="intro">C/C++能让你更多的接触底层的东西，掌握更多的核心层技术，成为这方面的专家，就如同手中捧着金制的饭碗.</span>
+					<span class="intro2">应届生平均薪金：5000~6000</span>
+					<a style="color:#6FF"><div class="button">查看学习体系</div></a>
+				</div>
+			</div>
+			<div class="gap"></div>
+			<div class="job_img" data-toggle="modal" data-target="#job_modal" style="background:url(<@m.path/>/image/job/android/android_01.png); background-size:100% 100%;" >	
+				<div class="job_detail">
+					<h3>Andriod开发工程师</h3>
+					<span class="intro">一个异常吃香的职业，移动互联网时代的缔造者，目前市场需求供不应求，快来成为一个有思想有内涵的Andriod机器人</span>
+					<span class="intro2">应届生平均薪金：5000~6000</span>
+					<a style="color:#6FF"><div class="button">查看学习体系</div></a>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="height:450px;"></div>
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center; height:50px;"><span style="font-size:25px; line-height:2.8;">其他更多职位正在努力开发中...</span></div>
+		
+		<!-- 职位模态提示窗口 -->
+		<div class="modal fade" id="job_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-body" style="text-align:center;">
+		        <img src="<@m.path/>/image/working2.png" style="width:50%; height:50%">
+				<h3 class="modal-title" style="text-align:center;line-height:2;"><a href="<@m.path/>/tree.html" target="_blank" style="color:#3399FF">Java工程师</a> 职位已开发成功</h3>
+				<h3 class="modal-title" style="text-align:center;line-height:2;">其他职位正在努力开发中，敬请期待...</font></h3>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">我 知 道 了</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- 模态窗口结束 -->
+		
+	</div>
+
+	<!--版权信息-->
+	<#include "html/common/footer.html">
+	<!--版权信息结束-->
+</body>
+</html>
+
+<#include "html/common/bottom.html">
